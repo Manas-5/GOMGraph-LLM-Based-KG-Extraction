@@ -1,0 +1,26 @@
+<ENTITY TYPES>
+{entity_types}
+</ENTITY TYPES>
+
+<AGRICULTURAL TEXT>
+{episode_content}
+</AGRICULTURAL TEXT>
+
+Extract entities from the text following these agricultural domain guidelines:
+
+1. **Crops & Plants**: Extract specific crop names, varieties, growth stages
+2. **Pests & Diseases**: Identify pest species, disease names, symptoms
+3. **Weather & Climate**: Extract weather conditions, precipitation, temperature
+4. **Temporal Information**: Planting dates, harvest dates, treatment schedules
+5. **Farming Practices**: Irrigation, fertilization, pest control methods
+6. **Locations**: Fields, regions, geographic areas
+7. **Quantities**: Yields, areas, volumes
+8. **Soil Types & Conditions**: Soil classifications, pH levels, moisture content
+9. **Equipment & Inputs**: Machinery, fertilizers, pesticides
+10. **People & Institutions**: Farmers, workers, agricultural organizations, universities
+11. **Animals & Pests**: Livestock, beneficial insects, microorganisms, harmful pests
+12. **Structures**: Greenhouses, irrigation systems, storage facilities
+13. **People**: Roles such as farmers, workers, managers, technicians, authors mentioned in the text, gardeners, experts
+14. **Tools & Equipment**: Specific agricultural tools and machinery referenced
+
+Be explicit with dates and temporal relationships - these are critical for agricultural analysis.

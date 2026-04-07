@@ -1,0 +1,17 @@
+<EDGE_FACT>
+{edge_fact}
+</EDGE_FACT>
+
+<CURRENT_EPISODE>
+{current_episode}
+</CURRENT_EPISODE>
+
+<PREVIOUS_EPISODES>
+{previous_episodes}
+</PREVIOUS_EPISODES>
+
+Reference timestamp: {reference_timestamp}
+
+Return:
+- valid_at: ISO 8601 (or null) when the fact becomes true
+- invalid_at: ISO 8601 (or null) when the fact stops being true

@@ -1,0 +1,5 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-13T17:12:44.751860+00:00,exact,713b4846-00c7-4526-a4f5-1c3a2ce608e4,Syringa,"Syringa is mentioned alongside Fraxinus, Ligustrum, Ornus in the text as part of the Oleineae family.",d5f5be41-f18e-4b3d-b594-a141d4bbf997,,,,
+2026-02-13T17:12:44.751871+00:00,llm,713b4846-00c7-4526-a4f5-1c3a2ce608e4,Syringa,"Syringa is mentioned alongside Fraxinus, Ligustrum, Ornus in the text as part of the Oleineae family.",2aca6fb1-f178-4d70-9b0e-4ba6070eff3e,,,,
+2026-02-13T17:12:44.751881+00:00,llm,b3270760-df8b-449e-a241-b2f052ad884c,Thyme,"Thyme is recommended for edging paths and walkways, planted in a single row, 7 to 8 centimetres apart.",33802bec-32f5-40ee-8b4b-1924f0f36323,,,,
+2026-02-13T17:12:44.751891+00:00,llm,b3270760-df8b-449e-a241-b2f052ad884c,Thyme,"Thyme is recommended for edging paths and walkways, planted in a single row, 7 to 8 centimetres apart.",2b486fc7-7338-4026-b943-49ce62c7b8ac,,,,

@@ -1,0 +1,7 @@
+threshold_type,threshold,similarity_used,file,representatives,avg_edges_per_new_edge_name
+distance,0.6,0.4,collapsed_sim_0.40.csv,7,213.57142857142858
+distance,0.5,0.5,collapsed_sim_0.50.csv,51,29.313725490196077
+distance,0.4,0.6,collapsed_sim_0.60.csv,150,9.966666666666667
+distance,0.3,0.7,collapsed_sim_0.70.csv,326,4.585889570552148
+distance,0.2,0.8,collapsed_sim_0.80.csv,553,2.7034358047016274
+distance,0.1,0.9,collapsed_sim_0.90.csv,758,1.9722955145118735

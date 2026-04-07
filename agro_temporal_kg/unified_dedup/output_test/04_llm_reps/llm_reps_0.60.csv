@@ -1,0 +1,4 @@
+cluster_id,representative_llm,representative_llm_free,representative,total_count,members
+2,GROWN_IN,GROWS_IN_LOCATION,PLANTED_IN,210,3
+0,RELATED_TO,ASSOCIATED_WITH,AFFECTED_BY,179,6
+1,REQUIRES,DEPENDENCY_RELATIONSHIP,REQUIRES,18,1

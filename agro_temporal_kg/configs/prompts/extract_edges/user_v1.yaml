@@ -1,0 +1,79 @@
+|
+<FACT TYPES>
+{edge_types}
+</FACT TYPES>
+
+<PREVIOUS_TEXT>
+{previous_episodes}
+</PREVIOUS_TEXT>
+
+<CURRENT_TEXT>
+{episode_content}
+</CURRENT_TEXT>
+
+<ENTITIES>
+{nodes}
+</ENTITIES>
+
+<REFERENCE_TIME>
+{reference_time}  # ISO 8601 (UTC); used to resolve relative time mentions
+</REFERENCE_TIME>
+
+# TASK
+Extract all factual relationships between the given ENTITIES based on the CURRENT_TEXT.
+Focus on agricultural domain relationships including:
+
+1. **Crop & Plant Relationships**: Crop varieties, growth stages, planting/harvest relationships
+2. **Pest & Disease Relationships**: Pest-crop associations, disease-crop associations, treatment relationships
+3. **Weather & Climate Relationships**: Weather impacts on crops, climate patterns, seasonal effects
+4. **Temporal Agricultural Events**: Planting dates, harvest dates, treatment schedules, growth cycles
+5. **Farming Practice Relationships**: Irrigation methods, fertilization practices, pest control applications
+6. **Location & Geographic Relationships**: Field locations, regional associations, geographic impacts
+7. **Quantity & Measurement Relationships**: Yield relationships, area measurements, volume associations
+8. **Soil Type & Condition Relationships**: Soil classifications, condition impacts on crops
+9. **Equipment & Input Relationships**: Machinery usage, fertilizer applications, pesticide treatments
+10. **People & Institution Relationships**: Farmer-institution associations, worker roles, organizational impacts, author contributions
+11. **Animal & Pest Relationships**: Livestock-crop interactions, beneficial insect roles, harmful pest impacts
+12. **Structure Relationships**: Greenhouse-crop relationships, irrigation system impacts, storage facility uses
+13. **People Relationships**: Roles and contributions of individuals mentioned in the text
+14. **Tool & Farming Relationships**: Specific agricultural tools and machinery relationships
+
+Only extract facts that:
+- involve two DISTINCT ENTITIES from the ENTITIES list,
+- are clearly stated or unambiguously implied in the CURRENT_TEXT,
+    and can be represented as edges in a knowledge graph.
+- Facts should include entity names rather than pronouns whenever possible.
+- The FACT TYPES provide a list of the most important types of facts, make sure to extract facts of these types.
+- The FACT TYPES each contain their fact_type_signature which represents the source and target entity types.
+- **CRITICAL**: Pay special attention to temporal relationships - dates, seasons, and time-based agricultural events are essential for agricultural analysis.
+
+You may use information from the PREVIOUS TEXT only to disambiguate references or support continuity.
+
+
+
+# EXTRACTION RULES
+
+1. **Entity ID Validation**: `source_entity_id` and `target_entity_id` must use only the `id` values from the ENTITIES list provided above.
+   - **CRITICAL**: Using IDs not in the list will cause the edge to be rejected
+2. Each fact must involve two **distinct** entities.
+3. You MUST use only the relation types provided in FACT TYPES. Map every relationship to the closest matching type.
+4. Do not emit duplicate or semantically redundant facts.
+5. The `fact` should closely paraphrase the original source sentence(s). Do not verbatim quote the original text.
+6. Use `REFERENCE_TIME` to resolve vague or relative temporal expressions (e.g., "last week", "this season", "next harvest").
+7. Do **not** hallucinate or infer temporal bounds from unrelated events.
+8. **Agricultural Context**: Prioritize extracting relationships that are relevant to agricultural analysis, including temporal sequences (e.g., planting → growth → harvest), causal relationships (e.g., pest → crop damage), and spatial relationships (e.g., crop → field location).
+
+# DATETIME RULES
+
+- Use ISO 8601 with "Z" suffix (UTC) (e.g., 2025-04-30T00:00:00Z).
+- If the fact is ongoing (present tense), set `valid_at` to REFERENCE_TIME.
+- If a change/termination is expressed, set `invalid_at` to the relevant timestamp.
+- Leave both fields `null` if no explicit or resolvable time is stated.
+- If only a date is mentioned (no time), assume 00:00:00.
+- If only a year is mentioned, use January 1st at 00:00:00.
+- **Agricultural Temporal Context**: For agricultural events, be especially precise with dates:
+  - Planting dates: Use the actual planting date when specified
+  - Harvest dates: Use the actual harvest date when specified
+  - Seasonal references: Resolve to specific dates based on crop calendars and geographic context
+  - Growth stages: Use dates when transitioning between stages (e.g., germination, flowering, maturity)
+

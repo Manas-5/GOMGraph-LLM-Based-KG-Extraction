@@ -1,0 +1,14 @@
+# @package _global_.prompts.extract_edges
+# Default configuration for extract_edges prompt
+# 
+# Options:
+#   system_version: Version for system prompt (default: "v0")
+#   user_version: Version for user prompt (default: "v0")
+#
+# Example: Use system v0 and user v1:
+#   system_version: v0
+#   user_version: v1
+
+system_version: v0
+user_version: v2 #changed from v0 to v2 to reflect updated user prompt with more specific instructions for extracting edges in historical agricultural contexts
+

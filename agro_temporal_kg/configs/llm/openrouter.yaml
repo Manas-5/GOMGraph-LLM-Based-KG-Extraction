@@ -1,0 +1,4 @@
+model: "tngtech/deepseek-r1t2-chimera:free"
+temperature: 0.0
+api_key: ${oc.env:OPENROUTER_API_KEY}
+base_url: "https://openrouter.ai/api/v1"

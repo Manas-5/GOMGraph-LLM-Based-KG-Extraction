@@ -1,0 +1,29 @@
+|
+<ENTITY TYPES>                                                                                                                                                                                      
+{entity_types}  
+</ENTITY TYPES>
+
+<CURRENT_TEXT>
+{episode_content}
+</CURRENT_TEXT>
+
+# TASK
+Extract all significant entities from the CURRENT_TEXT. The text describes historical
+agricultural practices.
+
+# EXTRACTION RULES
+
+1. **Classify using ENTITY TYPES**: For each entity, assign the `entity_type_id` that
+    best matches based on the ENTITY TYPES descriptions. If no type fits, use the
+    default Entity type (id 0).
+2. **Naming**:
+    - Use full, unambiguous names (e.g., "fumier de cheval" not "fumier").
+    - Resolve pronouns (he/she/they/this/that) to the actual entity name.
+    - Do NOT extract pronouns as entities.
+3. **Exclusions**:
+    - Do NOT extract relationships or actions as entities.
+    - Do NOT extract dates, times, or years as entities — temporal information
+      will be captured on edges.
+4. **Granularity**: Extract at the most specific level mentioned in the text.
+    If the text says "feuilles de laitue", extract both "laitue" (Plant) and
+    "feuilles" (PlantPart) if both are meaningful in context.

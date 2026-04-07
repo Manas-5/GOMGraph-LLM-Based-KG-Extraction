@@ -1,0 +1,8 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-13T15:45:35.593258+00:00,exact,96f924cf-539a-460c-9d1b-83bd081d90f3,Camaïeux,"Camaïeux is a variety of Rosa Gallica, one of the most beautiful varieties from Provins.",f81bc3da-5e3d-483c-90f6-b180baf07546,,,,
+2026-02-13T15:45:35.593290+00:00,llm,96f924cf-539a-460c-9d1b-83bd081d90f3,Camaïeux,"Camaïeux is a variety of Rosa Gallica, one of the most beautiful varieties from Provins.",a047fac7-c8b1-4cf9-ad1b-c56974933f6d,,,,
+2026-02-13T15:45:35.593315+00:00,llm,96f924cf-539a-460c-9d1b-83bd081d90f3,Camaïeux,"Camaïeux is a variety of Rosa Gallica, one of the most beautiful varieties from Provins.",ac624b84-5aa2-46cd-bc07-189b4ed02238,,,,
+2026-02-13T15:45:35.593342+00:00,llm,8788bbe2-5e74-4175-b0ff-0e8b74630df1,Rosa,"Rosa requires slightly sandy, moist soil; north or east-facing exposure. Propagate by grafting and marcotting; from seed in dull beds in spring.",a73b2be4-66ec-48ca-a739-dcdb5e428da0,,,,
+2026-02-13T15:45:35.593369+00:00,llm,8788bbe2-5e74-4175-b0ff-0e8b74630df1,Rosa,"Rosa requires slightly sandy, moist soil; north or east-facing exposure. Propagate by grafting and marcotting; from seed in dull beds in spring.",605eb6fd-53f2-44b0-8a41-d1c1f41cf182,,,,
+2026-02-13T15:45:35.593403+00:00,llm,5263726d-7d75-4318-b665-590bc52f7bcb,Gallium,Gallium is a plant species mentioned as being yielded in calcareous soil.,51ab03c8-cef8-47d8-aee5-98c12276e4de,,,,
+2026-02-13T15:45:35.593425+00:00,llm,5263726d-7d75-4318-b665-590bc52f7bcb,Gallium,Gallium is a plant species mentioned as being yielded in calcareous soil.,ef6c535a-2e8f-4da0-ae3f-f7f7da3d9bec,,,,

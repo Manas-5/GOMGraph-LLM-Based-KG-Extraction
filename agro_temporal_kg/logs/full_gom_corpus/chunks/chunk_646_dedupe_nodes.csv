@@ -1,0 +1,5 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-11T21:31:31.346414+00:00,exact,f6eb4969-2bb2-4475-b88b-19d70859f451,Beans,Beans are attacked by aphids and must be treated by burning infected leaves.,3f714d56-3ee1-4cde-929c-c30d00a03cd3,,,,
+2026-02-11T21:31:31.346437+00:00,llm,f6eb4969-2bb2-4475-b88b-19d70859f451,Beans,Beans are attacked by aphids and must be treated by burning infected leaves.,e6854208-e71f-4f1a-82c8-c5318a87e360,,,,
+2026-02-11T21:31:31.346457+00:00,llm,d83d3f6c-850e-491e-8e58-5539f9ea2401,insects,,997f70db-d0fe-4697-a5a0-e9a0eb590cb3,,,,
+2026-02-11T21:31:31.346470+00:00,llm,d83d3f6c-850e-491e-8e58-5539f9ea2401,insects,,7d30b8b9-9062-4af7-9fca-0c464cb76d1a,,,,

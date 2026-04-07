@@ -1,0 +1,5 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-12T13:57:34.120642+00:00,llm,8d983843-718c-4713-ac90-ee22bb84ade5,Bergamote d'été,Bergamote d'été is a type of Pear mentioned as one of the available varieties in October.,41451c59-ae13-4a00-bbc2-aa74d6b81a58,,,,
+2026-02-12T13:57:34.120700+00:00,llm,8d983843-718c-4713-ac90-ee22bb84ade5,Bergamote d'été,Bergamote d'été is a type of Pear mentioned as one of the available varieties in October.,b009e2b3-3239-41b6-99ab-270166db68ac,,,,
+2026-02-12T13:57:34.120759+00:00,llm,a4bbe11b-c533-448b-8677-662daa3733a9,Primrose Roses,Primrose Roses are blooming in July and require staking.,005358e2-d41c-485d-8203-16f0497d5456,,,,
+2026-02-12T13:57:34.120803+00:00,llm,a4bbe11b-c533-448b-8677-662daa3733a9,Primrose Roses,Primrose Roses are blooming in July and require staking.,ed9ea002-af7b-4ebf-b92d-ee61ad199c4c,,,,

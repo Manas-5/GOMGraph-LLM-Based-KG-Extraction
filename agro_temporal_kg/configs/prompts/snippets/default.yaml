@@ -1,0 +1,13 @@
+# @package _global_.prompts.snippets
+# Default configuration for prompt snippets
+# 
+# Options:
+#   summary_instructions:
+#     version: Version for summary_instructions snippet (default: "v0")
+#
+# Example: Use summary_instructions v1:
+#   summary_instructions:
+#     version: v1
+
+summary_instructions:
+  version: v0

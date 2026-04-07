@@ -1,0 +1,1 @@
+python agro_temporal_kg/scripts/run.py create-tkg --override file=test llm.model=llama3.1:70b file.chunk_size= file.chunk_overlap= max_retries=1

@@ -1,0 +1,14 @@
+# @package _global_.prompts.extract_text
+# Default configuration for extract_text prompt
+# 
+# Options:
+#   system_version: Version for system prompt (default: "v0")
+#   user_version: Version for user prompt (default: "v0")
+#
+# Example: Use system v0 and user v1:
+#   system_version: v0
+#   user_version: v1
+
+system_version: v0
+user_version: v2 #changed from v1 to v2 to reflect updated user prompt with more specific instructions for historical agricultural practices
+

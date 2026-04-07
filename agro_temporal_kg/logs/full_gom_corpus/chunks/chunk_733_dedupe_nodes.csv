@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-12T02:51:24.274830+00:00,exact,db9d0643-559d-41d1-b9fc-99e444098c0e,strawberry plants,Strawberry plants require moderate watering in October.,41bf66e1-b7a5-4d3a-91a6-163227d4dc50,,,,
+2026-02-12T02:51:24.274849+00:00,llm,db9d0643-559d-41d1-b9fc-99e444098c0e,strawberry plants,Strawberry plants require moderate watering in October.,53a8ae76-99ef-4908-a858-ceb1e97c2943,,,,

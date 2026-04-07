@@ -1,0 +1,6 @@
+term_a,term_b,similarity
+affected by weather conditions,affected by weather condition,0.984
+harvested in month,harvested in months,0.944
+has growth stage,has growth stages,0.936
+affected by pests,affected by pest,0.932
+cultivated in,cultivated,0.904

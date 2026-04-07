@@ -1,0 +1,44 @@
+2026-02-23 01:27:51 - unified_dedup - INFO - ================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - UNIFIED EDGE NAME DEDUPLICATION PIPELINE
+2026-02-23 01:27:51 - unified_dedup - INFO - ================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - Start time: 2026-02-23 01:27:51
+2026-02-23 01:27:51 - unified_dedup - INFO - Input file: /mnt/diskGum/manas/graph-dedup-patch/agro_temporal_kg/exported_data/1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845/edges_1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845.tsv
+2026-02-23 01:27:51 - unified_dedup - INFO - Output directory: output_test
+2026-02-23 01:27:51 - unified_dedup - INFO - LLM model: llama3.1:70b
+2026-02-23 01:27:51 - unified_dedup - INFO - Embedding model: bge-m3:567m
+2026-02-23 01:27:51 - unified_dedup - INFO - Thresholds: default (0.10-0.90)
+2026-02-23 01:27:51 - unified_dedup - INFO - Similarity threshold for near-duplicates: 0.9
+2026-02-23 01:27:51 - unified_dedup - INFO - ================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - STEP 1: Loading names...
+2026-02-23 01:27:51 - unified_dedup - INFO - ================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Loaded 10 raw unique names
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Total edges: 407
+2026-02-23 01:27:51 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - STEP 1.5: Grouping by normalized embedding form...
+2026-02-23 01:27:51 - unified_dedup - INFO - ================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Grouped into 10 unique normalized forms
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Reduction: 10 → 10 (0 consolidated)
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Embedding only 10 representatives (1 per normalized form)
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Total edges still: 407
+2026-02-23 01:27:51 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - STEP 2: Preprocessing raw data (normalization + similarity analysis)...
+2026-02-23 01:27:51 - unified_dedup - INFO - ================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - Building exact normalized groups...
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Saved output_test/03_preprocessing/artifacts/00_exact_normalized_groups.csv (10 unique normalized terms)
+2026-02-23 01:27:51 - unified_dedup - INFO - Computing similarity candidates on normalized terms...
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Saved output_test/03_preprocessing/artifacts/00_similarity_candidates.csv (0 similarity pairs)
+2026-02-23 01:27:51 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - STEP 3: Saving normalized names and mappings...
+2026-02-23 01:27:51 - unified_dedup - INFO - ================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Saved output_test/02_embeddings/normalized_names.csv
+2026-02-23 01:27:51 - unified_dedup - INFO - ✓ Saved output_test/02_embeddings/raw_to_normalized_mapping.csv
+2026-02-23 01:27:51 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - STEP 4: Embedding normalized names...
+2026-02-23 01:27:51 - unified_dedup - INFO - ================================================================================
+2026-02-23 01:27:51 - unified_dedup - INFO - Embedding 10 names with bge-m3:567m...

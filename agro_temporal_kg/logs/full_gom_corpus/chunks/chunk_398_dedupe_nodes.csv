@@ -1,0 +1,4 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-11T07:08:10.097007+00:00,exact,c2d82ba6-9aed-409c-a59c-7535395812e1,June,June is a month when eggplant will be able to produce fruit fit for consumption at the end of June and during July.,068046c8-f065-46c1-b2d0-bb9d72eb5007,,,,
+2026-02-11T07:08:10.097031+00:00,llm,c2d82ba6-9aed-409c-a59c-7535395812e1,June,June is a month when eggplant will be able to produce fruit fit for consumption at the end of June and during July.,4a43e001-8ed3-44d8-bc19-fa75e8b0be3d,,,,
+2026-02-11T07:08:10.097051+00:00,llm,c2d82ba6-9aed-409c-a59c-7535395812e1,June,June is a month when eggplant will be able to produce fruit fit for consumption at the end of June and during July.,be44cd82-537a-4b84-8006-02725870f70a,,,,

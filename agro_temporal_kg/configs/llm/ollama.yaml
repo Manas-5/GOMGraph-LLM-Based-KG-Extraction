@@ -1,0 +1,4 @@
+model: "llama3.3:70b" #changed from llama3.1:70b to mixtral:8x22b
+temperature: 0.0
+api_key: 'abc'  # Set via OPENROUTER_API_KEY env var or override
+base_url: "http://localhost:11434/v1"

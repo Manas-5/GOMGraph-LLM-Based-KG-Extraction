@@ -1,0 +1,19 @@
+2026-01-15 17:43:04.983 | INFO     | __main__:create_tkg:84 - Loaded configuration:
+{'text_splitter': {'chunk_size': 1000, 'chunk_overlap': 150, 'separators': ['\n\n', '\n', '. ', ' ', '']}, 'llm': {'model': 'llama3.1:70b', 'temperature': 0.0, 'api_key': 'abc', 'base_url': 'http://localhost:11434/v1'}, 'embedder': {'api_key': 'abc', 'base_url': 'http://localhost:11434/v1', 'embedding_model': 'bge-m3:567m', 'embedding_dim': 768}, 'falkordb': {'host': 'localhost', 'port': 6380, 'database': 'tomato_10_ent_1_edge_0_prompt_new'}, 'file': {'path': '/mnt/diskGum/manas/GOMgraph-main/data/tomato_test/10_tomato.txt', 'group_id': 'tomato_10_ent_1_edge_0_prompt_new', 'source_description': 'A concise 1845 French manual detailing the techniques and principles of Parisian market gardening, by Moreau and Daverne.', 'reference_year': 1899}, 'prompts': {'extract_text': {'system_version': 'v0', 'user_version': 'v0'}, 'extract_edges': {'system_version': 'v0', 'user_version': 'v1'}}, 'entity_types': {'types': ['Plant', 'PlantPart', 'Pest', 'Practice', 'SoilType', 'Condition', 'Structure', 'Time', 'Location', 'Input', 'Equipment', 'Disease', 'Weather', 'Nutrient', 'Organism', 'Animal', 'People', 'Institution']}, 'edge_types': {'types': []}}
+2026-01-15 17:43:04.985 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:23 - ============================================================
+2026-01-15 17:43:04.986 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:24 - Starting Temporal Knowledge Graph Pipeline
+2026-01-15 17:43:04.986 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:25 - ============================================================
+2026-01-15 17:43:04.986 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:28 - [Step 1/4] Loading file...
+2026-01-15 17:43:04.986 | INFO     | agro_temporal_kg.steps.load_file:load_file:34 - Loading file: /mnt/diskGum/manas/GOMgraph-main/data/tomato_test/10_tomato.txt
+2026-01-15 17:43:04.986 | INFO     | agro_temporal_kg.steps.load_file:load_file:43 - Loaded 27 characters from 10_tomato.txt
+2026-01-15 17:43:04.986 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:32 - [Step 2/4] Splitting text into chunks...
+2026-01-15 17:43:04.986 | INFO     | agro_temporal_kg.steps.split_text:split_text:42 - Split text into 1 chunks (chunk_size=1000, overlap=150)
+2026-01-15 17:43:04.986 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:36 - [Step 3/4] Initializing Graphiti...
+2026-01-15 17:43:04.986 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:37 - Initializing FalkorDB driver: localhost:6380
+2026-01-15 17:43:04.988 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:53 - Initializing LLM client: llama3.1:70b
+2026-01-15 17:43:05.054 | INFO     | agro_temporal_kg.ollama_graphiti_client:__init__:44 - 🦙 OllamaGraphitiClient initialized: llama3.1:70b
+2026-01-15 17:43:05.055 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:68 - Initializing embedder: bge-m3:567m
+2026-01-15 17:43:05.103 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:79 - Initializing cross-encoder reranker
+2026-01-15 17:43:05.103 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:90 - Loading custom prompts: extract_text (system: vv0, user: vv0)
+2026-01-15 17:43:05.104 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:103 - Loading custom prompts: extract_edges (system: vv0, user: vv1)
+2026-01-15 17:43:05.105 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:126 - Custom prompts and snippets loaded successfully

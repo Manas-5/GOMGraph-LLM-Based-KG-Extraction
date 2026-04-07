@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "title": "Manuel pratique de la culture maraîchère de Paris",
+    "author": "Moreau & Daverne",
+    "year": 1845,
+    "description_en": "A foundational manual detailing the intensive Parisian market-gardening system, including soil preparation, rotations, and productivity techniques."
+  },
+  {
+    "id": 2,
+    "title": "Guide pratique du jardinier français",
+    "author": "Ph. Desmoulins",
+    "year": 1881,
+    "description_en": "An encyclopedic alphabetical guide covering vegetables, fruit trees, ornamentals, pests, and general horticultural practice in France."
+  },
+  {
+    "id": 3,
+    "title": "L’école du jardin potager",
+    "author": "Mme de Guercy née Prévost",
+    "year": 1859,
+    "description_en": "A pedagogical, month-by-month guide to vegetable gardening and basic field crops intended for practical instruction."
+  },
+  {
+    "id": 4,
+    "title": "L’horticulture dans les écoles primaires",
+    "author": "Bidault",
+    "year": 1864,
+    "description_en": "An educational treatise advocating horticulture as a practical and moral discipline in French primary schools."
+  },
+  {
+    "id": 5,
+    "title": "La culture maraîchère pratique des environs de Paris",
+    "author": "I. Ponce",
+    "year": 1869,
+    "description_en": "A detailed description of professional market-gardening practices around Paris, focused on intensive production and urban supply."
+  },
+  {
+    "id": 6,
+    "title": "Le jardin potager",
+    "author": "L.-J. Troncet",
+    "year": 1907,
+    "description_en": "An illustrated practical handbook on establishing, managing, and protecting a productive vegetable garden."
+  },
+  {
+    "id": 7,
+    "title": "Le jardinier de tout le monde",
+    "author": "Alexandre Ysabeau",
+    "year": 1872,
+    "description_en": "A comprehensive gardening manual for amateurs and professionals covering vegetables, fruit, ornamentals, and greenhouses."
+  },
+  {
+    "id": 8,
+    "title": "Le petit jardin potager et fruitier",
+    "author": "F. Morel",
+    "year": 1872,
+    "description_en": "A concise guide for managing small household vegetable and fruit gardens efficiently."
+  },
+  {
+    "id": 9,
+    "title": "Le potager d’un curieux",
+    "author": "A. Paillieux & D. Bois",
+    "year": 1885,
+    "description_en": "A pioneering exploration of rare, exotic, and neglected edible plants combining botany, experimentation, and culinary use."
+  },
+  {
+    "id": 10,
+    "title": "Le potager, essai didactique",
+    "author": "J.-B. Lalanne",
+    "year": 1800,
+    "description_en": "A didactic and literary essay reflecting on vegetable gardening through dialogue, philosophy, and observation."
+  },
+  {
+    "id": 11,
+    "title": "Le potager moderne",
+    "author": "Gressent",
+    "year": 1863,
+    "description_en": "A modernized guide to vegetable gardening emphasizing efficiency, rational methods, and adaptation to contemporary needs."
+  },
+  {
+    "id": 12,
+    "title": "L’école du jardin potager",
+    "author": "M. de Combles",
+    "year": 1802,
+    "description_en": "An early systematic horticultural manual covering vegetable species, soils, climates, and propagation techniques."
+  },
+  {
+    "id": 13,
+    "title": "Les jardiniers de Paris et leur culture",
+    "author": "J. Curé",
+    "year": 1900,
+    "description_en": "A historical and socio-economic study of Parisian market gardeners and the evolution of their cultivation methods."
+  },
+  {
+    "id": 14,
+    "title": "Ma pratique de la culture maraîchère ordinaire et forcée",
+    "author": "J. Curé",
+    "year": 1918,
+    "description_en": "A professional handbook on open-air and forced vegetable cultivation with calendars, tools, and crop management advice."
+  },
+  {
+    "id": 15,
+    "title": "Manuel complet du jardinier maraîcher, pépiniériste, botaniste, fleuriste et paysagiste",
+    "author": "Louis Noisette",
+    "year": 1825,
+    "description_en": "A broad professional reference covering market gardening, nurseries, botany, floriculture, and landscape design."
+  },
+  {
+    "id": 16,
+    "title": "Manuel de culture maraîchère",
+    "author": "Deny & Rodigas",
+    "year": 1853,
+    "description_en": "A prize-winning practical and theoretical guide to market gardening focused on soils, fertilizers, and organization."
+  },
+  {
+    "id": 17,
+    "title": "Manuel du jardinier des primeurs",
+    "author": "Noisette & Boitard",
+    "year": 1832,
+    "description_en": "A specialized manual on forcing vegetables and fruit to obtain early and off-season harvests."
+  },
+  {
+    "id": 18,
+    "title": "Manuel pratique de jardinage",
+    "author": "Courtois-Gérard",
+    "year": 1890,
+    "description_en": "A widely used general gardening manual for vegetables, fruit, and ornamentals, regularly updated through editions."
+  },
+  {
+    "id": 19,
+    "title": "Les plantes potagères et la culture maraîchère",
+    "author": "Jean Dybowski",
+    "year": 1895,
+    "description_en": "A scientifically grounded reference combining vegetable botany with commercial-scale cultivation practices."
+  },
+  {
+    "id": 20,
+    "title": "Traité de culture potagère (petite et grande culture)",
+    "author": "Jean Dybowski",
+    "year": 1895,
+    "description_en": "An authoritative synthesis of vegetable production methods for both household gardens and large-scale agriculture."
+  },
+  {
+    "id": 21,
+    "title": "Le jardin potager : notions pratiques de culture maraîchère",
+    "author": "Alexandre Ysabeau",
+    "year": 1863,
+    "description_en": "A clear and accessible practical manual explaining tools, soils, irrigation, and vegetable cultivation for market gardening."
+  }
+]

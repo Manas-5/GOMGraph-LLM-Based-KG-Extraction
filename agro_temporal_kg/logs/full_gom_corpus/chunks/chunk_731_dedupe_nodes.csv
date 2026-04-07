@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-12T02:44:03.562874+00:00,exact,0225edac-6489-4c15-8703-da8a007df6e3,September,September is a month when market gardeners in Paris harvest cabbage varieties such as Poméranio conical cabbage and Brunswick stubby.,ad47cd45-6a6c-4b69-a511-aa5fc84f23a3,,,,
+2026-02-12T02:44:03.562910+00:00,llm,0225edac-6489-4c15-8703-da8a007df6e3,September,September is a month when market gardeners in Paris harvest cabbage varieties such as Poméranio conical cabbage and Brunswick stubby.,b491b036-6d7f-4685-b5db-810715b050e0,,,,

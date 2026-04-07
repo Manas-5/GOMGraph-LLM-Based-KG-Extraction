@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-12T13:37:18.516944+00:00,exact,18f572ab-98db-4eb9-a876-8e533dc84f71,orange trees,"Orange trees are cultivated in Paris and require specific care. In March, remove diseased orange trees and revive their roots by laying them bare in the soil of the bed.",0346a99f-f3dc-4daf-aaa9-5abecb632472,,,,
+2026-02-12T13:37:18.516994+00:00,llm,18f572ab-98db-4eb9-a876-8e533dc84f71,orange trees,"Orange trees are cultivated in Paris and require specific care. In March, remove diseased orange trees and revive their roots by laying them bare in the soil of the bed.",3c7963ea-aa21-402c-af72-923f10282e5c,,,,

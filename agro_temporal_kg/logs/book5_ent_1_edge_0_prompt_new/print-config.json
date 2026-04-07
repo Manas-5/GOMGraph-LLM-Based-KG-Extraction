@@ -1,0 +1,72 @@
+2026-01-19 09:49:06.278 | INFO     | __main__:create_tkg:84 - Loaded configuration:
+{'text_splitter': {'chunk_size': 1000, 'chunk_overlap': 150, 'separators': ['\n\n', '\n', '. ', ' ', '']}, 'llm': {'model': 'llama3.1:70b', 'temperature': 0.0, 'api_key': 'abc', 'base_url': 'http://localhost:11434/v1'}, 'embedder': {'api_key': 'abc', 'base_url': 'http://localhost:11434/v1', 'embedding_model': 'bge-m3:567m', 'embedding_dim': 768}, 'falkordb': {'host': 'localhost', 'port': 6380, 'database': 'book5_ent_1_edge_0_prompt_new'}, 'file': {'path': '/mnt/diskGum/manas/GOMgraph-main/data/5_La_Culture_maraîchère_pratique.txt', 'group_id': 'book5_ent_1_edge_0_prompt_new', 'source_description': 'A detailed account of intensive market-gardening systems around Paris, focused on productivity, irrigation, and urban supply.', 'reference_year': 1869}, 'prompts': {'extract_text': {'system_version': 'v0', 'user_version': 'v0'}, 'extract_edges': {'system_version': 'v0', 'user_version': 'v1'}}, 'entity_types': {'types': ['Plant', 'PlantPart', 'Pest', 'Practice', 'SoilType', 'Condition', 'Structure', 'Time', 'Location', 'Input', 'Equipment', 'Disease', 'Weather', 'Nutrient', 'Organism', 'Animal', 'People', 'Institution']}, 'edge_types': {'types': []}}
+{
+  "embedder": {
+    "api_key": "**********",
+    "base_url": "http://localhost:11434/v1",
+    "embedding_model": "bge-m3:567m",
+    "embedding_dim": 768
+  },
+  "falkor_db": {
+    "host": "localhost",
+    "port": 6380,
+    "database": "book5_ent_1_edge_0_prompt_new"
+  },
+  "text_splitter": {
+    "chunk_size": 1000,
+    "chunk_overlap": 150,
+    "separators": [
+      "\n\n",
+      "\n",
+      ". ",
+      " ",
+      ""
+    ]
+  },
+  "llm": {
+    "model": "llama3.1:70b",
+    "temperature": 0.0,
+    "api_key": "abc",
+    "base_url": "http://localhost:11434/v1"
+  },
+  "file": {
+    "path": "/mnt/diskGum/manas/GOMgraph-main/data/5_La_Culture_maraîchère_pratique.txt",
+    "group_id": "book5_ent_1_edge_0_prompt_new",
+    "source_description": "A detailed account of intensive market-gardening systems around Paris, focused on productivity, irrigation, and urban supply.",
+    "reference_year": 1869
+  },
+  "prompts": {
+    "extract_text": {
+      "system_version": "v0",
+      "user_version": "v0"
+    },
+    "extract_edges": {
+      "system_version": "v0",
+      "user_version": "v1"
+    },
+    "summary_instructions_version": null
+  },
+  "update_communities": false,
+  "entity_types": [
+    "Plant",
+    "PlantPart",
+    "Pest",
+    "Practice",
+    "SoilType",
+    "Condition",
+    "Structure",
+    "Time",
+    "Location",
+    "Input",
+    "Equipment",
+    "Disease",
+    "Weather",
+    "Nutrient",
+    "Organism",
+    "Animal",
+    "People",
+    "Institution"
+  ],
+  "edge_types": [],
+  "edge_type_map": null
+}

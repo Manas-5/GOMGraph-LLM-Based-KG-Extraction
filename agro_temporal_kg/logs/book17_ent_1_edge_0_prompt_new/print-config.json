@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/scripts/run.py", line 22, in <module>
+    from agro_temporal_kg.configs import CreateTemporalKGConfig, compose_config
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/agro_temporal_kg/configs/__init__.py", line 3, in <module>
+    from agro_temporal_kg.configs.compose_config import compose_config, config_to_dict
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/agro_temporal_kg/configs/compose_config.py", line 10, in <module>
+    from hydra import compose, initialize_config_dir
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/__init__.py", line 5, in <module>
+    from hydra import utils
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/utils.py", line 8, in <module>
+    import hydra._internal.instantiate._instantiate2
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 9, in <module>
+    from omegaconf import OmegaConf, SCMode
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/__init__.py", line 1, in <module>
+    from .base import Container, DictKeyType, Node, SCMode, UnionNode
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/base.py", line 11, in <module>
+    from ._utils import (
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/_utils.py", line 34, in <module>
+    from .grammar_parser import SIMPLE_INTERPOLATION_PATTERN, parse
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/grammar_parser.py", line 12, in <module>
+    from .grammar_visitor import (  # type: ignore
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/grammar_visitor.py", line 25, in <module>
+    from omegaconf.grammar.gen.OmegaConfGrammarLexer import OmegaConfGrammarLexer
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/grammar/gen/OmegaConfGrammarLexer.py", line 258, in <module>
+    class OmegaConfGrammarLexer(Lexer):
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/grammar/gen/OmegaConfGrammarLexer.py", line 260, in OmegaConfGrammarLexer
+    atn = ATNDeserializer().deserialize(serializedATN())
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/antlr4/atn/ATNDeserializer.py", line 61, in deserialize
+    self.reset(data)
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/antlr4/atn/ATNDeserializer.py", line 91, in reset
+    temp = [ adjust(c) for c in data ]
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/antlr4/atn/ATNDeserializer.py", line 91, in <listcomp>
+    temp = [ adjust(c) for c in data ]
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/antlr4/atn/ATNDeserializer.py", line 88, in adjust
+    def adjust(c):
+KeyboardInterrupt

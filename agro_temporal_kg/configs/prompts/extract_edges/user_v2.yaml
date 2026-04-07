@@ -1,0 +1,65 @@
+|
+<FACT TYPES>
+{edge_types}
+</FACT TYPES>
+
+<PREVIOUS_TEXT>
+{previous_episodes}
+</PREVIOUS_TEXT>
+
+<CURRENT_TEXT>
+{episode_content}
+</CURRENT_TEXT>
+
+<ENTITIES>
+{nodes}
+</ENTITIES>
+
+<REFERENCE_TIME>
+{reference_time}
+</REFERENCE_TIME>
+
+# TASK
+Extract factual relationships between the given ENTITIES from the CURRENT_TEXT.
+The text describes historical agricultural practices — pay close attention to
+planting sequences, seasonal timing, spatial arrangements, and causal relationships
+between crops, pests, weather, and farming practices.
+
+Only extract facts that:
+- Involve two DISTINCT ENTITIES from the ENTITIES list.
+- Are clearly stated or unambiguously implied in the CURRENT_TEXT.
+- Use entity names rather than pronouns.
+
+You may use PREVIOUS_TEXT only to disambiguate references or support continuity.
+
+# RELATION TYPE RULES
+
+1. **Match FACT TYPES first**: For each relationship, check if it fits a provided
+    FACT TYPE by name, description, and signature. If it does, use that
+    `fact_type_name` exactly as the `relation_type`.
+2. **Respect signatures**: Each FACT TYPE has a `fact_type_signature` indicating
+    expected source and target entity types. Prefer assignments where entity types
+    align with the signature.
+3. **Fallback only when necessary**: If a relationship genuinely does not fit any
+    FACT TYPE, use a concise PascalCase `relation_type`. Do NOT invent types that
+    overlap with existing FACT TYPES.
+
+# EXTRACTION RULES
+
+1. **Entity ID Validation**: `source_entity_id` and `target_entity_id` must use
+    only `id` values from the ENTITIES list.
+    - **CRITICAL**: IDs not in the list will cause the edge to be rejected.
+2. Each fact must involve two **distinct** entities.
+3. Do not emit duplicate or semantically redundant facts.
+4. The `fact` field should closely paraphrase the source sentence(s).
+    Do not verbatim quote the original text.
+5. Use `REFERENCE_TIME` to resolve relative temporal expressions.
+6. Do **not** hallucinate or infer temporal bounds from unrelated events.
+
+# DATETIME RULES
+
+- Use ISO 8601 with "Z" suffix (UTC).
+- If ongoing (present tense), set `valid_at` to REFERENCE_TIME.
+- If a change/termination is expressed, set `invalid_at` accordingly.
+- Leave both `null` if no time is stated or resolvable.
+- Date only → assume 00:00:00Z. Year only → January 1st 00:00:00Z.

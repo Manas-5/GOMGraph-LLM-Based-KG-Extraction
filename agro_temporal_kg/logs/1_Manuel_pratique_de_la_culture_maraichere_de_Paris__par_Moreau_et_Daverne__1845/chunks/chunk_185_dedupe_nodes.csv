@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-03-13T00:08:38.912614+00:00,exact,e31147e1-7ac6-40de-b31d-b75a905a5398,apples,"Small apples from Brussels sprouts are frost-resistant and highly sought-after for opulent tables, selling at a fairly high price.",e6e1437b-d8c0-4660-a046-ac7d8dc5d63f,,,,
+2026-03-13T00:08:38.912635+00:00,llm,e31147e1-7ac6-40de-b31d-b75a905a5398,apples,"Small apples from Brussels sprouts are frost-resistant and highly sought-after for opulent tables, selling at a fairly high price.",a3677b99-f5cd-478e-a657-e6e4a26eb8a4,,,,

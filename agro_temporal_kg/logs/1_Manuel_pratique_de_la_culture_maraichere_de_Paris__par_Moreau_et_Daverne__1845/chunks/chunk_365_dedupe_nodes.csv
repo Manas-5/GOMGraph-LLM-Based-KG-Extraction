@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-03-13T08:10:32.650868+00:00,exact,db707c06-5569-4b2d-aac0-6f7161fde558,HARICOTS,"HARICOTS can be planted every 12-15 days until the end of August, watered immediately and often, and delivered for consumption 10 days after binding.",a126a321-2642-458b-bb93-2625541e2add,,,,
+2026-03-13T08:10:32.650898+00:00,llm,db707c06-5569-4b2d-aac0-6f7161fde558,HARICOTS,"HARICOTS can be planted every 12-15 days until the end of August, watered immediately and often, and delivered for consumption 10 days after binding.",ae651120-6f98-4e69-984d-9a3a1331a21b,,,,

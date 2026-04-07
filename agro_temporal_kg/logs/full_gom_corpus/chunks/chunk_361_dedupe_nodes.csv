@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-11T05:24:01.859432+00:00,exact,81d13bc5-a231-4430-8451-4c98801b9c48,horse manure,Horse manure is used by market gardeners in Paris for fertilizer; its increasing price may lead to adoption of alternative heating systems like thermosiphon.,c1797623-5d9f-4368-8a23-d507b0dbf817,,,,
+2026-02-11T05:24:01.859452+00:00,llm,81d13bc5-a231-4430-8451-4c98801b9c48,horse manure,Horse manure is used by market gardeners in Paris for fertilizer; its increasing price may lead to adoption of alternative heating systems like thermosiphon.,7bdaa43d-2206-43ea-b75b-eaf973af445c,,,,

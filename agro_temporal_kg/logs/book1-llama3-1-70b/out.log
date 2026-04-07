@@ -1,0 +1,928 @@
+╭───────────────────────────────────────────────────────────── Traceback (most recent call last) ─────────────────────────────────────────────────────────────╮
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/scripts/run.py:79 in create_tkg                                                                           │
+│                                                                                                                                                             │
+│    76 │   overrides = override.split(" ") if override else None                                                                                             │
+│    77 │                                                                                                                                                     │
+│    78 │   # Compose configuration using Hydra                                                                                                               │
+│ ❱  79 │   cfg = compose_config(                                                                                                                             │
+│    80 │   │   config_name="create_tkg",                                                                                                                     │
+│    81 │   │   config_dir=config_dir,                                                                                                                        │
+│    82 │   │   overrides=overrides,                                                                                                                          │
+│                                                                                                                                                             │
+│ ╭───────────────────────────────────────────────── locals ──────────────────────────────────────────────────╮                                               │
+│ │   config_dir = None                                                                                       │                                               │
+│ │     override = 'file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+145     │                                               │
+│ │    overrides = [                                                                                          │                                               │
+│ │                │   'file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                                               │
+│ │                │   'file.group_id=book1-llama3-1-70b',                                                    │                                               │
+│ │                │   'llm.model=llama3.1:70b',                                                              │                                               │
+│ │                │   'falkordb.database=book1-llama3-1-70b'                                                 │                                               │
+│ │                ]                                                                                          │                                               │
+│ │ print_config = False                                                                                      │                                               │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                               │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/agro_temporal_kg/configs/compose_config.py:39 in compose_config                                           │
+│                                                                                                                                                             │
+│   36 │   with initialize_config_dir(config_dir=str(config_dir), version_base=None):                                                                         │
+│   37 │   │   # Compose config with overrides                                                                                                                │
+│   38 │   │   overrides_list = overrides or []                                                                                                               │
+│ ❱ 39 │   │   cfg = compose(config_name=config_name, overrides=overrides_list)                                                                               │
+│   40 │   │                                                                                                                                                  │
+│   41 │   │   # Resolve interpolations                                                                                                                       │
+│   42 │   │   OmegaConf.resolve(cfg)                                                                                                                         │
+│                                                                                                                                                             │
+│ ╭────────────────────────────────────────────────── locals ───────────────────────────────────────────────────╮                                             │
+│ │     config_dir = PosixPath('/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/configs')                     │                                             │
+│ │    config_name = 'create_tkg'                                                                               │                                             │
+│ │      overrides = [                                                                                          │                                             │
+│ │                  │   'file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                                             │
+│ │                  │   'file.group_id=book1-llama3-1-70b',                                                    │                                             │
+│ │                  │   'llm.model=llama3.1:70b',                                                              │                                             │
+│ │                  │   'falkordb.database=book1-llama3-1-70b'                                                 │                                             │
+│ │                  ]                                                                                          │                                             │
+│ │ overrides_list = [                                                                                          │                                             │
+│ │                  │   'file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                                             │
+│ │                  │   'file.group_id=book1-llama3-1-70b',                                                    │                                             │
+│ │                  │   'llm.model=llama3.1:70b',                                                              │                                             │
+│ │                  │   'falkordb.database=book1-llama3-1-70b'                                                 │                                             │
+│ │                  ]                                                                                          │                                             │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                             │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/compose.py:38 in compose                                         │
+│                                                                                                                                                             │
+│   35 │                                                                                                                                                      │
+│   36 │   gh = GlobalHydra.instance()                                                                                                                        │
+│   37 │   assert gh.hydra is not None                                                                                                                        │
+│ ❱ 38 │   cfg = gh.hydra.compose_config(                                                                                                                     │
+│   39 │   │   config_name=config_name,                                                                                                                       │
+│   40 │   │   overrides=overrides,                                                                                                                           │
+│   41 │   │   run_mode=RunMode.RUN,                                                                                                                          │
+│                                                                                                                                                             │
+│ ╭───────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────╮                                        │
+│ │         config_name = 'create_tkg'                                                                               │                                        │
+│ │                  gh = <hydra.core.global_hydra.GlobalHydra object at 0x7f5fa332c190>                             │                                        │
+│ │           overrides = [                                                                                          │                                        │
+│ │                       │   'file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                                        │
+│ │                       │   'file.group_id=book1-llama3-1-70b',                                                    │                                        │
+│ │                       │   'llm.model=llama3.1:70b',                                                              │                                        │
+│ │                       │   'falkordb.database=book1-llama3-1-70b'                                                 │                                        │
+│ │                       ]                                                                                          │                                        │
+│ │ return_hydra_config = False                                                                                      │                                        │
+│ │              strict = None                                                                                       │                                        │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                        │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/hydra.py:594 in compose_config                         │
+│                                                                                                                                                             │
+│   591 │   │   :return:                                                                                                                                      │
+│   592 │   │   """                                                                                                                                           │
+│   593 │   │                                                                                                                                                 │
+│ ❱ 594 │   │   cfg = self.config_loader.load_configuration(                                                                                                  │
+│   595 │   │   │   config_name=config_name,                                                                                                                  │
+│   596 │   │   │   overrides=overrides,                                                                                                                      │
+│   597 │   │   │   run_mode=run_mode,                                                                                                                        │
+│                                                                                                                                                             │
+│ ╭─────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────╮                                   │
+│ │              config_name = 'create_tkg'                                                                               │                                   │
+│ │               from_shell = False                                                                                      │                                   │
+│ │                overrides = [                                                                                          │                                   │
+│ │                            │   'file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                                   │
+│ │                            │   'file.group_id=book1-llama3-1-70b',                                                    │                                   │
+│ │                            │   'llm.model=llama3.1:70b',                                                              │                                   │
+│ │                            │   'falkordb.database=book1-llama3-1-70b'                                                 │                                   │
+│ │                            ]                                                                                          │                                   │
+│ │                 run_mode = <RunMode.RUN: 1>                                                                           │                                   │
+│ │                     self = <hydra._internal.hydra.Hydra object at 0x7f5fa332eec0>                                     │                                   │
+│ │ validate_sweep_overrides = True                                                                                       │                                   │
+│ │   with_log_configuration = False                                                                                      │                                   │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                   │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/config_loader_impl.py:142 in load_configuration        │
+│                                                                                                                                                             │
+│   139 │   │   validate_sweep_overrides: bool = True,                                                                                                        │
+│   140 │   ) -> DictConfig:                                                                                                                                  │
+│   141 │   │   try:                                                                                                                                          │
+│ ❱ 142 │   │   │   return self._load_configuration_impl(                                                                                                     │
+│   143 │   │   │   │   config_name=config_name,                                                                                                              │
+│   144 │   │   │   │   overrides=overrides,                                                                                                                  │
+│   145 │   │   │   │   run_mode=run_mode,                                                                                                                    │
+│                                                                                                                                                             │
+│ ╭─────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────╮                                   │
+│ │              config_name = 'create_tkg'                                                                               │                                   │
+│ │               from_shell = False                                                                                      │                                   │
+│ │                overrides = [                                                                                          │                                   │
+│ │                            │   'file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                                   │
+│ │                            │   'file.group_id=book1-llama3-1-70b',                                                    │                                   │
+│ │                            │   'llm.model=llama3.1:70b',                                                              │                                   │
+│ │                            │   'falkordb.database=book1-llama3-1-70b'                                                 │                                   │
+│ │                            ]                                                                                          │                                   │
+│ │                 run_mode = <RunMode.RUN: 1>                                                                           │                                   │
+│ │                     self = <hydra._internal.config_loader_impl.ConfigLoaderImpl object at 0x7f5fa332caf0>             │                                   │
+│ │ validate_sweep_overrides = True                                                                                       │                                   │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                   │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/config_loader_impl.py:253 in _load_configuration_impl  │
+│                                                                                                                                                             │
+│   250 │   │   │   │   overrides=parsed_overrides, run_mode=run_mode, from_shell=from_shell                                                                  │
+│   251 │   │   │   )                                                                                                                                         │
+│   252 │   │                                                                                                                                                 │
+│ ❱ 253 │   │   defaults_list = create_defaults_list(                                                                                                         │
+│   254 │   │   │   repo=caching_repo,                                                                                                                        │
+│   255 │   │   │   config_name=config_name,                                                                                                                  │
+│   256 │   │   │   overrides_list=parsed_overrides,                                                                                                          │
+│                                                                                                                                                             │
+│ ╭──────────────────────────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────────────────────────╮ │
+│ │             caching_repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>                                         │ │
+│ │              config_name = 'create_tkg'                                                                                                                 │ │
+│ │               from_shell = False                                                                                                                        │ │
+│ │                overrides = [                                                                                                                            │ │
+│ │                            │   'file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52,                                   │ │
+│ │                            │   'file.group_id=book1-llama3-1-70b',                                                                                      │ │
+│ │                            │   'llm.model=llama3.1:70b',                                                                                                │ │
+│ │                            │   'falkordb.database=book1-llama3-1-70b'                                                                                   │ │
+│ │                            ]                                                                                                                            │ │
+│ │         parsed_overrides = [                                                                                                                            │ │
+│ │                            │   Override(                                                                                                                │ │
+│ │                            │   │   type=<OverrideType.CHANGE: 1>,                                                                                       │ │
+│ │                            │   │   key_or_group='file.path',                                                                                            │ │
+│ │                            │   │   value_type=<ValueType.ELEMENT: 1>,                                                                                   │ │
+│ │                            │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,                        │ │
+│ │                            │   │   package=None,                                                                                                        │ │
+│ │                            │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52,                    │ │
+│ │                            │   │   config_loader=None                                                                                                   │ │
+│ │                            │   ),                                                                                                                       │ │
+│ │                            │   Override(                                                                                                                │ │
+│ │                            │   │   type=<OverrideType.CHANGE: 1>,                                                                                       │ │
+│ │                            │   │   key_or_group='file.group_id',                                                                                        │ │
+│ │                            │   │   value_type=<ValueType.ELEMENT: 1>,                                                                                   │ │
+│ │                            │   │   _value='book1-llama3-1-70b',                                                                                         │ │
+│ │                            │   │   package=None,                                                                                                        │ │
+│ │                            │   │   input_line='file.group_id=book1-llama3-1-70b',                                                                       │ │
+│ │                            │   │   config_loader=None                                                                                                   │ │
+│ │                            │   ),                                                                                                                       │ │
+│ │                            │   Override(                                                                                                                │ │
+│ │                            │   │   type=<OverrideType.CHANGE: 1>,                                                                                       │ │
+│ │                            │   │   key_or_group='llm.model',                                                                                            │ │
+│ │                            │   │   value_type=<ValueType.ELEMENT: 1>,                                                                                   │ │
+│ │                            │   │   _value='llama3.1:70b',                                                                                               │ │
+│ │                            │   │   package=None,                                                                                                        │ │
+│ │                            │   │   input_line='llm.model=llama3.1:70b',                                                                                 │ │
+│ │                            │   │   config_loader=None                                                                                                   │ │
+│ │                            │   ),                                                                                                                       │ │
+│ │                            │   Override(                                                                                                                │ │
+│ │                            │   │   type=<OverrideType.CHANGE: 1>,                                                                                       │ │
+│ │                            │   │   key_or_group='falkordb.database',                                                                                    │ │
+│ │                            │   │   value_type=<ValueType.ELEMENT: 1>,                                                                                   │ │
+│ │                            │   │   _value='book1-llama3-1-70b',                                                                                         │ │
+│ │                            │   │   package=None,                                                                                                        │ │
+│ │                            │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                                   │ │
+│ │                            │   │   config_loader=None                                                                                                   │ │
+│ │                            │   )                                                                                                                        │ │
+│ │                            ]                                                                                                                            │ │
+│ │                 run_mode = <RunMode.RUN: 1>                                                                                                             │ │
+│ │                     self = <hydra._internal.config_loader_impl.ConfigLoaderImpl object at 0x7f5fa332caf0>                                               │ │
+│ │ validate_sweep_overrides = True                                                                                                                         │ │
+│ │                  version = <module 'hydra.version' from                                                                                                 │ │
+│ │                            '/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/version.py'>                     │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/defaults_list.py:745 in create_defaults_list           │
+│                                                                                                                                                             │
+│   742 │   :return:                                                                                                                                          │
+│   743 │   """                                                                                                                                               │
+│   744 │   overrides = Overrides(repo=repo, overrides_list=overrides_list)                                                                                   │
+│ ❱ 745 │   defaults, tree = _create_defaults_list(                                                                                                           │
+│   746 │   │   repo,                                                                                                                                         │
+│   747 │   │   config_name,                                                                                                                                  │
+│   748 │   │   overrides,                                                                                                                                    │
+│                                                                                                                                                             │
+│ ╭──────────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────────╮                          │
+│ │    config_name = 'create_tkg'                                                                                                  │                          │
+│ │      overrides = Overrides(                                                                                                    │                          │
+│ │                  │   override_choices={},                                                                                      │                          │
+│ │                  │   override_metadata={},                                                                                     │                          │
+│ │                  │   append_group_defaults=[],                                                                                 │                          │
+│ │                  │   config_overrides=[                                                                                        │                          │
+│ │                  │   │   Override(                                                                                             │                          │
+│ │                  │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                          │
+│ │                  │   │   │   key_or_group='file.path',                                                                         │                          │
+│ │                  │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                          │
+│ │                  │   │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,     │                          │
+│ │                  │   │   │   package=None,                                                                                     │                          │
+│ │                  │   │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                          │
+│ │                  │   │   │   config_loader=None                                                                                │                          │
+│ │                  │   │   ),                                                                                                    │                          │
+│ │                  │   │   Override(                                                                                             │                          │
+│ │                  │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                          │
+│ │                  │   │   │   key_or_group='file.group_id',                                                                     │                          │
+│ │                  │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                          │
+│ │                  │   │   │   _value='book1-llama3-1-70b',                                                                      │                          │
+│ │                  │   │   │   package=None,                                                                                     │                          │
+│ │                  │   │   │   input_line='file.group_id=book1-llama3-1-70b',                                                    │                          │
+│ │                  │   │   │   config_loader=None                                                                                │                          │
+│ │                  │   │   ),                                                                                                    │                          │
+│ │                  │   │   Override(                                                                                             │                          │
+│ │                  │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                          │
+│ │                  │   │   │   key_or_group='llm.model',                                                                         │                          │
+│ │                  │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                          │
+│ │                  │   │   │   _value='llama3.1:70b',                                                                            │                          │
+│ │                  │   │   │   package=None,                                                                                     │                          │
+│ │                  │   │   │   input_line='llm.model=llama3.1:70b',                                                              │                          │
+│ │                  │   │   │   config_loader=None                                                                                │                          │
+│ │                  │   │   ),                                                                                                    │                          │
+│ │                  │   │   Override(                                                                                             │                          │
+│ │                  │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                          │
+│ │                  │   │   │   key_or_group='falkordb.database',                                                                 │                          │
+│ │                  │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                          │
+│ │                  │   │   │   _value='book1-llama3-1-70b',                                                                      │                          │
+│ │                  │   │   │   package=None,                                                                                     │                          │
+│ │                  │   │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                │                          │
+│ │                  │   │   │   config_loader=None                                                                                │                          │
+│ │                  │   │   )                                                                                                     │                          │
+│ │                  │   ],                                                                                                        │                          │
+│ │                  │   known_choices={                                                                                           │                          │
+│ │                  │   │   'edge_types': 'none',                                                                                 │                          │
+│ │                  │   │   'entity_types': 'all',                                                                                │                          │
+│ │                  │   │   'prompts/extract_edges': 'default',                                                                   │                          │
+│ │                  │   │   'prompts/extract_text': 'default',                                                                    │                          │
+│ │                  │   │   'file': 'book1'                                                                                       │                          │
+│ │                  │   },                                                                                                        │                          │
+│ │                  │   known_choices_per_group={                                                                                 │                          │
+│ │                  │   │   'edge_types': {'edge_types'},                                                                         │                          │
+│ │                  │   │   'entity_types': {'entity_types'},                                                                     │                          │
+│ │                  │   │   'prompts/extract_edges': {'prompts/extract_edges'},                                                   │                          │
+│ │                  │   │   'prompts/extract_text': {'prompts/extract_text'},                                                     │                          │
+│ │                  │   │   'file': {'file'}                                                                                      │                          │
+│ │                  │   },                                                                                                        │                          │
+│ │                  │   deletions={}                                                                                              │                          │
+│ │                  )                                                                                                             │                          │
+│ │ overrides_list = [                                                                                                             │                          │
+│ │                  │   Override(                                                                                                 │                          │
+│ │                  │   │   type=<OverrideType.CHANGE: 1>,                                                                        │                          │
+│ │                  │   │   key_or_group='file.path',                                                                             │                          │
+│ │                  │   │   value_type=<ValueType.ELEMENT: 1>,                                                                    │                          │
+│ │                  │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,         │                          │
+│ │                  │   │   package=None,                                                                                         │                          │
+│ │                  │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52,     │                          │
+│ │                  │   │   config_loader=None                                                                                    │                          │
+│ │                  │   ),                                                                                                        │                          │
+│ │                  │   Override(                                                                                                 │                          │
+│ │                  │   │   type=<OverrideType.CHANGE: 1>,                                                                        │                          │
+│ │                  │   │   key_or_group='file.group_id',                                                                         │                          │
+│ │                  │   │   value_type=<ValueType.ELEMENT: 1>,                                                                    │                          │
+│ │                  │   │   _value='book1-llama3-1-70b',                                                                          │                          │
+│ │                  │   │   package=None,                                                                                         │                          │
+│ │                  │   │   input_line='file.group_id=book1-llama3-1-70b',                                                        │                          │
+│ │                  │   │   config_loader=None                                                                                    │                          │
+│ │                  │   ),                                                                                                        │                          │
+│ │                  │   Override(                                                                                                 │                          │
+│ │                  │   │   type=<OverrideType.CHANGE: 1>,                                                                        │                          │
+│ │                  │   │   key_or_group='llm.model',                                                                             │                          │
+│ │                  │   │   value_type=<ValueType.ELEMENT: 1>,                                                                    │                          │
+│ │                  │   │   _value='llama3.1:70b',                                                                                │                          │
+│ │                  │   │   package=None,                                                                                         │                          │
+│ │                  │   │   input_line='llm.model=llama3.1:70b',                                                                  │                          │
+│ │                  │   │   config_loader=None                                                                                    │                          │
+│ │                  │   ),                                                                                                        │                          │
+│ │                  │   Override(                                                                                                 │                          │
+│ │                  │   │   type=<OverrideType.CHANGE: 1>,                                                                        │                          │
+│ │                  │   │   key_or_group='falkordb.database',                                                                     │                          │
+│ │                  │   │   value_type=<ValueType.ELEMENT: 1>,                                                                    │                          │
+│ │                  │   │   _value='book1-llama3-1-70b',                                                                          │                          │
+│ │                  │   │   package=None,                                                                                         │                          │
+│ │                  │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                    │                          │
+│ │                  │   │   config_loader=None                                                                                    │                          │
+│ │                  │   )                                                                                                         │                          │
+│ │                  ]                                                                                                             │                          │
+│ │  prepend_hydra = True                                                                                                          │                          │
+│ │           repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>                          │                          │
+│ │   skip_missing = False                                                                                                         │                          │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                          │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/defaults_list.py:715 in _create_defaults_list          │
+│                                                                                                                                                             │
+│   712 ) -> Tuple[List[ResultDefault], DefaultsTreeNode]:                                                                                                    │
+│   713 │   root = _create_root(config_name=config_name, with_hydra=prepend_hydra)                                                                            │
+│   714 │                                                                                                                                                     │
+│ ❱ 715 │   defaults_tree = _create_defaults_tree(                                                                                                            │
+│   716 │   │   repo=repo,                                                                                                                                    │
+│   717 │   │   root=root,                                                                                                                                    │
+│   718 │   │   overrides=overrides,                                                                                                                          │
+│                                                                                                                                                             │
+│ ╭─────────────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────────────╮                   │
+│ │   config_name = 'create_tkg'                                                                                                          │                   │
+│ │     overrides = Overrides(                                                                                                            │                   │
+│ │                 │   override_choices={},                                                                                              │                   │
+│ │                 │   override_metadata={},                                                                                             │                   │
+│ │                 │   append_group_defaults=[],                                                                                         │                   │
+│ │                 │   config_overrides=[                                                                                                │                   │
+│ │                 │   │   Override(                                                                                                     │                   │
+│ │                 │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │                   │
+│ │                 │   │   │   key_or_group='file.path',                                                                                 │                   │
+│ │                 │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │                   │
+│ │                 │   │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,             │                   │
+│ │                 │   │   │   package=None,                                                                                             │                   │
+│ │                 │   │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52,         │                   │
+│ │                 │   │   │   config_loader=None                                                                                        │                   │
+│ │                 │   │   ),                                                                                                            │                   │
+│ │                 │   │   Override(                                                                                                     │                   │
+│ │                 │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │                   │
+│ │                 │   │   │   key_or_group='file.group_id',                                                                             │                   │
+│ │                 │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │                   │
+│ │                 │   │   │   _value='book1-llama3-1-70b',                                                                              │                   │
+│ │                 │   │   │   package=None,                                                                                             │                   │
+│ │                 │   │   │   input_line='file.group_id=book1-llama3-1-70b',                                                            │                   │
+│ │                 │   │   │   config_loader=None                                                                                        │                   │
+│ │                 │   │   ),                                                                                                            │                   │
+│ │                 │   │   Override(                                                                                                     │                   │
+│ │                 │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │                   │
+│ │                 │   │   │   key_or_group='llm.model',                                                                                 │                   │
+│ │                 │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │                   │
+│ │                 │   │   │   _value='llama3.1:70b',                                                                                    │                   │
+│ │                 │   │   │   package=None,                                                                                             │                   │
+│ │                 │   │   │   input_line='llm.model=llama3.1:70b',                                                                      │                   │
+│ │                 │   │   │   config_loader=None                                                                                        │                   │
+│ │                 │   │   ),                                                                                                            │                   │
+│ │                 │   │   Override(                                                                                                     │                   │
+│ │                 │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │                   │
+│ │                 │   │   │   key_or_group='falkordb.database',                                                                         │                   │
+│ │                 │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │                   │
+│ │                 │   │   │   _value='book1-llama3-1-70b',                                                                              │                   │
+│ │                 │   │   │   package=None,                                                                                             │                   │
+│ │                 │   │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                        │                   │
+│ │                 │   │   │   config_loader=None                                                                                        │                   │
+│ │                 │   │   )                                                                                                             │                   │
+│ │                 │   ],                                                                                                                │                   │
+│ │                 │   known_choices={                                                                                                   │                   │
+│ │                 │   │   'edge_types': 'none',                                                                                         │                   │
+│ │                 │   │   'entity_types': 'all',                                                                                        │                   │
+│ │                 │   │   'prompts/extract_edges': 'default',                                                                           │                   │
+│ │                 │   │   'prompts/extract_text': 'default',                                                                            │                   │
+│ │                 │   │   'file': 'book1'                                                                                               │                   │
+│ │                 │   },                                                                                                                │                   │
+│ │                 │   known_choices_per_group={                                                                                         │                   │
+│ │                 │   │   'edge_types': {'edge_types'},                                                                                 │                   │
+│ │                 │   │   'entity_types': {'entity_types'},                                                                             │                   │
+│ │                 │   │   'prompts/extract_edges': {'prompts/extract_edges'},                                                           │                   │
+│ │                 │   │   'prompts/extract_text': {'prompts/extract_text'},                                                             │                   │
+│ │                 │   │   'file': {'file'}                                                                                              │                   │
+│ │                 │   },                                                                                                                │                   │
+│ │                 │   deletions={}                                                                                                      │                   │
+│ │                 )                                                                                                                     │                   │
+│ │ prepend_hydra = True                                                                                                                  │                   │
+│ │          repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>                                  │                   │
+│ │          root = DefaultsTreeNode(node=VirtualRoot(), children=[ConfigDefault(path="hydra/config"), ConfigDefault(path="create_tkg")]) │                   │
+│ │  skip_missing = False                                                                                                                 │                   │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                   │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/defaults_list.py:356 in _create_defaults_tree          │
+│                                                                                                                                                             │
+│   353 │   interpolated_subtree: bool,                                                                                                                       │
+│   354 │   overrides: Overrides,                                                                                                                             │
+│   355 ) -> DefaultsTreeNode:                                                                                                                                │
+│ ❱ 356 │   ret = _create_defaults_tree_impl(                                                                                                                 │
+│   357 │   │   repo=repo,                                                                                                                                    │
+│   358 │   │   root=root,                                                                                                                                    │
+│   359 │   │   is_root_config=is_root_config,                                                                                                                │
+│                                                                                                                                                             │
+│ ╭─────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────╮            │
+│ │ interpolated_subtree = False                                                                                                                 │            │
+│ │       is_root_config = True                                                                                                                  │            │
+│ │            overrides = Overrides(                                                                                                            │            │
+│ │                        │   override_choices={},                                                                                              │            │
+│ │                        │   override_metadata={},                                                                                             │            │
+│ │                        │   append_group_defaults=[],                                                                                         │            │
+│ │                        │   config_overrides=[                                                                                                │            │
+│ │                        │   │   Override(                                                                                                     │            │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │            │
+│ │                        │   │   │   key_or_group='file.path',                                                                                 │            │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │            │
+│ │                        │   │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,             │            │
+│ │                        │   │   │   package=None,                                                                                             │            │
+│ │                        │   │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52,         │            │
+│ │                        │   │   │   config_loader=None                                                                                        │            │
+│ │                        │   │   ),                                                                                                            │            │
+│ │                        │   │   Override(                                                                                                     │            │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │            │
+│ │                        │   │   │   key_or_group='file.group_id',                                                                             │            │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │            │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                              │            │
+│ │                        │   │   │   package=None,                                                                                             │            │
+│ │                        │   │   │   input_line='file.group_id=book1-llama3-1-70b',                                                            │            │
+│ │                        │   │   │   config_loader=None                                                                                        │            │
+│ │                        │   │   ),                                                                                                            │            │
+│ │                        │   │   Override(                                                                                                     │            │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │            │
+│ │                        │   │   │   key_or_group='llm.model',                                                                                 │            │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │            │
+│ │                        │   │   │   _value='llama3.1:70b',                                                                                    │            │
+│ │                        │   │   │   package=None,                                                                                             │            │
+│ │                        │   │   │   input_line='llm.model=llama3.1:70b',                                                                      │            │
+│ │                        │   │   │   config_loader=None                                                                                        │            │
+│ │                        │   │   ),                                                                                                            │            │
+│ │                        │   │   Override(                                                                                                     │            │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │            │
+│ │                        │   │   │   key_or_group='falkordb.database',                                                                         │            │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │            │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                              │            │
+│ │                        │   │   │   package=None,                                                                                             │            │
+│ │                        │   │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                        │            │
+│ │                        │   │   │   config_loader=None                                                                                        │            │
+│ │                        │   │   )                                                                                                             │            │
+│ │                        │   ],                                                                                                                │            │
+│ │                        │   known_choices={                                                                                                   │            │
+│ │                        │   │   'edge_types': 'none',                                                                                         │            │
+│ │                        │   │   'entity_types': 'all',                                                                                        │            │
+│ │                        │   │   'prompts/extract_edges': 'default',                                                                           │            │
+│ │                        │   │   'prompts/extract_text': 'default',                                                                            │            │
+│ │                        │   │   'file': 'book1'                                                                                               │            │
+│ │                        │   },                                                                                                                │            │
+│ │                        │   known_choices_per_group={                                                                                         │            │
+│ │                        │   │   'edge_types': {'edge_types'},                                                                                 │            │
+│ │                        │   │   'entity_types': {'entity_types'},                                                                             │            │
+│ │                        │   │   'prompts/extract_edges': {'prompts/extract_edges'},                                                           │            │
+│ │                        │   │   'prompts/extract_text': {'prompts/extract_text'},                                                             │            │
+│ │                        │   │   'file': {'file'}                                                                                              │            │
+│ │                        │   },                                                                                                                │            │
+│ │                        │   deletions={}                                                                                                      │            │
+│ │                        )                                                                                                                     │            │
+│ │                 repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>                                  │            │
+│ │                 root = DefaultsTreeNode(node=VirtualRoot(), children=[ConfigDefault(path="hydra/config"), ConfigDefault(path="create_tkg")]) │            │
+│ │         skip_missing = False                                                                                                                 │            │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯            │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/defaults_list.py:457 in _create_defaults_tree_impl     │
+│                                                                                                                                                             │
+│   454 │   children: List[Union[InputDefault, DefaultsTreeNode]] = []                                                                                        │
+│   455 │   if parent.is_virtual():                                                                                                                           │
+│   456 │   │   if is_root_config:                                                                                                                            │
+│ ❱ 457 │   │   │   return _expand_virtual_root(repo, root, overrides, skip_missing)                                                                          │
+│   458 │   │   else:                                                                                                                                         │
+│   459 │   │   │   return root                                                                                                                               │
+│   460                                                                                                                                                       │
+│                                                                                                                                                             │
+│ ╭─────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────╮            │
+│ │             children = []                                                                                                                    │            │
+│ │ interpolated_subtree = False                                                                                                                 │            │
+│ │       is_root_config = True                                                                                                                  │            │
+│ │            overrides = Overrides(                                                                                                            │            │
+│ │                        │   override_choices={},                                                                                              │            │
+│ │                        │   override_metadata={},                                                                                             │            │
+│ │                        │   append_group_defaults=[],                                                                                         │            │
+│ │                        │   config_overrides=[                                                                                                │            │
+│ │                        │   │   Override(                                                                                                     │            │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │            │
+│ │                        │   │   │   key_or_group='file.path',                                                                                 │            │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │            │
+│ │                        │   │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,             │            │
+│ │                        │   │   │   package=None,                                                                                             │            │
+│ │                        │   │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52,         │            │
+│ │                        │   │   │   config_loader=None                                                                                        │            │
+│ │                        │   │   ),                                                                                                            │            │
+│ │                        │   │   Override(                                                                                                     │            │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │            │
+│ │                        │   │   │   key_or_group='file.group_id',                                                                             │            │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │            │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                              │            │
+│ │                        │   │   │   package=None,                                                                                             │            │
+│ │                        │   │   │   input_line='file.group_id=book1-llama3-1-70b',                                                            │            │
+│ │                        │   │   │   config_loader=None                                                                                        │            │
+│ │                        │   │   ),                                                                                                            │            │
+│ │                        │   │   Override(                                                                                                     │            │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │            │
+│ │                        │   │   │   key_or_group='llm.model',                                                                                 │            │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │            │
+│ │                        │   │   │   _value='llama3.1:70b',                                                                                    │            │
+│ │                        │   │   │   package=None,                                                                                             │            │
+│ │                        │   │   │   input_line='llm.model=llama3.1:70b',                                                                      │            │
+│ │                        │   │   │   config_loader=None                                                                                        │            │
+│ │                        │   │   ),                                                                                                            │            │
+│ │                        │   │   Override(                                                                                                     │            │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │            │
+│ │                        │   │   │   key_or_group='falkordb.database',                                                                         │            │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │            │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                              │            │
+│ │                        │   │   │   package=None,                                                                                             │            │
+│ │                        │   │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                        │            │
+│ │                        │   │   │   config_loader=None                                                                                        │            │
+│ │                        │   │   )                                                                                                             │            │
+│ │                        │   ],                                                                                                                │            │
+│ │                        │   known_choices={                                                                                                   │            │
+│ │                        │   │   'edge_types': 'none',                                                                                         │            │
+│ │                        │   │   'entity_types': 'all',                                                                                        │            │
+│ │                        │   │   'prompts/extract_edges': 'default',                                                                           │            │
+│ │                        │   │   'prompts/extract_text': 'default',                                                                            │            │
+│ │                        │   │   'file': 'book1'                                                                                               │            │
+│ │                        │   },                                                                                                                │            │
+│ │                        │   known_choices_per_group={                                                                                         │            │
+│ │                        │   │   'edge_types': {'edge_types'},                                                                                 │            │
+│ │                        │   │   'entity_types': {'entity_types'},                                                                             │            │
+│ │                        │   │   'prompts/extract_edges': {'prompts/extract_edges'},                                                           │            │
+│ │                        │   │   'prompts/extract_text': {'prompts/extract_text'},                                                             │            │
+│ │                        │   │   'file': {'file'}                                                                                              │            │
+│ │                        │   },                                                                                                                │            │
+│ │                        │   deletions={}                                                                                                      │            │
+│ │                        )                                                                                                                     │            │
+│ │               parent = VirtualRoot()                                                                                                         │            │
+│ │                 repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>                                  │            │
+│ │                 root = DefaultsTreeNode(node=VirtualRoot(), children=[ConfigDefault(path="hydra/config"), ConfigDefault(path="create_tkg")]) │            │
+│ │         skip_missing = False                                                                                                                 │            │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯            │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/defaults_list.py:280 in _expand_virtual_root           │
+│                                                                                                                                                             │
+│   277 │   │   new_root = DefaultsTreeNode(node=d, parent=root)                                                                                              │
+│   278 │   │   d.update_parent("", "")                                                                                                                       │
+│   279 │   │                                                                                                                                                 │
+│ ❱ 280 │   │   subtree = _create_defaults_tree_impl(                                                                                                         │
+│   281 │   │   │   repo=repo,                                                                                                                                │
+│   282 │   │   │   root=new_root,                                                                                                                            │
+│   283 │   │   │   is_root_config=d.primary,                                                                                                                 │
+│                                                                                                                                                             │
+│ ╭─────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────╮                    │
+│ │     children = []                                                                                                                    │                    │
+│ │            d = ConfigDefault(path="create_tkg")                                                                                      │                    │
+│ │     new_root = DefaultsTreeNode(node=ConfigDefault(path="create_tkg"), children=None)                                                │                    │
+│ │    overrides = Overrides(                                                                                                            │                    │
+│ │                │   override_choices={},                                                                                              │                    │
+│ │                │   override_metadata={},                                                                                             │                    │
+│ │                │   append_group_defaults=[],                                                                                         │                    │
+│ │                │   config_overrides=[                                                                                                │                    │
+│ │                │   │   Override(                                                                                                     │                    │
+│ │                │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │                    │
+│ │                │   │   │   key_or_group='file.path',                                                                                 │                    │
+│ │                │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │                    │
+│ │                │   │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,             │                    │
+│ │                │   │   │   package=None,                                                                                             │                    │
+│ │                │   │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52,         │                    │
+│ │                │   │   │   config_loader=None                                                                                        │                    │
+│ │                │   │   ),                                                                                                            │                    │
+│ │                │   │   Override(                                                                                                     │                    │
+│ │                │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │                    │
+│ │                │   │   │   key_or_group='file.group_id',                                                                             │                    │
+│ │                │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │                    │
+│ │                │   │   │   _value='book1-llama3-1-70b',                                                                              │                    │
+│ │                │   │   │   package=None,                                                                                             │                    │
+│ │                │   │   │   input_line='file.group_id=book1-llama3-1-70b',                                                            │                    │
+│ │                │   │   │   config_loader=None                                                                                        │                    │
+│ │                │   │   ),                                                                                                            │                    │
+│ │                │   │   Override(                                                                                                     │                    │
+│ │                │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │                    │
+│ │                │   │   │   key_or_group='llm.model',                                                                                 │                    │
+│ │                │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │                    │
+│ │                │   │   │   _value='llama3.1:70b',                                                                                    │                    │
+│ │                │   │   │   package=None,                                                                                             │                    │
+│ │                │   │   │   input_line='llm.model=llama3.1:70b',                                                                      │                    │
+│ │                │   │   │   config_loader=None                                                                                        │                    │
+│ │                │   │   ),                                                                                                            │                    │
+│ │                │   │   Override(                                                                                                     │                    │
+│ │                │   │   │   type=<OverrideType.CHANGE: 1>,                                                                            │                    │
+│ │                │   │   │   key_or_group='falkordb.database',                                                                         │                    │
+│ │                │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                        │                    │
+│ │                │   │   │   _value='book1-llama3-1-70b',                                                                              │                    │
+│ │                │   │   │   package=None,                                                                                             │                    │
+│ │                │   │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                        │                    │
+│ │                │   │   │   config_loader=None                                                                                        │                    │
+│ │                │   │   )                                                                                                             │                    │
+│ │                │   ],                                                                                                                │                    │
+│ │                │   known_choices={                                                                                                   │                    │
+│ │                │   │   'edge_types': 'none',                                                                                         │                    │
+│ │                │   │   'entity_types': 'all',                                                                                        │                    │
+│ │                │   │   'prompts/extract_edges': 'default',                                                                           │                    │
+│ │                │   │   'prompts/extract_text': 'default',                                                                            │                    │
+│ │                │   │   'file': 'book1'                                                                                               │                    │
+│ │                │   },                                                                                                                │                    │
+│ │                │   known_choices_per_group={                                                                                         │                    │
+│ │                │   │   'edge_types': {'edge_types'},                                                                                 │                    │
+│ │                │   │   'entity_types': {'entity_types'},                                                                             │                    │
+│ │                │   │   'prompts/extract_edges': {'prompts/extract_edges'},                                                           │                    │
+│ │                │   │   'prompts/extract_text': {'prompts/extract_text'},                                                             │                    │
+│ │                │   │   'file': {'file'}                                                                                              │                    │
+│ │                │   },                                                                                                                │                    │
+│ │                │   deletions={}                                                                                                      │                    │
+│ │                )                                                                                                                     │                    │
+│ │         repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>                                  │                    │
+│ │         root = DefaultsTreeNode(node=VirtualRoot(), children=[ConfigDefault(path="hydra/config"), ConfigDefault(path="create_tkg")]) │                    │
+│ │ skip_missing = False                                                                                                                 │                    │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                    │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/defaults_list.py:573 in _create_defaults_tree_impl     │
+│                                                                                                                                                             │
+│   570 │   │   │   │   │   continue                                                                                                                          │
+│   571 │   │   │   │                                                                                                                                         │
+│   572 │   │   │   │   new_root = DefaultsTreeNode(node=d, parent=root)                                                                                      │
+│ ❱ 573 │   │   │   │   add_child(children, new_root)                                                                                                         │
+│   574 │                                                                                                                                                     │
+│   575 │   # processed deferred interpolations                                                                                                               │
+│   576 │   known_choices = _create_interpolation_map(overrides, defaults_list, self_added)                                                                   │
+│                                                                                                                                                             │
+│ ╭─────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────╮                    │
+│ │             children = [                                                                                                             │                    │
+│ │                        │   GroupDefault(group="edge_types",value="none"),                                                            │                    │
+│ │                        │   GroupDefault(group="entity_types",value="all"),                                                           │                    │
+│ │                        │   GroupDefault(group="prompts/extract_edges",value="default"),                                              │                    │
+│ │                        │   GroupDefault(group="prompts/extract_text",value="default")                                                │                    │
+│ │                        ]                                                                                                             │                    │
+│ │                    d = GroupDefault(group="file",value="book1")                                                                      │                    │
+│ │        defaults_list = [                                                                                                             │                    │
+│ │                        │   ConfigDefault(path="_self_"),                                                                             │                    │
+│ │                        │   GroupDefault(group="text_splitter",value="default"),                                                      │                    │
+│ │                        │   GroupDefault(group="llm",value="ollama"),                                                                 │                    │
+│ │                        │   GroupDefault(group="embedder",value="ollama"),                                                            │                    │
+│ │                        │   GroupDefault(group="falkordb",value="default"),                                                           │                    │
+│ │                        │   GroupDefault(group="file",value="book1"),                                                                 │                    │
+│ │                        │   GroupDefault(group="prompts/extract_text",value="default"),                                               │                    │
+│ │                        │   GroupDefault(group="prompts/extract_edges",value="default"),                                              │                    │
+│ │                        │   GroupDefault(group="entity_types",value="all"),                                                           │                    │
+│ │                        │   GroupDefault(group="edge_types",value="none")                                                             │                    │
+│ │                        ]                                                                                                             │                    │
+│ │   has_config_content = False                                                                                                         │                    │
+│ │ interpolated_subtree = False                                                                                                         │                    │
+│ │       is_root_config = True                                                                                                          │                    │
+│ │               loaded = ConfigResult(                                                                                                 │                    │
+│ │                        │   provider='main',                                                                                          │                    │
+│ │                        │   path='file:///mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/configs',                                  │                    │
+│ │                        │   config={},                                                                                                │                    │
+│ │                        │   header={'package': None},                                                                                 │                    │
+│ │                        │   defaults_list=[                                                                                           │                    │
+│ │                        │   │   ConfigDefault(path="_self_"),                                                                         │                    │
+│ │                        │   │   GroupDefault(group="text_splitter",value="default"),                                                  │                    │
+│ │                        │   │   GroupDefault(group="llm",value="ollama"),                                                             │                    │
+│ │                        │   │   GroupDefault(group="embedder",value="ollama"),                                                        │                    │
+│ │                        │   │   GroupDefault(group="falkordb",value="default"),                                                       │                    │
+│ │                        │   │   GroupDefault(group="file",value="book1"),                                                             │                    │
+│ │                        │   │   GroupDefault(group="prompts/extract_text",value="default"),                                           │                    │
+│ │                        │   │   GroupDefault(group="prompts/extract_edges",value="default"),                                          │                    │
+│ │                        │   │   GroupDefault(group="entity_types",value="all"),                                                       │                    │
+│ │                        │   │   GroupDefault(group="edge_types",value="none")                                                         │                    │
+│ │                        │   ],                                                                                                        │                    │
+│ │                        │   is_schema_source=False                                                                                    │                    │
+│ │                        )                                                                                                             │                    │
+│ │             new_root = DefaultsTreeNode(node=GroupDefault(group="file",value="book1"), children=None)                                │                    │
+│ │            overrides = Overrides(                                                                                                    │                    │
+│ │                        │   override_choices={},                                                                                      │                    │
+│ │                        │   override_metadata={},                                                                                     │                    │
+│ │                        │   append_group_defaults=[],                                                                                 │                    │
+│ │                        │   config_overrides=[                                                                                        │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='file.path',                                                                         │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,     │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   ),                                                                                                    │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='file.group_id',                                                                     │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                      │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='file.group_id=book1-llama3-1-70b',                                                    │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   ),                                                                                                    │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='llm.model',                                                                         │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='llama3.1:70b',                                                                            │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='llm.model=llama3.1:70b',                                                              │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   ),                                                                                                    │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='falkordb.database',                                                                 │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                      │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   )                                                                                                     │                    │
+│ │                        │   ],                                                                                                        │                    │
+│ │                        │   known_choices={                                                                                           │                    │
+│ │                        │   │   'edge_types': 'none',                                                                                 │                    │
+│ │                        │   │   'entity_types': 'all',                                                                                │                    │
+│ │                        │   │   'prompts/extract_edges': 'default',                                                                   │                    │
+│ │                        │   │   'prompts/extract_text': 'default',                                                                    │                    │
+│ │                        │   │   'file': 'book1'                                                                                       │                    │
+│ │                        │   },                                                                                                        │                    │
+│ │                        │   known_choices_per_group={                                                                                 │                    │
+│ │                        │   │   'edge_types': {'edge_types'},                                                                         │                    │
+│ │                        │   │   'entity_types': {'entity_types'},                                                                     │                    │
+│ │                        │   │   'prompts/extract_edges': {'prompts/extract_edges'},                                                   │                    │
+│ │                        │   │   'prompts/extract_text': {'prompts/extract_text'},                                                     │                    │
+│ │                        │   │   'file': {'file'}                                                                                      │                    │
+│ │                        │   },                                                                                                        │                    │
+│ │                        │   deletions={}                                                                                              │                    │
+│ │                        )                                                                                                             │                    │
+│ │               parent = ConfigDefault(path="create_tkg")                                                                              │                    │
+│ │                 path = 'create_tkg'                                                                                                  │                    │
+│ │                 repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>                          │                    │
+│ │                 root = DefaultsTreeNode(node=ConfigDefault(path="create_tkg"), children=None)                                        │                    │
+│ │           self_added = False                                                                                                         │                    │
+│ │         skip_missing = False                                                                                                         │                    │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                    │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/defaults_list.py:520 in add_child                      │
+│                                                                                                                                                             │
+│   517 │   │   child_list: List[Union[InputDefault, DefaultsTreeNode]],                                                                                      │
+│   518 │   │   new_root_: DefaultsTreeNode,                                                                                                                  │
+│   519 │   ) -> None:                                                                                                                                        │
+│ ❱ 520 │   │   subtree_ = _create_defaults_tree_impl(                                                                                                        │
+│   521 │   │   │   repo=repo,                                                                                                                                │
+│   522 │   │   │   root=new_root_,                                                                                                                           │
+│   523 │   │   │   is_root_config=False,                                                                                                                     │
+│                                                                                                                                                             │
+│ ╭─────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────╮                    │
+│ │           child_list = [                                                                                                             │                    │
+│ │                        │   GroupDefault(group="edge_types",value="none"),                                                            │                    │
+│ │                        │   GroupDefault(group="entity_types",value="all"),                                                           │                    │
+│ │                        │   GroupDefault(group="prompts/extract_edges",value="default"),                                              │                    │
+│ │                        │   GroupDefault(group="prompts/extract_text",value="default")                                                │                    │
+│ │                        ]                                                                                                             │                    │
+│ │ interpolated_subtree = False                                                                                                         │                    │
+│ │            new_root_ = DefaultsTreeNode(node=GroupDefault(group="file",value="book1"), children=None)                                │                    │
+│ │            overrides = Overrides(                                                                                                    │                    │
+│ │                        │   override_choices={},                                                                                      │                    │
+│ │                        │   override_metadata={},                                                                                     │                    │
+│ │                        │   append_group_defaults=[],                                                                                 │                    │
+│ │                        │   config_overrides=[                                                                                        │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='file.path',                                                                         │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,     │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   ),                                                                                                    │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='file.group_id',                                                                     │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                      │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='file.group_id=book1-llama3-1-70b',                                                    │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   ),                                                                                                    │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='llm.model',                                                                         │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='llama3.1:70b',                                                                            │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='llm.model=llama3.1:70b',                                                              │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   ),                                                                                                    │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='falkordb.database',                                                                 │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                      │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   )                                                                                                     │                    │
+│ │                        │   ],                                                                                                        │                    │
+│ │                        │   known_choices={                                                                                           │                    │
+│ │                        │   │   'edge_types': 'none',                                                                                 │                    │
+│ │                        │   │   'entity_types': 'all',                                                                                │                    │
+│ │                        │   │   'prompts/extract_edges': 'default',                                                                   │                    │
+│ │                        │   │   'prompts/extract_text': 'default',                                                                    │                    │
+│ │                        │   │   'file': 'book1'                                                                                       │                    │
+│ │                        │   },                                                                                                        │                    │
+│ │                        │   known_choices_per_group={                                                                                 │                    │
+│ │                        │   │   'edge_types': {'edge_types'},                                                                         │                    │
+│ │                        │   │   'entity_types': {'entity_types'},                                                                     │                    │
+│ │                        │   │   'prompts/extract_edges': {'prompts/extract_edges'},                                                   │                    │
+│ │                        │   │   'prompts/extract_text': {'prompts/extract_text'},                                                     │                    │
+│ │                        │   │   'file': {'file'}                                                                                      │                    │
+│ │                        │   },                                                                                                        │                    │
+│ │                        │   deletions={}                                                                                              │                    │
+│ │                        )                                                                                                             │                    │
+│ │                 repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>                          │                    │
+│ │         skip_missing = False                                                                                                         │                    │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                    │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/defaults_list.py:488 in _create_defaults_tree_impl     │
+│                                                                                                                                                             │
+│   485 │   │   │   assert isinstance(parent, (GroupDefault, ConfigDefault))                                                                                  │
+│   486 │   │   │   parent.deleted = True                                                                                                                     │
+│   487 │   │   │   return root                                                                                                                               │
+│ ❱ 488 │   │   config_not_found_error(repo=repo, tree=root)                                                                                                  │
+│   489 │                                                                                                                                                     │
+│   490 │   assert loaded is not None                                                                                                                         │
+│   491 │   defaults_list = copy.deepcopy(loaded.defaults_list)                                                                                               │
+│                                                                                                                                                             │
+│ ╭─────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────╮                    │
+│ │             children = []                                                                                                            │                    │
+│ │ interpolated_subtree = False                                                                                                         │                    │
+│ │       is_root_config = False                                                                                                         │                    │
+│ │               loaded = None                                                                                                          │                    │
+│ │            overrides = Overrides(                                                                                                    │                    │
+│ │                        │   override_choices={},                                                                                      │                    │
+│ │                        │   override_metadata={},                                                                                     │                    │
+│ │                        │   append_group_defaults=[],                                                                                 │                    │
+│ │                        │   config_overrides=[                                                                                        │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='file.path',                                                                         │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_maraichere'+42,     │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='file.path=/mnt/diskGum/manas/GOMgraph-main/data/1_Manuel_pratique_de_la_culture_'+52, │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   ),                                                                                                    │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='file.group_id',                                                                     │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                      │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='file.group_id=book1-llama3-1-70b',                                                    │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   ),                                                                                                    │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='llm.model',                                                                         │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='llama3.1:70b',                                                                            │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='llm.model=llama3.1:70b',                                                              │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   ),                                                                                                    │                    │
+│ │                        │   │   Override(                                                                                             │                    │
+│ │                        │   │   │   type=<OverrideType.CHANGE: 1>,                                                                    │                    │
+│ │                        │   │   │   key_or_group='falkordb.database',                                                                 │                    │
+│ │                        │   │   │   value_type=<ValueType.ELEMENT: 1>,                                                                │                    │
+│ │                        │   │   │   _value='book1-llama3-1-70b',                                                                      │                    │
+│ │                        │   │   │   package=None,                                                                                     │                    │
+│ │                        │   │   │   input_line='falkordb.database=book1-llama3-1-70b',                                                │                    │
+│ │                        │   │   │   config_loader=None                                                                                │                    │
+│ │                        │   │   )                                                                                                     │                    │
+│ │                        │   ],                                                                                                        │                    │
+│ │                        │   known_choices={                                                                                           │                    │
+│ │                        │   │   'edge_types': 'none',                                                                                 │                    │
+│ │                        │   │   'entity_types': 'all',                                                                                │                    │
+│ │                        │   │   'prompts/extract_edges': 'default',                                                                   │                    │
+│ │                        │   │   'prompts/extract_text': 'default',                                                                    │                    │
+│ │                        │   │   'file': 'book1'                                                                                       │                    │
+│ │                        │   },                                                                                                        │                    │
+│ │                        │   known_choices_per_group={                                                                                 │                    │
+│ │                        │   │   'edge_types': {'edge_types'},                                                                         │                    │
+│ │                        │   │   'entity_types': {'entity_types'},                                                                     │                    │
+│ │                        │   │   'prompts/extract_edges': {'prompts/extract_edges'},                                                   │                    │
+│ │                        │   │   'prompts/extract_text': {'prompts/extract_text'},                                                     │                    │
+│ │                        │   │   'file': {'file'}                                                                                      │                    │
+│ │                        │   },                                                                                                        │                    │
+│ │                        │   deletions={}                                                                                              │                    │
+│ │                        )                                                                                                             │                    │
+│ │               parent = GroupDefault(group="file",value="book1")                                                                      │                    │
+│ │                 path = 'file/book1'                                                                                                  │                    │
+│ │                 repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>                          │                    │
+│ │                 root = DefaultsTreeNode(node=GroupDefault(group="file",value="book1"), children=None)                                │                    │
+│ │         skip_missing = False                                                                                                         │                    │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                    │
+│                                                                                                                                                             │
+│ /mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/defaults_list.py:799 in config_not_found_error         │
+│                                                                                                                                                             │
+│   796 │   lines = "\n".join(descs)                                                                                                                          │
+│   797 │   msg += "\nConfig search path:" + f"\n{lines}"                                                                                                     │
+│   798 │                                                                                                                                                     │
+│ ❱ 799 │   raise MissingConfigException(                                                                                                                     │
+│   800 │   │   missing_cfg_file=element.get_config_path(),                                                                                                   │
+│   801 │   │   message=msg,                                                                                                                                  │
+│   802 │   │   options=options,                                                                                                                              │
+│                                                                                                                                                             │
+│ ╭──────────────────────────────────────────────── locals ─────────────────────────────────────────────────╮                                                 │
+│ │    descs = [                                                                                            │                                                 │
+│ │            │   '\tprovider=hydra, path=pkg://hydra.conf',                                               │                                                 │
+│ │            │   '\tprovider=main, path=file:///mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/co'+5,   │                                                 │
+│ │            │   '\tprovider=schema, path=structured://'                                                  │                                                 │
+│ │            ]                                                                                            │                                                 │
+│ │  element = GroupDefault(group="file",value="book1")                                                     │                                                 │
+│ │    group = 'file'                                                                                       │                                                 │
+│ │    lines = '\tprovider=hydra, path=pkg://hydra.conf\n\tprovider=main, path=file:///mnt/diskGum/'+81     │                                                 │
+│ │      msg = "In 'create_tkg': Could not find 'file/book1'\n\nAvailable options in 'file':\n\tL_ho"+256   │                                                 │
+│ │ opt_list = '\tL_horticulture\n\tbook1-llama70b\n\tbook1-mistral\n\tbook1-mixtral\n\tbook1-qwen\n\ttest' │                                                 │
+│ │  options = ['L_horticulture', 'book1-llama70b', 'book1-mistral', 'book1-mixtral', 'book1-qwen', 'test'] │                                                 │
+│ │   parent = ConfigDefault(path="create_tkg")                                                             │                                                 │
+│ │     repo = <hydra._internal.config_repository.CachingConfigRepository object at 0x7f5fa332fbb0>         │                                                 │
+│ │      src = provider=schema, path=structured://                                                          │                                                 │
+│ │     tree = DefaultsTreeNode(node=GroupDefault(group="file",value="book1"), children=None)               │                                                 │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+MissingConfigException: In 'create_tkg': Could not find 'file/book1'
+
+Available options in 'file':
+        L_horticulture
+        book1-llama70b
+        book1-mistral
+        book1-mixtral
+        book1-qwen
+        test
+Config search path:
+        provider=hydra, path=pkg://hydra.conf
+        provider=main, path=file:///mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/configs
+        provider=schema, path=structured://

@@ -1,0 +1,21 @@
+<EXTRACTED_NODES>
+{extracted_nodes}
+</EXTRACTED_NODES>
+
+<EXISTING_NODES>
+{existing_nodes}
+</EXISTING_NODES>
+
+<EPISODE_CONTENT>
+{episode_content}
+</EPISODE_CONTENT>
+
+<PREVIOUS_EPISODES>
+{previous_episodes}
+</PREVIOUS_EPISODES>
+
+For each extracted node, return an object with:
+- id: index into EXTRACTED_NODES
+- duplicate_of: index into EXISTING_NODES if it is the same entity, otherwise -1
+
+Only mark duplicates when they refer to the same real-world entity. Prefer reusing existing nodes instead of creating near-duplicates.

@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-13T12:29:57.550389+00:00,exact,63bb3b0b-26f9-4c86-b4ee-9d2edee561f9,Dianthus,Dianthus is mentioned alongside other plant species in the context of a horticultural discussion.,7490b045-3f91-49e7-859b-7e982c942d6b,,,,
+2026-02-13T12:29:57.550422+00:00,llm,63bb3b0b-26f9-4c86-b4ee-9d2edee561f9,Dianthus,Dianthus is mentioned alongside other plant species in the context of a horticultural discussion.,e7c9ea11-56fe-4794-817e-2fb5955883a1,,,,

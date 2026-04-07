@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-03-13T09:52:30.726525+00:00,exact,a405fcfb-2ce7-414c-9047-bc2f919e3d56,tarragon,"Tarragon is a perennial plant of the Artemisia genus, native to Tartary. Its young stems and tender leaves are edible and used to garnish salads.",cc7349aa-9335-49d1-a524-ed2929de3961,,,,
+2026-03-13T09:52:30.726563+00:00,llm,a405fcfb-2ce7-414c-9047-bc2f919e3d56,tarragon,"Tarragon is a perennial plant of the Artemisia genus, native to Tartary. Its young stems and tender leaves are edible and used to garnish salads.",265f3861-32f6-489e-a5a2-0292dd2271a3,,,,

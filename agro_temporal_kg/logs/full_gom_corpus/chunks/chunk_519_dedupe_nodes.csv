@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-11T13:41:25.579867+00:00,exact,f6eb4969-2bb2-4475-b88b-19d70859f451,Beans,Beans can be planted on beds in late August and covered with trays; they are also sown to succeed earlier plantings.,cdf0c5f2-4c99-4903-9c1c-75ec933ef33e,,,,
+2026-02-11T13:41:25.579903+00:00,llm,f6eb4969-2bb2-4475-b88b-19d70859f451,Beans,Beans can be planted on beds in late August and covered with trays; they are also sown to succeed earlier plantings.,4cf7206e-0be6-4fa7-b37b-ccfd679fbfda,,,,

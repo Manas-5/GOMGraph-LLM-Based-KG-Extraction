@@ -1,0 +1,208 @@
+2026-01-15 17:42:42.527 | INFO     | __main__:create_tkg:84 - Loaded configuration:
+{'text_splitter': {'chunk_size': 1000, 'chunk_overlap': 150, 'separators': ['\n\n', '\n', '. ', ' ', '']}, 'llm': {'model': 'llama3.1:70b', 'temperature': 0.0, 'api_key': 'abc', 'base_url': 'http://localhost:11434/v1'}, 'embedder': {'api_key': 'abc', 'base_url': 'http://localhost:11434/v1', 'embedding_model': 'bge-m3:567m', 'embedding_dim': 768}, 'falkordb': {'host': 'localhost', 'port': 6380, 'database': 'tomato_9_ent_1_edge_0_prompt_new'}, 'file': {'path': '/mnt/diskGum/manas/GOMgraph-main/data/tomato_test/9_tomato.txt', 'group_id': 'tomato_9_ent_1_edge_0_prompt_new', 'source_description': 'A concise 1845 French manual detailing the techniques and principles of Parisian market gardening, by Moreau and Daverne.', 'reference_year': 1899}, 'prompts': {'extract_text': {'system_version': 'v0', 'user_version': 'v0'}, 'extract_edges': {'system_version': 'v0', 'user_version': 'v1'}}, 'entity_types': {'types': ['Plant', 'PlantPart', 'Pest', 'Practice', 'SoilType', 'Condition', 'Structure', 'Time', 'Location', 'Input', 'Equipment', 'Disease', 'Weather', 'Nutrient', 'Organism', 'Animal', 'People', 'Institution']}, 'edge_types': {'types': []}}
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:23 - ============================================================
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:24 - Starting Temporal Knowledge Graph Pipeline
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:25 - ============================================================
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:28 - [Step 1/4] Loading file...
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.steps.load_file:load_file:34 - Loading file: /mnt/diskGum/manas/GOMgraph-main/data/tomato_test/9_tomato.txt
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.steps.load_file:load_file:43 - Loaded 27 characters from 9_tomato.txt
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:32 - [Step 2/4] Splitting text into chunks...
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.steps.split_text:split_text:42 - Split text into 1 chunks (chunk_size=1000, overlap=150)
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:36 - [Step 3/4] Initializing Graphiti...
+2026-01-15 17:42:42.530 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:37 - Initializing FalkorDB driver: localhost:6380
+2026-01-15 17:42:42.533 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:53 - Initializing LLM client: llama3.1:70b
+2026-01-15 17:42:42.596 | INFO     | agro_temporal_kg.ollama_graphiti_client:__init__:44 - 🦙 OllamaGraphitiClient initialized: llama3.1:70b
+2026-01-15 17:42:42.596 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:68 - Initializing embedder: bge-m3:567m
+2026-01-15 17:42:42.642 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:79 - Initializing cross-encoder reranker
+2026-01-15 17:42:42.642 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:90 - Loading custom prompts: extract_text (system: vv0, user: vv0)
+2026-01-15 17:42:42.642 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:103 - Loading custom prompts: extract_edges (system: vv0, user: vv1)
+2026-01-15 17:42:42.644 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:126 - Custom prompts and snippets loaded successfully
+2026-01-15 17:42:42.765 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:139 - Graphiti initialized successfully (database: tomato_9_ent_1_edge_0_prompt_new)
+2026-01-15 17:42:42.766 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:40 - [Step 4/4] Ingesting episodes into knowledge graph...
+2026-01-15 17:42:42.766 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:48 - Starting ingestion of 1 chunks into knowledge graph
+2026-01-15 17:42:42.766 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:49 -   Group ID: tomato_9_ent_1_edge_0_prompt_new
+2026-01-15 17:42:42.766 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:50 -   Source: A concise 1845 French manual detailing the techniques and principles of Parisian market gardening, by Moreau and Daverne.
+2026-01-15 17:42:42.767 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:51 -   Reference year: 1899
+2026-01-15 17:42:42.767 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:58 -   Using 18 entity types: Animal, Condition, Disease, Equipment, Input, Institution, Location, Nutrient, Organism, People, Pest, Plant, PlantPart, Practice, SoilType, Structure, Time, Weather
+2026-01-15 17:42:42.767 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:69 -   Using default Graphiti edge types
+2026-01-15 17:42:42.767 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:74 - Processing chunk 1/1 (25 chars)...
+2026-01-15 17:42:42.775 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:324 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "extracted_entities": {
+      "description": "List of extracted entities",
+      "items": {
+        "properties": {
+          "name": {
+            "description": "Name of the extracted entity",
+            "title": "Name",
+            "type": "string"
+          },
+          "entity_type_id": {
+            "description": "ID of the classified entity type. Must be one of the provided entity_type_id integers.",
+            "title": "Entity Type Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "name",
+          "entity_type_id"
+        ],
+        "title": "ExtractedEntity",
+        "type": "object"
+      },
+      "title": "Extracted Entities",
+      "type": "array"
+    }
+  },
+  "required": [
+    "extracted_entities"
+  ],
+  "title": "ExtractedEntities",
+  "type": "object"
+}
+2026-01-15 17:42:42.775 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:325 - 📋 Example sent to model:
+{
+  "extracted_entities": [
+    {
+      "name": "example_name",
+      "entity_type_id": 0
+    }
+  ]
+}
+2026-01-15 17:42:49.786 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:396 - ✅ Ollama response validated successfully
+2026-01-15 17:42:50.070 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:324 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "entity_resolutions": {
+      "description": "List of resolved nodes",
+      "items": {
+        "properties": {
+          "id": {
+            "description": "integer id of the entity",
+            "title": "Id",
+            "type": "integer"
+          },
+          "duplicate_idx": {
+            "description": "idx of the duplicate entity. If no duplicate entities are found, default to -1.",
+            "title": "Duplicate Idx",
+            "type": "integer"
+          },
+          "name": {
+            "description": "Name of the entity. Should be the most complete and descriptive name of the entity. Do not include any JSON formatting in the Entity name such as {}.",
+            "title": "Name",
+            "type": "string"
+          },
+          "duplicates": {
+            "description": "idx of all entities that are a duplicate of the entity with the above id.",
+            "items": {
+              "type": "integer"
+            },
+            "title": "Duplicates",
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "duplicate_idx",
+          "name",
+          "duplicates"
+        ],
+        "title": "NodeDuplicate",
+        "type": "object"
+      },
+      "title": "Entity Resolutions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "entity_resolutions"
+  ],
+  "title": "NodeResolutions",
+  "type": "object"
+}
+2026-01-15 17:42:50.070 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:325 - 📋 Example sent to model:
+{
+  "entity_resolutions": [
+    {
+      "id": 0,
+      "duplicate_idx": 0,
+      "name": "example_name",
+      "duplicates": [
+        {}
+      ]
+    }
+  ]
+}
+2026-01-15 17:42:55.787 | INFO     | __main__:create_tkg:84 - Loaded configuration:
+{'text_splitter': {'chunk_size': 1000, 'chunk_overlap': 150, 'separators': ['\n\n', '\n', '. ', ' ', '']}, 'llm': {'model': 'llama3.1:70b', 'temperature': 0.0, 'api_key': 'abc', 'base_url': 'http://localhost:11434/v1'}, 'embedder': {'api_key': 'abc', 'base_url': 'http://localhost:11434/v1', 'embedding_model': 'bge-m3:567m', 'embedding_dim': 768}, 'falkordb': {'host': 'localhost', 'port': 6380, 'database': 'tomato_9_ent_1_edge_0_prompt_new'}, 'file': {'path': '/mnt/diskGum/manas/GOMgraph-main/data/tomato_test/9_tomato.txt', 'group_id': 'tomato_9_ent_1_edge_0_prompt_new', 'source_description': 'A concise 1845 French manual detailing the techniques and principles of Parisian market gardening, by Moreau and Daverne.', 'reference_year': 1899}, 'prompts': {'extract_text': {'system_version': 'v0', 'user_version': 'v0'}, 'extract_edges': {'system_version': 'v0', 'user_version': 'v1'}}, 'entity_types': {'types': ['Plant', 'PlantPart', 'Pest', 'Practice', 'SoilType', 'Condition', 'Structure', 'Time', 'Location', 'Input', 'Equipment', 'Disease', 'Weather', 'Nutrient', 'Organism', 'Animal', 'People', 'Institution']}, 'edge_types': {'types': []}}
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:23 - ============================================================
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:24 - Starting Temporal Knowledge Graph Pipeline
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:25 - ============================================================
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:28 - [Step 1/4] Loading file...
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.steps.load_file:load_file:34 - Loading file: /mnt/diskGum/manas/GOMgraph-main/data/tomato_test/9_tomato.txt
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.steps.load_file:load_file:43 - Loaded 27 characters from 9_tomato.txt
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:32 - [Step 2/4] Splitting text into chunks...
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.steps.split_text:split_text:42 - Split text into 1 chunks (chunk_size=1000, overlap=150)
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:36 - [Step 3/4] Initializing Graphiti...
+2026-01-15 17:42:55.790 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:37 - Initializing FalkorDB driver: localhost:6380
+2026-01-15 17:42:55.793 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:53 - Initializing LLM client: llama3.1:70b
+2026-01-15 17:42:55.857 | INFO     | agro_temporal_kg.ollama_graphiti_client:__init__:44 - 🦙 OllamaGraphitiClient initialized: llama3.1:70b
+2026-01-15 17:42:55.857 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:68 - Initializing embedder: bge-m3:567m
+2026-01-15 17:42:55.902 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:79 - Initializing cross-encoder reranker
+2026-01-15 17:42:55.903 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:90 - Loading custom prompts: extract_text (system: vv0, user: vv0)
+2026-01-15 17:42:55.903 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:103 - Loading custom prompts: extract_edges (system: vv0, user: vv1)
+2026-01-15 17:42:55.904 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:126 - Custom prompts and snippets loaded successfully
+2026-01-15 17:42:56.026 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:139 - Graphiti initialized successfully (database: tomato_9_ent_1_edge_0_prompt_new)
+2026-01-15 17:42:56.027 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:40 - [Step 4/4] Ingesting episodes into knowledge graph...
+2026-01-15 17:42:56.028 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:48 - Starting ingestion of 1 chunks into knowledge graph
+2026-01-15 17:42:56.028 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:49 -   Group ID: tomato_9_ent_1_edge_0_prompt_new
+2026-01-15 17:42:56.028 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:50 -   Source: A concise 1845 French manual detailing the techniques and principles of Parisian market gardening, by Moreau and Daverne.
+2026-01-15 17:42:56.028 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:51 -   Reference year: 1899
+2026-01-15 17:42:56.028 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:58 -   Using 18 entity types: Animal, Condition, Disease, Equipment, Input, Institution, Location, Nutrient, Organism, People, Pest, Plant, PlantPart, Practice, SoilType, Structure, Time, Weather
+2026-01-15 17:42:56.028 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:69 -   Using default Graphiti edge types
+2026-01-15 17:42:56.028 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:74 - Processing chunk 1/1 (25 chars)...
+2026-01-15 17:42:56.040 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:324 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "extracted_entities": {
+      "description": "List of extracted entities",
+      "items": {
+        "properties": {
+          "name": {
+            "description": "Name of the extracted entity",
+            "title": "Name",
+            "type": "string"
+          },
+          "entity_type_id": {
+            "description": "ID of the classified entity type. Must be one of the provided entity_type_id integers.",
+            "title": "Entity Type Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "name",
+          "entity_type_id"
+        ],
+        "title": "ExtractedEntity",
+        "type": "object"
+      },
+      "title": "Extracted Entities",
+      "type": "array"
+    }
+  },
+  "required": [
+    "extracted_entities"
+  ],
+  "title": "ExtractedEntities",
+  "type": "object"
+}
+2026-01-15 17:42:56.040 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:325 - 📋 Example sent to model:
+{
+  "extracted_entities": [
+    {
+      "name": "example_name",
+      "entity_type_id": 0
+    }
+  ]
+}

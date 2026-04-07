@@ -1,0 +1,9 @@
+<NEW_EDGE>
+{new_edge}
+</NEW_EDGE>
+
+<EXISTING_EDGES>
+{existing_edges}
+</EXISTING_EDGES>
+
+List the indices (0-based) of EXISTING_EDGES that are contradicted by NEW_EDGE and should be invalidated. Return an empty list if none.

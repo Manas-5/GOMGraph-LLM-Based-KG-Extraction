@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-15T12:36:07.443520+00:00,exact,db28c8c6-8434-450e-86e2-861414f32e2b,stable manure,Stable manure can be used as a fertilizer and stimulant,e7508b26-d4f0-4b20-a9bd-e6a53356763a,,,,
+2026-02-15T12:36:07.443550+00:00,llm,db28c8c6-8434-450e-86e2-861414f32e2b,stable manure,Stable manure can be used as a fertilizer and stimulant,34a3534b-04f0-48ac-9d7e-947b447da984,,,,

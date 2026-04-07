@@ -1,0 +1,160 @@
+2026-02-23 16:03:46 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - UNIFIED EDGE NAME DEDUPLICATION PIPELINE
+2026-02-23 16:03:46 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - Start time: 2026-02-23 16:03:46
+2026-02-23 16:03:46 - unified_dedup - INFO - Input file: /mnt/diskGum/manas/graph-dedup-patch/agro_temporal_kg/exported_data/1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845/edges_1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845.tsv
+2026-02-23 16:03:46 - unified_dedup - INFO - Output directory: output_v5_distance
+2026-02-23 16:03:46 - unified_dedup - INFO - LLM model: llama3.1:70b
+2026-02-23 16:03:46 - unified_dedup - INFO - Embedding model: bge-m3:567m
+2026-02-23 16:03:46 - unified_dedup - INFO - Thresholds: 0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9
+2026-02-23 16:03:46 - unified_dedup - INFO - Similarity threshold for near-duplicates: 0.9
+2026-02-23 16:03:46 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - STEP 1: Loading names...
+2026-02-23 16:03:46 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Loaded 1147 raw unique names
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Total edges: 2041
+2026-02-23 16:03:46 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - STEP 1.5: Grouping by normalized embedding form...
+2026-02-23 16:03:46 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Grouped into 1108 unique normalized forms
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Reduction: 1147 → 1108 (39 consolidated)
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Embedding only 1108 representatives (1 per normalized form)
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Total edges still: 2041
+2026-02-23 16:03:46 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - STEP 2: Preprocessing raw data (normalization + similarity analysis)...
+2026-02-23 16:03:46 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - Building exact normalized groups...
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Saved output_v5_distance/03_preprocessing/artifacts/00_exact_normalized_groups.csv (1108 unique normalized terms)
+2026-02-23 16:03:46 - unified_dedup - INFO - Computing similarity candidates on normalized terms...
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Saved output_v5_distance/03_preprocessing/artifacts/00_similarity_candidates.csv (13 similarity pairs)
+2026-02-23 16:03:46 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - STEP 3: Saving normalized names and mappings...
+2026-02-23 16:03:46 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Saved output_v5_distance/02_embeddings/normalized_names.csv
+2026-02-23 16:03:46 - unified_dedup - INFO - ✓ Saved output_v5_distance/02_embeddings/raw_to_normalized_mapping.csv
+2026-02-23 16:03:46 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - STEP 4: Embedding normalized names...
+2026-02-23 16:03:46 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:03:46 - unified_dedup - INFO - Embedding 1108 names with bge-m3:567m...
+2026-02-23 16:04:04 - unified_dedup - INFO - ✓ Generated embeddings with shape (1108, 1024)
+2026-02-23 16:04:04 - unified_dedup - INFO - ✓ Saved embeddings to output_v5_distance/02_embeddings/all_names_embeddings.npz
+2026-02-23 16:04:04 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 16:04:04 - unified_dedup - INFO - STEP 5: Building similarity/distance matrices...
+2026-02-23 16:04:04 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:04:04 - unified_dedup - INFO - ✓ Computed matrices with shape (1108, 1108)
+2026-02-23 16:04:04 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 16:04:04 - unified_dedup - INFO - STEP 6: Clustering at multiple thresholds...
+2026-02-23 16:04:04 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:04:04 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.00 (similarity ≥ 1.00)...
+2026-02-23 16:04:04 - unified_dedup - DEBUG -   Found 1108 clusters
+2026-02-23 16:04:04 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:04 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:04 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.00.csv, mapping_sim_0.00.csv
+2026-02-23 16:04:04 - unified_dedup - DEBUG -   Stats: 1108 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:04 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.10 (similarity ≥ 0.90)...
+2026-02-23 16:04:04 - unified_dedup - DEBUG -   Found 996 clusters
+2026-02-23 16:04:04 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:04 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:04 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.10.csv, mapping_sim_0.10.csv
+2026-02-23 16:04:04 - unified_dedup - DEBUG -   Stats: 996 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:04 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.20 (similarity ≥ 0.80)...
+2026-02-23 16:04:04 - unified_dedup - DEBUG -   Found 692 clusters
+2026-02-23 16:04:04 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:05 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.20.csv, mapping_sim_0.20.csv
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Stats: 692 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:05 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.30 (similarity ≥ 0.70)...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Found 370 clusters
+2026-02-23 16:04:05 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:05 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.30.csv, mapping_sim_0.30.csv
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Stats: 370 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:05 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.40 (similarity ≥ 0.60)...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Found 160 clusters
+2026-02-23 16:04:05 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:05 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.40.csv, mapping_sim_0.40.csv
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Stats: 160 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:05 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.50 (similarity ≥ 0.50)...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Found 42 clusters
+2026-02-23 16:04:05 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:05 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.50.csv, mapping_sim_0.50.csv
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Stats: 42 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:05 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.60 (similarity ≥ 0.40)...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Found 7 clusters
+2026-02-23 16:04:05 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:05 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.60.csv, mapping_sim_0.60.csv
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Stats: 7 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:05 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.70 (similarity ≥ 0.30)...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Found 1 clusters
+2026-02-23 16:04:05 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:05 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.70.csv, mapping_sim_0.70.csv
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Stats: 1 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:05 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.80 (similarity ≥ 0.20)...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Found 1 clusters
+2026-02-23 16:04:05 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:05 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.80.csv, mapping_sim_0.80.csv
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Stats: 1 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:05 - unified_dedup - INFO - 
+Clustering at distance ≤ 0.90 (similarity ≥ 0.10)...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Found 1 clusters
+2026-02-23 16:04:05 - unified_dedup - DEBUG - Post-processing: consolidating clusters by normalized form...
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   No cluster merges needed (all identical normalized forms already in same cluster)
+2026-02-23 16:04:05 - unified_dedup - INFO - ✓ Saved clustering outputs: collapsed_sim_0.90.csv, mapping_sim_0.90.csv
+2026-02-23 16:04:05 - unified_dedup - DEBUG -   Stats: 1 clusters, 2041 edges, 1108 members
+2026-02-23 16:04:05 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 16:04:05 - unified_dedup - INFO - STEP 7: Building per-threshold preprocessing artifacts...
+2026-02-23 16:04:05 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:04:06 - unified_dedup - INFO - ✓ Threshold 0.00: saved artifacts
+2026-02-23 16:04:06 - unified_dedup - DEBUG -   thr_0.00_exact_normalized_groups.csv, thr_0.00_similarity_candidates.csv
+2026-02-23 16:04:06 - unified_dedup - INFO - ✓ Threshold 0.10: saved artifacts
+2026-02-23 16:04:06 - unified_dedup - DEBUG -   thr_0.10_exact_normalized_groups.csv, thr_0.10_similarity_candidates.csv
+2026-02-23 16:04:06 - unified_dedup - INFO - ✓ Threshold 0.20: saved artifacts
+2026-02-23 16:04:06 - unified_dedup - DEBUG -   thr_0.20_exact_normalized_groups.csv, thr_0.20_similarity_candidates.csv
+2026-02-23 16:04:06 - unified_dedup - INFO - ✓ Threshold 0.30: saved artifacts
+2026-02-23 16:04:06 - unified_dedup - DEBUG -   thr_0.30_exact_normalized_groups.csv, thr_0.30_similarity_candidates.csv
+2026-02-23 16:04:06 - unified_dedup - INFO - ✓ Threshold 0.40: saved artifacts
+2026-02-23 16:04:06 - unified_dedup - DEBUG -   thr_0.40_exact_normalized_groups.csv, thr_0.40_similarity_candidates.csv
+2026-02-23 16:04:07 - unified_dedup - INFO - ✓ Threshold 0.50: saved artifacts
+2026-02-23 16:04:07 - unified_dedup - DEBUG -   thr_0.50_exact_normalized_groups.csv, thr_0.50_similarity_candidates.csv
+2026-02-23 16:04:07 - unified_dedup - INFO - ✓ Threshold 0.60: saved artifacts
+2026-02-23 16:04:07 - unified_dedup - DEBUG -   thr_0.60_exact_normalized_groups.csv, thr_0.60_similarity_candidates.csv
+2026-02-23 16:04:07 - unified_dedup - INFO - ✓ Threshold 0.70: saved artifacts
+2026-02-23 16:04:07 - unified_dedup - DEBUG -   thr_0.70_exact_normalized_groups.csv, thr_0.70_similarity_candidates.csv
+2026-02-23 16:04:07 - unified_dedup - INFO - ✓ Threshold 0.80: saved artifacts
+2026-02-23 16:04:07 - unified_dedup - DEBUG -   thr_0.80_exact_normalized_groups.csv, thr_0.80_similarity_candidates.csv
+2026-02-23 16:04:07 - unified_dedup - INFO - ✓ Threshold 0.90: saved artifacts
+2026-02-23 16:04:07 - unified_dedup - DEBUG -   thr_0.90_exact_normalized_groups.csv, thr_0.90_similarity_candidates.csv
+2026-02-23 16:04:07 - unified_dedup - INFO - 
+================================================================================
+2026-02-23 16:04:07 - unified_dedup - INFO - STEP 8: LLM rep picking (constrained + free)...
+2026-02-23 16:04:07 - unified_dedup - INFO - ================================================================================
+2026-02-23 16:04:07 - unified_dedup - INFO - 
+Processing LLM reps for threshold 0.00...
+2026-02-23 16:29:57 - unified_dedup - INFO - ✓ Saved llm_reps_0.00.csv
+2026-02-23 16:29:57 - unified_dedup - INFO - ✓ Saved members_llm_0.00.csv
+2026-02-23 16:29:57 - unified_dedup - INFO -   Stats - avg_edges=1.84 | reps=1108 | free_reps=953
+2026-02-23 16:29:57 - unified_dedup - INFO - 
+Processing LLM reps for threshold 0.10...

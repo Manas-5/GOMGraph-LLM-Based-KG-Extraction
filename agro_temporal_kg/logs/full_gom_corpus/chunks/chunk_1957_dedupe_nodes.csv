@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-15T11:12:32.965476+00:00,exact_geo_hint_partial,e5943fd6-612f-422f-bb97-03ab739dc4e0,market gardens,"Market gardens in Paris require constant fertilization to force nature; manure provides essential elements like heat, nitrogen, and phosphorus for vegetation production.",309c2391-4730-49e4-aff2-6d6e0c8f07f3,,,,
+2026-02-15T11:12:32.965516+00:00,llm,e5943fd6-612f-422f-bb97-03ab739dc4e0,market gardens,"Market gardens in Paris require constant fertilization to force nature; manure provides essential elements like heat, nitrogen, and phosphorus for vegetation production.",db1a2bc3-a59e-4f9e-b4ea-3a368d432fef,,,,

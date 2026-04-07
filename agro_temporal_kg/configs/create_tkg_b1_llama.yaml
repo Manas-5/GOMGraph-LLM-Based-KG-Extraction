@@ -1,0 +1,15 @@
+
+defaults:
+  - _self_
+  - text_splitter: default
+  - llm: ollama #will be overrided in command line
+  - embedder: ollama #remains constant all over the experiments
+  - falkordb: default #will be overrided in command line
+  - file: book1-llama70b #changed from test to book1
+  - prompts/extract_text: default #configs can be changed go to configs/prompts/extract_text
+  - prompts/extract_edges: default #configs can be changed go to configs/prompts/extract_edges
+  - entity_types: all #changed from none to all
+  - edge_types: none 
+
+
+

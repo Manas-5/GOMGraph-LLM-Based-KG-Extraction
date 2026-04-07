@@ -1,0 +1,9 @@
+# Plant-focused entity types
+types:
+  - Plant
+  - PlantPart
+  - Location
+  - SoilType
+  - Time
+  - Structure
+

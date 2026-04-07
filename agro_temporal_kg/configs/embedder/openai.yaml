@@ -1,0 +1,4 @@
+api_key: ${oc.env:OPENAI_API_KEY}
+base_url: "https://api.openai.com/v1"
+embedding_model: "text-embedding-3-small"
+embedding_dim: 1536

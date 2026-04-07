@@ -1,0 +1,21 @@
+# All available entity types
+types:
+  - Plant
+  - PlantPart
+  - Pest
+  - Practice
+  - SoilType
+  - Condition
+  - Structure
+  - Time
+  - Location
+  - Input
+  - Equipment
+  - Disease
+  - Weather
+  - Nutrient
+  - Organism
+  - Animal #added
+  - People #added
+  - Institution #added
+

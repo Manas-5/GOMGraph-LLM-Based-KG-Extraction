@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/scripts/run.py", line 22, in <module>
+    from agro_temporal_kg.configs import CreateTemporalKGConfig, compose_config
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/agro_temporal_kg/configs/__init__.py", line 3, in <module>
+    from agro_temporal_kg.configs.compose_config import compose_config, config_to_dict
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/agro_temporal_kg/configs/compose_config.py", line 10, in <module>
+    from hydra import compose, initialize_config_dir
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/__init__.py", line 5, in <module>
+    from hydra import utils
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/utils.py", line 8, in <module>
+    import hydra._internal.instantiate._instantiate2
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 12, in <module>
+    from hydra._internal.utils import _locate
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 18, in <module>
+    from hydra.core.utils import get_valid_filename, validate_config_path
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/core/utils.py", line 20, in <module>
+    from hydra.core.hydra_config import HydraConfig
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/core/hydra_config.py", line 6, in <module>
+    from hydra.conf import HydraConf
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/conf/__init__.py", line 46, in <module>
+    class JobConf:
+  File "/usr/lib/python3.10/dataclasses.py", line 1184, in dataclass
+    return wrap(cls)
+  File "/usr/lib/python3.10/dataclasses.py", line 1175, in wrap
+    return _process_class(cls, init, repr, eq, order, unsafe_hash,
+  File "/usr/lib/python3.10/dataclasses.py", line 1024, in _process_class
+    _init_fn(all_init_fields,
+  File "/usr/lib/python3.10/dataclasses.py", line 579, in _init_fn
+    return _create_fn('__init__',
+  File "/usr/lib/python3.10/dataclasses.py", line 432, in _create_fn
+    exec(txt, globals, ns)
+  File "<string>", line 1, in <module>
+KeyboardInterrupt

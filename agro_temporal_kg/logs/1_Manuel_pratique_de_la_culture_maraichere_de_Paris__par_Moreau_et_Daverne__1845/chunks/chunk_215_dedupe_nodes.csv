@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-03-13T01:37:48.472701+00:00,exact,2f63ad14-0a20-400f-b888-0c08c389cc4b,leaf,"Leaf is a plant part, mentioned as having sharper leaves than some cabbage varieties and violet color in purple broccoli.",9171abf7-c9d2-449c-97a0-0bb294eb7d07,,,,
+2026-03-13T01:37:48.472727+00:00,llm,2f63ad14-0a20-400f-b888-0c08c389cc4b,leaf,"Leaf is a plant part, mentioned as having sharper leaves than some cabbage varieties and violet color in purple broccoli.",b958068e-3b36-42d2-8861-38b5fd7caf83,,,,

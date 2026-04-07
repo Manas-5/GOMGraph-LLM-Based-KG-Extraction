@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-03-13T02:10:40.031735+00:00,exact,840a461a-060b-4e27-ba08-2369e8a0496f,frost,Frost affects soil and forms crusts that take a long time to thaw; market gardeners have developed techniques to force nature despite frost.,2f7b1faa-3057-4f9b-bc88-b8f3bf866436,,,,
+2026-03-13T02:10:40.031763+00:00,llm,840a461a-060b-4e27-ba08-2369e8a0496f,frost,Frost affects soil and forms crusts that take a long time to thaw; market gardeners have developed techniques to force nature despite frost.,fa543f4c-50ac-4076-9d97-de2645bd5967,,,,

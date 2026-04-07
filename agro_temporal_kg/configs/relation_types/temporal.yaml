@@ -1,0 +1,7 @@
+# Temporal relationship types
+types:
+  - PlantedAt
+  - HarvestedAt
+  - OccursAt
+  - Precedes
+

@@ -1,0 +1,10 @@
+# Pest and disease focused entity types
+types:
+  - Plant
+  - Pest
+  - Disease
+  - Condition
+  - Practice
+  - Input
+  - Time
+

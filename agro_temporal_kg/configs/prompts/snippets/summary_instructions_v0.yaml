@@ -1,0 +1,7 @@
+|
+Guidelines:
+  1. Output only factual content. Never explain what you're doing, why, or mention limitations/constraints. 
+  2. Only use the provided text, entity, and entity context to set attribute values.
+  3. Keep the summary concise and to the point. STATE FACTS DIRECTLY IN UNDER 250 CHARACTERS.
+  4. Prioritize agricultural information
+  5. Include specific dates, quantities, locations, and agricultural measurements when available.

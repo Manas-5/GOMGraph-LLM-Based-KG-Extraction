@@ -1,0 +1,4 @@
+📊 Exporting graph '1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845' (1697 nodes, 6294 edges)
+✅ Successfully exported graph '1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845' to:
+   • Nodes: /mnt/diskGum/manas/graph-dedup-patch/agro_temporal_kg/exported_data/1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845/nodes_1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845.tsv
+   • Edges: /mnt/diskGum/manas/graph-dedup-patch/agro_temporal_kg/exported_data/1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845/edges_1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845.tsv

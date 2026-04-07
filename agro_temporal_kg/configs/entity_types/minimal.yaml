@@ -1,0 +1,7 @@
+# Minimal set of core entity types
+types:
+  - Plant
+  - Pest
+  - Practice
+  - Time
+

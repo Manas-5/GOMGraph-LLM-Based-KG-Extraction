@@ -1,0 +1,4 @@
+path: "/mnt/diskGum/manas/graph-dedup-patch/data/full_gom_corpus.txt"
+group_id: "full_gom_corpus"
+source_description: "Merged full GOM corpus (books 1-21) with simple newline separators."
+reference_year: 1900

@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-03-13T14:41:10.347730+00:00,exact,2ff9035b-0088-45cd-ba32-75a23dd112b8,eggplant,"Eggplant seeds are lenticular or kidney-shaped, brick-colored and 2 millimeters in diameter; they are good for two years. Eggplants are a September crop.",16afacae-d8dd-47f2-9831-ae7b86f2ba56,,,,
+2026-03-13T14:41:10.347767+00:00,llm,2ff9035b-0088-45cd-ba32-75a23dd112b8,eggplant,"Eggplant seeds are lenticular or kidney-shaped, brick-colored and 2 millimeters in diameter; they are good for two years. Eggplants are a September crop.",5805a760-b143-405a-bbf6-40e2e11d9a46,,,,

@@ -1,0 +1,72 @@
+2026-02-10 13:16:03.746 | INFO     | __main__:create_tkg:84 - Loaded configuration:
+{'text_splitter': {'chunk_size': 1000, 'chunk_overlap': 150, 'separators': ['\n\n', '\n', '. ', ' ', '']}, 'llm': {'model': 'llama3.1:70b', 'temperature': 0.0, 'api_key': 'abc', 'base_url': 'http://localhost:11434/v1'}, 'embedder': {'api_key': 'abc', 'base_url': 'http://localhost:11434/v1', 'embedding_model': 'bge-m3:567m', 'embedding_dim': 768}, 'falkordb': {'host': 'localhost', 'port': 6380, 'database': 'test'}, 'file': {'path': '/mnt/diskGum/manas/graph-dedup-patch/data/test.txt', 'group_id': 'test', 'source_description': 'These passages describe traditional horticultural practices and challenges, detailing soil management, watering, pest damage, plant structure, and cultivation methods in garden and orchard settings.', 'reference_year': 1880}, 'prompts': {'extract_text': {'system_version': 'v0', 'user_version': 'v0'}, 'extract_edges': {'system_version': 'v0', 'user_version': 'v1'}}, 'entity_types': {'types': ['Plant', 'PlantPart', 'Pest', 'Practice', 'SoilType', 'Condition', 'Structure', 'Time', 'Location', 'Input', 'Equipment', 'Disease', 'Weather', 'Nutrient', 'Organism', 'Animal', 'People', 'Institution']}, 'edge_types': {'types': []}}
+{
+  "embedder": {
+    "api_key": "**********",
+    "base_url": "http://localhost:11434/v1",
+    "embedding_model": "bge-m3:567m",
+    "embedding_dim": 768
+  },
+  "falkor_db": {
+    "host": "localhost",
+    "port": 6380,
+    "database": "test"
+  },
+  "text_splitter": {
+    "chunk_size": 1000,
+    "chunk_overlap": 150,
+    "separators": [
+      "\n\n",
+      "\n",
+      ". ",
+      " ",
+      ""
+    ]
+  },
+  "llm": {
+    "model": "llama3.1:70b",
+    "temperature": 0.0,
+    "api_key": "abc",
+    "base_url": "http://localhost:11434/v1"
+  },
+  "file": {
+    "path": "/mnt/diskGum/manas/graph-dedup-patch/data/test.txt",
+    "group_id": "test",
+    "source_description": "These passages describe traditional horticultural practices and challenges, detailing soil management, watering, pest damage, plant structure, and cultivation methods in garden and orchard settings.",
+    "reference_year": 1880
+  },
+  "prompts": {
+    "extract_text": {
+      "system_version": "v0",
+      "user_version": "v0"
+    },
+    "extract_edges": {
+      "system_version": "v0",
+      "user_version": "v1"
+    },
+    "summary_instructions_version": null
+  },
+  "update_communities": false,
+  "entity_types": [
+    "Plant",
+    "PlantPart",
+    "Pest",
+    "Practice",
+    "SoilType",
+    "Condition",
+    "Structure",
+    "Time",
+    "Location",
+    "Input",
+    "Equipment",
+    "Disease",
+    "Weather",
+    "Nutrient",
+    "Organism",
+    "Animal",
+    "People",
+    "Institution"
+  ],
+  "edge_types": [],
+  "edge_type_map": null
+}

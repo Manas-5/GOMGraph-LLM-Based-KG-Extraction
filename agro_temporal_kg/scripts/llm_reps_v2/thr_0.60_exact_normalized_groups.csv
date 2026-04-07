@@ -1,0 +1,828 @@
+normalized,total_count,examples
+planted in,89,"IS_PLANTED_IN, PLANTED_IN"
+affected by,69,"AFFECTED_BY, IS_AFFECTED_BY"
+grown in,57,GROWN_IN
+grows in,28,GROWS_IN
+covered with,27,"COVERED_WITH, IS_COVERED_WITH"
+harvested in,20,"HARVESTED_IN, IS_HARVESTED_IN"
+treated with,14,"IS_TREATED_WITH, TREATED_WITH"
+variety,12,"IS_VARIETY_OF, VARIETY_OF"
+used for,10,"IS_USED_FOR, USED_FOR"
+type,9,"IS_TYPE_OF, TYPE_OF"
+protected from,8,"IS_PROTECTED_FROM, PROTECTED_FROM"
+located in,8,"IS_LOCATED_IN, LOCATED_IN"
+uses equipment,7,USES_EQUIPMENT
+relates to,7,RELATES_TO
+grown under,7,GROWN_UNDER
+related to,7,"ARE_RELATED_TO, IS_RELATED_TO, RELATED_TO"
+contains,7,CONTAINS
+planted after,6,PLANTED_AFTER
+filled with,6,"FILLED_WITH, IS_FILLED_WITH"
+planted in rows,6,"PLANTED_IN_ROWS, PLANTED_IN_rows"
+protected by,6,"IS_PROTECTED_BY, PROTECTED_BY"
+sown in,6,SOWN_IN
+affected by relationship,6,AFFECTED_BY_RELATIONSHIP
+used with,6,USED_WITH
+crop planting relationship,6,CROP_PLANTING_RELATIONSHIP
+has growth stage,5,HAS_GROWTH_STAGE
+used in,5,"IS_USED_IN, USED_IN"
+pest affects crop,5,PEST_AFFECTS_CROP
+has part,5,HAS_PART
+differs from,5,DIFFERS_FROM
+affected by weather conditions,5,"AFFECTED_BY_WEATHER_CONDITIONS, AFFECTED_BY_WEATHER_CONDITIONS_OF"
+equipped with,5,EQUIPPED_WITH
+has variety,5,HAS_VARIETY
+associated with,5,"ARE_ASSOCIATED_WITH, ASSOCIATED_WITH, IS_ASSOCIATED_WITH"
+stored in,5,"IS_STORED_IN, STORED_IN"
+affected by pest or disease,5,AFFECTED_BY_PEST_OR_DISEASE
+planted in month,5,"CAN_BE_PLANTED_IN_MONTH, PLANTED_IN_MONTH"
+cultivated in,5,"CULTIVATED_IN, IS_CULTIVATED_IN"
+uses,5,USES
+pest affected by,4,PEST_AFFECTED_BY
+crop growth stage relationship,4,CROP_GROWTH_STAGE_RELATIONSHIP
+crop type,4,CROP_TYPE
+crop variety,4,CROP_VARIETY
+transplanted into,4,TRANSPLANTED_INTO
+transplanted to,4,TRANSPLANTED_TO
+placed on,4,PLACED_ON
+sown at,4,SOWN_AT
+covered by,4,"COVERED_BY, IS_COVERED_BY"
+type crop variety,4,TYPE_OF_CROP_VARIETY
+similar to,4,"IS_SIMILAR_TO, SIMILAR_TO"
+used by,4,USED_BY
+made,4,"IS_MADE_OF, MADE_OF"
+causes damage to,4,CAUSES_DAMAGE_TO
+planted with,4,"IS_PLANTED_WITH, PLANTED_WITH"
+part,4,"IS_PART_OF, PART_OF"
+watered with,4,WATERED_WITH
+flowed through,4,FLOWED_THROUGH
+watered by,4,WATERED_BY
+frame supports,3,FRAME_SUPPORTS
+planted at,3,PLANTED_AT
+requires,3,REQUIRES
+planted in autumn,3,PLANTED_IN_AUTUMN
+replaced with real relation type,3,REPLACED_WITH_REAL_RELATION_TYPE
+cultivated using,3,CULTIVATED_USING
+transplanted under,3,TRANSPLANTED_UNDER
+growth stage,3,GROWTH_STAGE
+mixed with,3,MIXED_WITH
+grows under,3,GROWS_UNDER
+cultivated during,3,CULTIVATED_DURING
+connected to,3,"CONNECTED_TO, IS_CONNECTED_TO"
+crop variegy,3,CROP_VARIEGY
+grown on,3,GROWN_ON
+planted in potting soil,3,PLANTED_IN_POTTING_SOIL
+planted in season,3,PLANTED_IN_SEASON
+grows,3,GROWS
+planted on date,3,PLANTED_ON_DATE
+involves operation,3,INVOLVES_OPERATION
+planted under,3,PLANTED_UNDER
+colocated with,3,COLOCATED_WITH
+affects growth,3,AFFECTS_GROWTH_OF
+maturity time in months,3,MATURITY_TIME_IN_MONTHS
+caused by,3,CAUSED_BY
+has cost,3,HAS_COST
+affected by weather condition,3,AFFECTED_BY_WEATHER_CONDITION
+harvested from,3,HARVESTED_FROM
+has characteristics,3,HAS_CHARACTERISTICS
+exposed to,3,EXPOSED_TO
+placed in,3,PLACED_IN
+seed harvested from,3,SEED_HARVESTED_FROM
+grown in sequence,2,GROWN_IN_SEQUENCE
+seed collection method,2,SEED_COLLECTION_METHOD
+face south,2,FACE_SOUTH
+crop varieies,2,CROP_VARIEIES
+grown from,2,GROWN_FROM
+seed storage lifetime,2,SEED_STORAGE_LIFETIME
+cultivated,2,CULTIVATED
+grows on,2,GROWS_ON
+relationship type treated with,2,RELATIONSHIP_TYPE_TREATED_WITH
+crop grown,2,CROP_GROWN
+covers,2,COVERS
+spread with,2,SPREAD_WITH
+relationship type affected by,2,RELATIONSHIP_TYPE_AFFECTED_BY
+grows during,2,GROWS_DURING
+introduced by,2,INTRODUCED_BY
+protected from frost,2,PROTECTED_FROM_FROST
+involves,2,INVOLVES
+equipment used in structure,2,EQUIPMENT_USED_IN_STRUCTURE
+sown on,2,SOWN_ON
+requires more human resources than,2,REQUIRES_MORE_HUMAN_RESOURCES_THAN
+harvested before,2,"HARVESTED_BEFORE, IS_HARVESTED_BEFORE"
+sowed on,2,SOWED_ON
+harvested during,2,HARVESTED_DURING
+cut above leaf,2,CUT_ABOVE_LEAF
+harvested at,2,HARVESTED_AT
+harvested,2,"HARVESTED, IS_HARVESTED"
+preparation requires,2,PREPARATION_REQUIRES
+has seeds with color tending to brick,2,HAS_SEEDS_WITH_COLOR_TENDING_TO_BRICK
+sown at same time,2,SOWN_AT_SAME_TIME
+cultivated variety,2,CULTIVATED_VARIETY
+seedlings were thinned out,2,SEEDLINGS_WERE_THINNED_OUT
+prized for earliness,2,IS_PRIZED_FOR_EARLINESS
+has requirement for watering,2,HAS_REQUIREMENT_FOR_WATERING
+requires watering,2,REQUIRES_WATERING
+growth stage associated with season,2,GROWTH_STAGE_ASSOCIATED_WITH_SEASON
+fertilizer relationship,2,FERTILIZER_RELATIONSHIP
+disease affects crop,2,DISEASE_AFFECTS_CROP
+cultivated on,2,CULTIVATED_ON
+grown at location,2,GROWN_AT_LOCATION
+produces seeds,2,PRODUCES_SEEDS
+have similar seed appearance to,2,HAVE_SIMILAR_SEED_APPEARANCE_TO
+cultivated at,2,CULTIVATED_AT
+grows to height,2,GROWS_TO_HEIGHT
+growth stage transition on,2,GROWTH_STAGE_TRANSITION_ON
+authored by,2,AUTHORED_BY
+contained by soil pit,2,CONTAINED_BY_SOIL_PIT
+lettuce growth stage,2,LETTUCE_GROWTH_STAGE
+consists,2,CONSISTS_OF
+comprises,2,"COMPRISES, COMPRISES_OF"
+picked from,2,"IS_PICKED_FROM, PICKED_FROM"
+uses to make mulch,2,USES_TO_MAKE_MULCH
+tool used in practice,2,TOOL_USED_IN_PRACTICE
+planted in layer,2,PLANTED_IN_LAYER
+planted in holes containing,2,PLANTED_IN_HOLES_CONTAINING
+transferred to,2,TRANSFERRED_TO
+watered every x days in condition y,2,WATERED_EVERY_X_DAYS_IN_CONDITION_Y
+uses up,2,USES_UP
+used for loading,2,USED_FOR_LOADING
+located on,2,"IS_LOCATED_ON, LOCATED_ON"
+warmed up in winter,2,WARMED_UP_IN_WINTER
+undergoes,2,UNDERGOES
+used as fertilizer,2,USED_AS_FERTILIZER
+affected by weather,2,AFFECTED_BY_WEATHER
+made from,2,MADE_FROM
+affected by condition,2,AFFECTED_BY_CONDITION
+affected by soil type,2,AFFECTED_BY_SOIL_TYPE
+affected by temperature,2,AFFECTED_BY_TEMPERATURE
+mannes contain,2,MANNES_CONTAIN
+used to prevent,2,USED_TO_PREVENT
+affected by pests or diseases,2,AFFECTED_BY_PESTS_OR_DISEASES
+affected by pests,2,AFFECTED_BY_PESTS
+supported by,2,SUPPORTED_BY
+affected by disease,2,AFFECTED_BY_DISEASE
+also related to as,2,IS_ALSO_RELATED_TO_AS
+symptom,2,SYMPTOM_OF
+needed to fertilize,2,IS_NEEDED_TO_FERTILIZE
+planted on,2,PLANTED_ON
+maturing on,2,MATURING_ON
+controlled by,2,"CONTROLLED_BY, IS_CONTROLLED_BY"
+uses equipment type,2,USES_EQUIPMENT_TYPE
+thinned in same way,2,ARE_THINNED_IN_SAME_WAY
+watered at,2,WATERED_AT
+,2,IS_A
+needed to maintain soil fertility,2,IS_NEEDED_TO_MAINTAIN_SOIL_FERTILITY
+provides financial support,1,PROVIDES_FINANCIAL_SUPPORT
+performed by market gardeners,1,PERFORMED_BY_MARKET_GARDENERS
+pulled out at,1,PULLED_OUT_AT
+published by institution,1,PUBLISHED_BY_INSTITUTION
+published by,1,PUBLISHED_BY
+published at,1,PUBLISHED_AT
+perennial in,1,IS_PERENNIAL_IN
+provides shade,1,PROVIDES_SHADE
+provides warmer exposures to,1,PROVIDES_WARMER_EXPOSURES_TO
+peas grow from,1,PEAS_GROW_FROM
+pruned for health,1,PRUNED_FOR_HEALTH
+pruned with,1,PRUNED_WITH
+people relationship encourage economy,1,PEOPLE_RELATIONSHIP_ENCOURAGE_ECONOMY
+people relationship work allocation,1,PEOPLE_RELATIONSHIP_WORK_ALLOCATION
+pulled up during,1,PULLED_UP_DURING
+pruning stage,1,PRUNING_STAGE_OF
+pruned within period,1,PRUNED_WITHIN_PERIOD
+persil grows into,1,PERSIL_GROWS_INTO
+needs to exist,1,NEEDS_TO_EXIST
+needs watering method,1,NEEDS_WATERING_METHOD
+needsfertilization,1,NEEDSFERTILIZATION
+not cultivated in,1,NOT_CULTIVATED_IN
+refers to timeframe,1,REFERS_TO_TIMEFRAME_OF
+occupies land for duration time,1,OCCUPIES_LAND_FOR_DURATION_OF_TIME
+occurs after,1,OCCURS_AFTER
+occurs before harvest,1,OCCURS_BEFORE_HARVEST
+recovered with airing,1,RECOVERED_WITH_AIRING
+recommended treatment,1,RECOMMENDED_TREATMENT
+recommended planting practice,1,RECOMMENDED_PLANTING_PRACTICE
+recommended planting method,1,RECOMMENDED_PLANTING_METHOD
+recommended for planting in,1,RECOMMENDED_FOR_PLANTING_IN
+occurs in,1,OCCURS_IN
+ready for consumption after,1,IS_READY_FOR_CONSUMPTION_AFTER
+occurs within location,1,OCCURS_WITHIN_LOCATION
+owns,1,OWNS
+parsley considered for cultivation,1,PARSLEY_CONSIDERED_FOR_CULTIVATION
+rebuild layers,1,REBUILD_LAYERS
+part layer,1,PART_OF_A_LAYER
+ready to harvest,1,READY_TO_HARVEST
+ready for planting after,1,READY_FOR_PLANTING_AFTER
+ready for consumption at,1,READY_FOR_CONSUMPTION_AT
+part plant used as,1,PART_OF_PLANT_USED_AS
+pest,1,PEST_OF
+rarely marry outside,1,RARELY_MARRY_OUTSIDE_OF
+raised above,1,RAISED_ABOVE
+pushed into by,1,IS_PUSHED_INTO_BY
+part planting process,1,IS_PART_OF_PLANTING_PROCESS
+path preparation depth,1,PATH_PREPARATION_DEPTH
+recipient,1,RECIPIENT_OF
+planted in first fortnight month,1,PLANTED_IN_FIRST_FORTNIGHT_OF_MONTH
+preferred by,1,PREFERRED_BY
+planted in full squares,1,PLANTED_IN_FULL_SQUARES
+planted in mid month,1,PLANTED_IN_MID_MONTH
+prefered growth period,1,PREFERED_GROWTH_PERIOD
+planted in november,1,PLANTED_IN_NOVEMBER
+planted in place,1,PLANTED_IN_PLACE_OF
+prefer soil type,1,PREFER_SOIL_TYPE
+planted in pot before permanent planting,1,PLANTED_IN_POT_BEFORE_PERMANENT_PLANTING
+prefer potting soil,1,PREFER_POTTING_SOIL
+practised in,1,PRACTISED_IN
+practiced in,1,PRACTICED_IN
+powered by,1,POWERED_BY
+potting soil covers,1,POTTING_SOIL_COVERS
+potting in,1,POTTING_IN
+prone to falling off,1,IS_PRONE_TO_FALLING_OFF
+plowed with,1,PLOWED_WITH
+plowed at time year,1,PLOWED_AT_TIME_OF_YEAR
+ploughed by,1,PLOUGHED_BY
+plants affected by weather conditions,1,PLANTS_AFFECTED_BY_WEATHER_CONDITIONS
+planted in soil type,1,PLANTED_IN_SOIL_TYPE
+planting method alternative,1,PLANTING_METHOD_ALTERNATIVE
+planted in stage growth,1,PLANTED_IN_STAGE_OF_GROWTH
+planting location,1,PLANTING_LOCATION
+planting date,1,PLANTING_DATE
+planted with spacing,1,PLANTED_WITH_SPACING
+planted near,1,PLANTED_NEAR
+planted nearby,1,PLANTED_NEARBY
+planted on sides,1,PLANTED_ON_SIDES
+planted out in,1,PLANTED_OUT_IN
+planted under different structure,1,PLANTED_UNDER_DIFFERENT_STRUCTURE
+post fixation,1,POST_FIXATION
+protected from direct contact,1,PROTECTED_FROM_DIRECT_CONTACT
+protected from affecting conditions frosts using method protecting against frosts by covering with frames and boxes,1,PROTECTED_FROM_AFFECTING_CONDITIONS_OF_FROSTS_USING_METHOD_OF_PROTECTING_AGAINST_FROSTS_BY_COVERING_WITH_FRAMES_AND_BOXES
+pest and disease relationships,1,PEST_AND_DISEASE_RELATIONSHIPS
+protected by hook,1,PROTECTED_BY_HOOK
+pest control measure used against,1,PEST_CONTROL_MEASURE_USED_AGAINST
+protected against,1,PROTECTED_AGAINST
+pest control relationship,1,PEST_CONTROL_RELATIONSHIP
+prone to pests,1,PRONE_TO_PESTS
+pest destructive to,1,PEST_DESTRUCTIVE_TO
+prone to,1,IS_PRONE_TO
+pest found in,1,PEST_FOUND_IN
+picked before ripening on vine,1,PICKED_BEFORE_RIPENING_ON_VINE
+produces income for,1,PRODUCES_INCOME_FOR
+placed into,1,PLACED_INTO
+produces in timeframe,1,PRODUCES_IN_TIMEFRAME
+preferred over,1,PREFERRED_OVER
+placed on or near surface,1,PLACED_ON_OR_NEAR_SURFACE_OF
+produces,1,PRODUCES
+processed with equipment,1,PROCESSED_WITH_EQUIPMENT
+probed at time period,1,PROBED_AT_TIME_PERIOD
+placed within,1,PLACED_WITHIN
+plant protected from frost,1,PLANT_PROTECTED_FROM_FROST
+prevents,1,PREVENTS
+prevented by,1,PREVENTED_BY
+pressed with,1,PRESSED_WITH
+prepared with,1,PREPARED_WITH
+prepared for harvest by planting in,1,PREPARED_FOR_HARVEST_BY_PLANTING_IN
+planted at time,1,PLANTED_AT_TIME
+planted before,1,PLANTED_BEFORE
+preffered for,1,PREFFERED_FOR
+planted during,1,PLANTED_DURING
+produces fruit at,1,PRODUCES_FRUIT_AT
+thrives in conditions,1,THRIVES_IN_CONDITIONS
+tied to,1,TIED_TO
+time period association,1,TIME_PERIOD_ASSOCIATION
+tool used for planting,1,TOOL_USED_FOR_PLANTING
+tool used in equipment,1,TOOL_USED_IN_EQUIPMENT
+topped on,1,TOPPED_ON
+total spent on manure and fertilizers,1,TOTAL_SPENT_ON_MANURE_AND_FERTILIZERS
+transferred through,1,TRANSFERRED_THROUGH
+transplanted at,1,TRANSPLANTED_AT
+transplanted from,1,TRANSPLANTED_FROM
+needs uncovering before,1,NEEDS_UNCOVERING_BEFORE
+treated with air,1,TREATED_WITH_AIR
+treated with potting soil,1,TREATED_WITH_POTTING_SOIL
+treated with same care,1,TREATED_WITH_SAME_CARE
+treated with water type,1,TREATED_WITH_WATER_TYPE
+trench bedded with,1,TRENCH_BEDDED_WITH
+turnips and radishes harvested in summer,1,TURNIPS_AND_RADISHES_HARVESTED_IN_SUMMER
+urine impergnates litter during manure preparation,1,URINE_IMPERGNATES_LITTER_DURING_MANURE_PREPARATION
+used during harsh nights,1,USED_DURING_HARSH_NIGHTS
+used for cutting,1,CAN_BE_USED_FOR_CUTTING
+used for harvesting,1,USED_FOR_HARVESTING
+trasplanted into,1,IS_TRASPLANTED_INTO
+spread on,1,SPREAD_ON
+spread over,1,SPREAD_OVER
+spreads to,1,SPREADS_TO
+spring chervil grown from,1,SPRING_CHERVIL_GROWN_FROM
+starts production after,1,STARTS_PRODUCTION_AFTER
+stored in same condition,1,STORED_IN_SAME_CONDITION
+straw plugs use for,1,STRAW_PLUGS_USE_FOR
+structure associated with practice,1,STRUCTURE_ASSOCIATED_WITH_PRACTICE
+structure relationship,1,STRUCTURE_RELATIONSHIP
+structured by,1,STRUCTURED_BY
+thinned in different ways,1,ARE_THINNED_IN_DIFFERENT_WAYS
+structured with,1,STRUCTURED_WITH
+subject to,1,SUBJECT_TO
+submitted to competition,1,SUBMITTED_TO_COMPETITION
+succeeded by,1,SUCCEEDED_BY
+summer crop,1,SUMMER_CROP
+supported by structure,1,SUPPORTED_BY_STRUCTURE
+surroundded with,1,IS_SURROUNDDED_WITH
+surrounded by,1,SURROUNDED_BY
+take soil from winter beds,1,TAKE_SOIL_FROM_WINTER_BEDS
+takes longer to maturate,1,TAKES_LONGER_TO_MATURATE
+structured in shape,1,STRUCTURED_IN_SHAPE_OF
+uses to access,1,USES_TO_ACCESS
+uses tool,1,USES_TOOL
+affected by changes in,1,AFFECTED_BY_CHANGES_IN
+visited during storage,1,VISITED_DURING_STORAGE
+vulnerable to,1,IS_VULNERABLE_TO
+watercress sorrel planted after,1,WATERCRESS_SORREL_PLANTED_AFTER
+watered abundantly,1,WATERED_ABUNDANTLY
+watered after planting,1,WATERED_AFTER_PLANTING
+watered against,1,WATERED_AGAINST
+watered at time,1,WATERED_AT_TIME
+used for irrigation,1,IS_USED_FOR_IRRIGATION
+watered in,1,WATERED_IN
+watered on,1,WATERED_ON
+watered when soil dries out,1,WATERED_WHEN_SOIL_DRIES_OUT
+watered withirrigation system,1,WATERED_WITHIRRIGATION_SYSTEM
+weighted,1,WEIGHTED
+winter chervil sown in,1,WINTER_CHERVIL_SOWN_IN
+winter chervil withstands,1,WINTER_CHERVIL_WITHSTANDS
+wood does not interact with manure during preparation,1,WOOD_DOES_NOT_INTERACT_WITH_MANURE_DURING_PREPARATION
+works as,1,WORKS_AS
+affected by cultivation method,1,AFFECTED_BY_CULTIVATION_METHOD
+watered due to,1,WATERED_DUE_TO
+used for larding,1,USED_FOR_LARDING
+used for pest control,1,USED_FOR_PEST_CONTROL
+used for planting,1,USED_FOR_PLANTING
+used for transporting,1,USED_FOR_TRANSPORTING
+used for watering,1,USED_FOR_WATERING
+used in forced cultivation,1,USED_IN_FORCED_CULTIVATION
+used in salads with,1,USED_IN_SALADS_WITH
+used to bring vegetables to market,1,USED_TO_BRING_VEGETABLES_TO_MARKET
+used to collect manure,1,USED_TO_COLLECT_MANURE
+used to create,1,USED_TO_CREATE
+uses soil type,1,USES_SOIL_TYPE
+used to establish espaliers for,1,USED_TO_ESTABLISH_ESPALIERS_FOR
+used to prevent damage from,1,USED_TO_PREVENT_DAMAGE_FROM
+used to protect from,1,USED_TO_PROTECT_FROM
+useful for,1,USEFUL_FOR
+uses as fertilizer,1,USES_AS_FERTILIZER
+uses equipment to perform marcotting,1,USES_EQUIPMENT_TO_PERFORM_MARCOTTING
+uses fertilizer,1,USES_FERTILIZER
+affected by climate conditions,1,AFFECTED_BY_CLIMATE_CONDITIONS
+uses for work,1,USES_FOR_WORK
+uses manure in,1,USES_MANURE_IN
+used to edge,1,USED_TO_EDGE
+requires irrigation method,1,REQUIRES_IRRIGATION_METHOD
+requires light moisture,1,REQUIRES_LIGHT_MOISTURE
+requires monitoring for shape,1,REQUIRES_MONITORING_FOR_SHAPE
+requires precaution,1,REQUIRES_PRECAUTION
+requires preparation,1,REQUIRES_PREPARATION
+requires pruning,1,REQUIRES_PRUNING
+requires renewal every year through sowing,1,REQUIRES_RENEWAL_EVERY_YEAR_THROUGH_SOWING
+requires space,1,REQUIRES_SPACE
+requires specific ploughing methods,1,REQUIRES_SPECIFIC_PLOUGHING_METHODS
+requires specific sealing methods,1,REQUIRES_SPECIFIC_SEALING_METHODS
+spread new manure in paths,1,SPREAD_NEW_MANURE_IN_PATHS
+requires specific training methods,1,REQUIRES_SPECIFIC_TRAINING_METHODS
+requiresirrigation,1,REQUIRESIRRIGATION
+requirespruning,1,REQUIRESPRUNING
+resembles,1,RESEMBLES
+resembles plant family,1,RESEMBLES_PLANT_FAMILY
+retransplantation done on,1,RETRANSPLANTATION_DONE_ON
+revenue market gardening in paris,1,REVENUE_OF_MARKET_GARDENING_IN_PARIS
+ripe date,1,RIPE_DATE
+ripens after,1,RIPENS_AFTER
+ripens in,1,RIPENS_IN
+requires specific topdressing methods,1,REQUIRES_SPECIFIC_TOPDRESSING_METHODS
+related to weather conditions,1,RELATED_TO_WEATHER_CONDITIONS
+relationship type not listed in fact types,1,RELATIONSHIP_TYPE_NOT_LISTED_IN_THE_FACT_TYPES
+relationship type planted in,1,RELATIONSHIP_TYPE_PLANTED_IN
+remains piled up at,1,REMAINS_PILED_UP_AT
+remove cotyledons,1,REMOVE_COTYLEDONS
+remove from leaf tips,1,REMOVE_FROM_LEAF_TIPS
+removed from field in agricultural context,1,REMOVED_FROM_FIELD_IN_AGRICULTURAL_CONTEXT
+removed if not chosen to be fruit,1,IS_REMOVED_IF_NOT_CHOSEN_TO_BE_FRUIT
+removed to prevent,1,REMOVED_TO_PREVENT
+removed when no longer needed,1,REMOVED_WHEN_NO_LONGER_NEEDED
+requires input,1,REQUIRES_INPUT
+repeats moistening,1,REPEATS_MOISTENING
+replaced,1,REPLACED
+replaced by windreaks made,1,REPLACED_BY_WINDREAKS_MADE_OF
+replaces,1,REPLACES
+replanting,1,REPLANTING
+represented in,1,REPRESENTED_IN
+required for,1,IS_REQUIRED_FOR
+required modification,1,REQUIRED_MODIFICATION
+requires conditions from,1,REQUIRES_CONDITIONS_FROM
+requires fertilization practices,1,REQUIRES_FERTILIZATION_PRACTICES
+renewed appeal,1,RENEWED_APPEAL
+soil placed in boxes,1,SOIL_PLACED_IN_BOXES
+soil quality impacts plant growth,1,SOIL_QUALITY_IMPACTS_PLANT_GROWTH
+soil temperature checked,1,SOIL_TEMPERATURE_CHECKED
+soil type in,1,SOIL_TYPE_IN
+sowed in,1,SOWED_IN
+sowing preparation requirement,1,SOWING_PREPARATION_REQUIREMENT
+sown at time year,1,SOWN_AT_TIME_OF_YEAR
+sown by,1,SOWN_BY
+sown during,1,SOWN_DURING
+sown in month,1,IS_SOWN_IN_MONTH
+ripens in season,1,RIPENS_IN_SEASON
+sown to mature in autumn,1,SOWN_TO_MATURE_IN_AUTUMN
+sown with different methods,1,SOWN_WITH_DIFFERENT_METHODS
+spaced apart,1,SPACED-apart
+spaced with,1,SPACED_WITH
+spatially associated with,1,SPATIALLY_ASSOCIATED_WITH
+specifies depth measurement,1,SPECIFIES_DEPTH_MEASUREMENT
+spent on,1,SPENT_ON
+split into two halves for,1,SPLIT_INTO_TWO_HALVES_FOR
+spread before,1,SPREAD_BEFORE
+spread into,1,IS_SPREAD_INTO
+sown in monthly intervals until,1,SOWN_IN_MONTHLY_INTERVALS_UNTIL
+row preparation technique,1,ROW_PREPARATION_TECHNIQUE
+same insects,1,SAME_INSECTS
+seasonal availability,1,SEASONAL_AVAILABILITY
+seasonal growth stage,1,SEASONAL_GROWTH_STAGE_OF
+seed characteristic,1,SEED_CHARACTERISTIC
+seed covered with soil thickness,1,SEED_COVERED_WITH_SOIL_THICKNESS
+seed harvesting method,1,SEED_HARVESTING_METHOD
+seed harvesting method variation,1,SEED_HARVESTING_METHOD_VARIATION
+seed production prerequisite,1,SEED_PRODUCTION_PREREQUISITE
+seed sown on,1,SEED_SOWN_ON
+soil improved with,1,SOIL_IMPROVED_WITH
+separately handled,1,SEPARATELY_HANDLED
+shaded in,1,SHaded_IN
+shaded with,1,SHADED_WITH
+should not have,1,SHOULD_NOT_HAVE
+small in size,1,IS_SMALL_IN_SIZE
+smaller than,1,SMALLER_THAN
+softened by long obscturty,1,SOFTENED_BY_LONG_OBSCTURTY
+soil condition affects crop growth,1,SOIL_CONDITION_AFFECTS_CROP_GROWTH
+soil condition chosen for planting,1,SOIL_CONDITION_CHOSEN_FOR_PLANTING
+soil condition impacts plant,1,SOIL_CONDITION_IMPACTS_PLANT
+seeds require soft bedding,1,SEEDS_REQUIRE_SOFT_BEDDING
+covered with frames,1,COVERED_WITH_FRAMES
+covered with instead mulch,1,COVERED_WITH_INSTEAD_OF_MULCH
+covered with soil,1,COVERED_WITH_SOIL
+covered with soil in,1,COVERED_WITH_SOIL_IN
+covers soil for,1,COVERS_SOIL_FOR
+created from,1,IS_CREATED_FROM
+created in,1,IS_CREATED_IN
+crop associated with practice,1,CROP_ASSOCIATED_WITH_PRACTICE
+crop grafting,1,CROP_GRAFTING
+crop grown from layer,1,CROP_GROWN_FROM_LAYER
+works with,1,WORKS_WITH
+crop growth stages,1,CROP_GROWTH_STAGES
+crop harvest date relationship,1,CROP_HARVEST_DATE_RELATIONSHIP
+crop planted,1,CROP_PLANTED
+crop planting date relationship,1,CROP_PLANTING_DATE_RELATIONSHIP
+crop preference,1,CROP_PREFERENCE
+culled from nursery,1,CULLED_FROM_NURSERY
+cultivated as,1,CULTIVATED_AS
+cultivated for,1,CULTIVATED_FOR
+cultivated from,1,CULTIVATED_FROM
+cultivated together,1,CULTIVATED_TOGETHER
+crop grows in,1,CROP_GROWS_IN
+contained in,1,IS_CONTAINED_IN
+containing,1,CONTAINING
+contains fertility from,1,CONTAINS_FERTILITY_FROM
+contains filaments,1,CONTAINS_FILAMENTS
+contains financial quantity,1,CONTAINS_FINANCIAL_QUANTITY
+contains nutrients,1,CONTAINS_NUTRIENTS
+contains or has,1,CONTAINS_OR_HAS
+contains or has parts,1,CONTAINS_OR_HAS_PARTS
+contains part,1,CONTAINS_PART_OF
+contains soil,1,CONTAINS_SOIL
+covered with during frost,1,COVERED_WITH_DURING_FROST
+contains square pieces,1,CONTAINS_SQUARE_PIECES_OF
+continues into,1,CONTINUES_INTO
+contributed to,1,CONTRIBUTED_TO
+cooccurs with,1,COOCCURS_WITH
+cool season crop,1,COOL_SEASON_CROP
+core removed to restore cauliflower freshness,1,CORE_REMOVED_TO_RESTORE_CAULIFLOWER_FRESHNESS
+couched in,1,COUCHED_IN
+counter planted with,1,COUNTER_PLANTED_WITH
+covered against frosts with,1,COVERED_AGAINST_FROSTS_WITH
+covered by structure,1,COVERED_BY_STRUCTURE
+covered with cloches or frames,1,COVERED_WITH_CLOCHES_OR_FRAMES
+contains spawn,1,CONTAINS_SPAWN
+does not need transplanting due to soil condition,1,DOES_NOT_NEED_TRANSPLANTING_DUE_TO_SOIL_CONDITION
+domed shape beds,1,DOMED_SHAPE_OF_BEDS
+doormat construction,1,DOORMAT_CONSTRUCTION
+doormat tightening,1,DOORMAT_TIGHTENING
+double crop harvesting,1,DOUBLE_CROP_HARVESTING
+draws water from,1,DRAWS_WATER_FROM
+eaten by,1,EATEN_BY
+edge placed in,1,EDGE_PLACED_IN
+emits light to,1,EMITS_LIGHT_TO
+employed in market gardening,1,EMPLOYED_IN_MARKET_GARDENING
+cultivated using forced cultivation method,1,CULTIVATED_USING_FORCED_CULTIVATION_METHOD
+entity history association,1,ENTITY_HISTORY_ASSOCIATION
+equipment for,1,EQUIPMENT_FOR
+equipped with feature,1,EQUIPPED_WITH_FEATURE
+established for espaliers,1,ESTABLISHED_FOR_ESPALIERS_OF
+exhibit long seed viability,1,EXHIBIT_LONG_SEED_VIABILITY
+exhibits similar characters,1,EXHIBITS_SIMILAR_CHARACTERS
+extracted from economics data,1,EXTRACTED_FROM_ECONOMICS_DATA
+farming practice relationship,1,FARMING_PRACTICE_RELATIONSHIP
+fearless,1,FEARLESS_OF
+fed with,1,FED_WITH
+fertilizer recommendation,1,FERTILIZER_RECOMMENDATION
+encouraged to contribute,1,ENCOURAGED_TO_CONTRIBUTE
+cultivated with,1,CULTIVATED_WITH
+cultivated within,1,CULTIVATED_WITHIN
+cultivatedon south coast,1,CULTIVATEDON_SOUTH_COAST
+cultivation method alternative,1,CULTIVATION_METHOD_ALTERNATIVE
+cut at third shoot,1,CUT_AT_THIRD_SHOOT
+cut off days before planting,1,CUT_OFF_DAYS_BEFORE_PLANTING
+cut to,1,CUT_TO
+cutting method,1,CUTTING_METHOD
+degenerated into,1,DEGENERATED_INTO
+degenerates easily,1,DEGENERATES_EASILY
+does not head,1,DOES_NOT_HEAD
+depicts,1,DEPICTS
+described by,1,DESCRIBED_BY
+described in year,1,DESCRIBED_IN_YEAR
+differences in width beds,1,DIFFERENCES_IN_WIDTH_OF_BEDS
+different from,1,DIFFERENT_FROM
+different in feature,1,DIFFERENT_IN_FEATURE
+different soil conditions,1,DIFFERENT_SOIL_CONDITIONS
+differs in color and size,1,DIFFERS_IN_COLOR_AND_SIZE
+difficult to grow for,1,DIFFICULT_TO_GROW_FOR
+disease affected by,1,DISEASE_AFFECTED_BY
+disease association,1,DISEASE_ASSOCIATION
+depanelled at stage,1,DEPANELLED_AT_STAGE
+affected by soil,1,AFFECTED_BY_SOIL
+affects,1,AFFECTS
+affects crop growth,1,AFFECTS_CROP_GROWTH
+affects fertility,1,AFFECTS_FERTILITY_OF
+affects vegetation,1,AFFECTS_VEGETATION
+affects yield,1,AFFECTS_YIELD
+aimed at producing manual for,1,AIMED_AT_PRODUCING_MANUAL_FOR
+alternative,1,ALTERNATIVE_OF
+alternative material,1,ALTERNATIVE_MATERIAL
+alternative option for space saving rechaud,1,ALTERNATIVE_OPTION_FOR_SPACE_SAVING_RECHAUD
+consumed,1,IS_CONSUMED
+alternatively preffered for,1,ALTERNATIVELY_PREFFERED_FOR
+arranged in,1,ARRANGED_IN
+arranged in pattern,1,ARRANGED_IN_PATTERN
+arranged under,1,ARRANGED_UNDER
+as paraphrased,1,AS_PARAPHRASED
+asparagus variey grown in greenhouse,1,ASPARAGUS_VARIEY_GROWN_IN_GREENHOUSE
+assembles chest on paths,1,ASSEMBLES_CHEST_ON_PATHS
+assists in planting,1,ASSISTS_IN_PLANTING
+affected by agricultural practice,1,AFFECTED_BY_AGRICULTURAL_PRACTICE
+associated with costs,1,ASSOCIATED_WITH_COSTS
+alternative planting in month,1,ALTERNATIVE_PLANTING_IN_MONTH
+affected by fire,1,AFFECTED_BY_FIRE
+affected by heat,1,AFFECTED_BY_HEAT
+affected by northern exposure,1,AFFECTED_BY_NORTHERN_EXPOSURE
+affected by pest,1,AFFECTED_BY_PEST
+affected by planting method,1,AFFECTED_BY_PLANTING_METHOD
+affected by police ban,1,AFFECTED_BY_POLICE_BAN
+affected by rot,1,AFFECTED_BY_ROT
+used for mulching,1,USED_FOR_MULCHING
+uses for transportation,1,USES_FOR_TRANSPORTATION
+affected by watering,1,AFFECTED_BY_WATERING
+affected by seasonality,1,AFFECTED_BY_SEASONALITY
+absorbs heat from,1,ABSORBS_HEAT_FROM
+acquired quality,1,ACQUIRED_QUALITY
+adjacent to,1,ADJACENT_TO
+ados constructed with,1,ADOS_CONSTRUCTED_WITH
+ados oriented toward direction,1,ADOS_ORIENTED_TOWARD_DIRECTION
+advanced than,1,IS_ADVANCED_THAN
+advances in time,1,ADVANCES_IN_TIME
+adversely affected by,1,ADVERSELY_AFFECTED_BY
+affected by season,1,AFFECTED_BY_SEASON
+affected by seasonal condition,1,AFFECTED_BY_SEASONAL_CONDITION
+affected by seasonal pattern,1,AFFECTED_BY_SEASONAL_PATTERN
+yields in,1,YIELDS_IN
+buried with part stem,1,BURIED_WITH_PART_OF_STEM
+can produce seeds after cutting,1,CAN_PRODUCE_SEEDS_AFTER_CUTTING
+can reach temperature,1,CAN_REACH_TEMPERATURE
+canbepruned,1,CANBEPRUNED
+cauliflower is adversely affected by,1,CAULIFLOWER_IS_ADVERSELY_AFFECTED_BY
+cauliflower was planted in,1,CAULIFLOWER_WAS_PLANTED_IN
+cause,1,IS_CAUSE_OF
+causesdamage,1,CAUSESDamage
+cauterized with,1,CAUTERIZED_WITH
+characteristic soil type,1,CHARACTERISTIC_OF_SOIL_TYPE
+associated with equipment,1,ASSOCIATED_WITH_EQUIPMENT
+checked with,1,CHECKED_WITH
+coiffee,1,COIFFEE
+compacting layers,1,COMPACTING_LAYERS
+companion crop,1,COMPANION_CROP
+comparable type characteristic,1,COMPARABLE_TYPE_CHARACTERISTIC
+compared to,1,COMPARED_TO
+compared to melon in ripening on vine,1,COMPARED_TO_MELON_IN_RIPENING_ON_VINE
+competes with regional crop producers,1,COMPETES_WITH_REGIONAL_CROP_PRODUCERS
+composed,1,IS_COMPOSED_OF
+comprised,1,COMPRISED_OF
+constructed on,1,CONSTRUCTED_ON
+characterized by,1,IS_CHARACTERIZED_BY
+associated with farm practice,1,ASSOCIATED_WITH_FARM_PRACTICE
+attached to,1,ATTACHED_TO
+awarded by,1,AWARDED_BY
+awarded in competition,1,AWARDED_IN_COMPETITION
+based on desire for publication,1,BASED_ON_DESIRE_FOR_PUBLICATION
+based on program,1,BASED_ON_PROGRAM_OF
+bed preparation technique,1,BED_PREPARATION_TECHNIQUE
+bell marked at,1,BELL_MARKED_AT
+bells placed on compost,1,BELLS_PLACED_ON_COMPOST
+belongs to family,1,BELONGS_TO_FAMILY
+buried with,1,BURIED_WITH
+belongs to same species,1,BELONGS_TO_THE_SAME_SPECIES
+benefited from,1,BENEFITED_FROM
+black radish does not go to seed in same year,1,BLACK_RADISH_DOES_NOT_GO_TO_SEED_IN_SAME_YEAR
+black radish has larger foliage and more pungent flavor,1,BLACK_RADISH_HAS_LARGER_FOLIAGE_AND_MORE_PUNGENT_FLAVOR
+black radish requires protection from winter to obtain seed,1,BLACK_RADISH_REQUIRES_PROTECTION_FROM_WINTER_TO_OBTAIN_SEED
+black radish should be planted in spring to obtain seed,1,BLACK_RADISH_SHOULD_BE_PLANTED_IN_SPRING_TO_OBTAIN_SEED
+blanched in,1,BLANCHED_IN
+break up and mix with new manure,1,BREAK_UP_AND_MIX_WITH_NEW_MANURE
+break up layer,1,BREAK_UP_LAYER
+breakable by,1,IS_BREAKABLE_BY
+brings back,1,BRINGS_BACK
+belongs to genus,1,BELONGS_TO_GENUS
+irrigated with,1,IRRIGATED_WITH
+irrigation schedule relationship,1,IRRIGATION_SCHEDULE_RELATIONSHIP
+issensitive to,1,ISSENSITIVE_TO
+kept at same level as,1,KEPT_AT_SAME_LEVEL_AS
+kills target,1,KILLS_TARGET
+knits after pruning,1,KNITS_AFTER_PRUNING
+known as early produce type,1,WAS_KNOWN_AS_EARLY_PRODUCE_TYPE
+lacks inherent quality,1,LACKS_INHERENT_QUALITY_OF
+land and relation,1,LAND_AND_RELATION
+land shaped into slope,1,LAND_SHAPED_INTO_SLOPE
+fertilizes with,1,FERTILIZES_WITH
+lasts for duration,1,LASTS_FOR_DURATION_OF
+later than sugarloaf cabbage,1,LATER_THAN_SUGARLOAF_CABBAGE
+later than york cabbage,1,LATER_THAN_YORK_CABBAGE
+layered under,1,LAYERED_UNDER
+lettuce maturity duration,1,LETTUCE_MATURITY_DURATION
+lettuce planting location,1,LETTUCE_PLANTING_LOCATION
+lettuce sowing season,1,LETTUCE_SOWING_SEASON
+lives in,1,LIVES_IN
+located at,1,LOCATED_AT
+located beside,1,LOCATED_BESIDE
+lard with substance or equipment,1,LARD_WITH_SUBSTANCE_OR_EQUIPMENT
+has variety with desired trait,1,HAS_VARIETY_WITH_DESIRED_TRAIT
+has width,1,HAS_WIDTH
+has width measurement,1,HAS_WIDTH_MEASUREMENT
+hasbeginning,1,HASBEGINNING
+have crop variety,1,HAVE_CROP_VARIETY
+have similar seed characteristics,1,HAVE_SIMILAR_SEED_CHARACTERISTICS
+have variety,1,HAVE_VARIETY
+heated,1,IS_HEATED
+heated by,1,IS_HEATED_BY
+held with,1,HELD_WITH
+irrigated,1,IRRIGATED
+impacted by climate change,1,IMPACTED_BY_CLIMATE_CHANGE
+impacts,1,IMPACTS
+imported from,1,IMPORTED_FROM
+improved,1,COULD_BE_IMPROVED
+included in july,1,INCLUDED_IN_JULY
+includes,1,INCLUDES
+includes stage,1,INCLUDES_STAGE
+inferior to,1,IS_INFERIOR_TO
+inflicts damage on,1,INFLICTS_DAMAGE_ON
+initiated research,1,INITIATED_RESEARCH
+interplanting relationship,1,INTERPLANTING_RELATIONSHIP
+hotter than,1,IS_HOTTER_THAN
+means to market gardener,1,MEANS_TO_THE_MARKET_GARDENER
+measured by area or volume,1,MEASURED_BY_AREA_OR_VOLUME
+measured by distance,1,MEASURED_BY_DISTANCE
+might be replaced by,1,MIGHT_BE_REPLACED_BY
+millstones receive compost,1,MILLSTONES_RECEIVE_COMPOST
+mix manure into layer,1,MIX_MANURE_INTO_LAYER
+mode transport,1,IS_MODE_OF_TRANSPORT
+moistened with,1,MOISTENED_WITH
+monitored for growth and condition,1,MONITORED_FOR_GROWTH_AND_CONDITION
+more sensitive than,1,MORE_SENSITIVE_THAN
+located in northern exposure,1,LOCATED_IN_NORTHERN_EXPOSURE
+move back,1,MOVE_BACK
+moved from,1,MOVED_FROM
+mulch covered with,1,MULCH_COVERED_WITH
+mushrooms are grown on,1,MUSHROOMS_ARE_GROWN_ON
+needs air and protection from cold,1,NEEDS_AIR_AND_PROTECTION_FROM_COLD
+needs care,1,NEEDS_CARE
+needs moisture during,1,NEEDS_MOISTURE_DURING
+needs root ball,1,NEEDS_ROOT_BALL
+needs shade,1,NEEDS_SHADE
+needs specific growing conditions,1,NEEDS_SPECIFIC_GROWING_CONDITIONS
+needs to be done with,1,NEEDS_TO_BE_DONE_WITH
+mounted on,1,MOUNTED_ON
+located in paths,1,LOCATED_IN_PATHS
+located in relationship,1,LOCATED_IN_RELATIONSHIP
+located nearby,1,LOCATED_NEARBY
+located nearby to,1,IS_LOCATED_NEARBY_TO
+location association,1,LOCATION_ASSOCIATION
+looped at,1,LOOPED_AT
+lost fires,1,LOST_FIRES
+made with,1,MADE_WITH
+main stem,1,MAIN_STEM_OF
+managed by,1,MANAGED_BY
+may retain heat longer,1,MAY_RETAIN_HEAT_LONGER
+manure added into,1,MANURE_ADDED_INTO
+manure is pressed down with fork during preparation,1,MANURE_IS_PRESSED_DOWN_WITH_FORK_DURING_PREPARATION
+manure placed in path between layers,1,MANURE_PLACED_IN_PATH_BETWEEN_LAYERS
+manure preparation,1,MANURE_PREPARATION
+manure preparation involves removing large pieces litter and hay,1,MANURE_PREPARATION_INVOLVES_REMOVING_LARGE_PIECES_OF_LITTER_AND_HAY
+marcotted at,1,MARCOTTED_AT
+market gardener workers from province,1,MARKET_GARDENER_WORKERS_FROM_PROVINCE
+market gardeners require proof good conduct,1,MARKET_GARDENERS_REQUIRE_PROOF_OF_GOOD_CONDUCT
+market gardeners use manure layering,1,MARKET_GARDENERS_USE_MANURE_LAYERING
+market gardeners worker class is very peaceful,1,MARKET_GARDENERS_WORKER_CLASS_IS_VERY_PEACEFUL
+mat removed during daylight,1,MAT_REMOVED_DURING_DAYLIGHT
+mannes cost,1,MANNES_COST
+green romaine was sown and planted in,1,GREEN_ROMAINE_WAS_SOWN_AND_PLANTED_IN
+grey romaine was sown and planted in,1,GREY_ROMAINE_WAS_SOWN_AND_PLANTED_IN
+grown around,1,GROWN_AROUND
+grown at,1,GROWN_AT
+grown by few market gardeners in city,1,IS_GROWN_BY_FEW_MARKET_GARDENERS_IN_CITY
+grown for,1,IS_GROWN_FOR
+grown for duration time,1,GROWN_FOR_DURATION_OF_TIME
+grown in areas measuring,1,GROWN_IN_AREAS_MEASURING
+grown in decmber,1,GROWN_IN_DECMBER
+grown in january and february,1,GROWN_IN_JANUARY_AND_FEBRUARY
+has statistics,1,HAS_STATISTICS
+grown in period,1,GROWN_IN_PERIOD_OF
+grown in season,1,GROWN_IN_SEASON
+grown together with,1,GROWN_TOGETHER_WITH
+grown with,1,GROWN_WITH
+grown without,1,GROWN_WITHOUT
+growninconditions,1,GROWNINCONDITIONS
+grownsuccessfullyin,1,GROWNSUCCESSFULLYIN
+grownuntil months,1,GROWNUNTIL_MONTHS_OF
+grows before,1,GROWS_BEFORE
+grows from,1,GROWS_FROM
+grows in paths beds,1,GROWS_IN_PATHS_OF_BEDS
+grown in location,1,GROWN_IN_LOCATION
+field location,1,FIELD_LOCATION
+fill path with,1,FILL_PATH_WITH
+flowers in,1,FLOWERS_IN
+follow example,1,FOLLOW_EXAMPLE_OF
+followed by,1,FOLLOWED_BY
+follows growth stage,1,FOLLOWS_GROWTH_STAGE_OF
+follows layers,1,FOLLOWS_LAYERS
+forced cultivation practiced on parsley,1,FORCED_CULTIVATION_PRACTICED_ON_PARSLEY
+forced in,1,SHOULD_BE_FORCED_IN
+founded prize,1,FOUNDED_PRIZE
+green romaine was adversely affected by,1,GREEN_ROMAINE_WAS_ADVERSELY_AFFECTED_BY
+frame put back,1,FRAME_PUT_BACK
+frames removed during mild weather,1,FRAMES_REMOVED_DURING_MILD_WEATHER
+frost sensitivity,1,FROST_SENSITIVITY
+fruit production,1,FRUIT_PRODUCTION
+gathered in same season,1,ARE_GATHERED_IN_SAME_SEASON
+gathers at,1,GATHERS_AT
+germinated in,1,GERMINATED_IN
+germinates within days,1,GERMINATES_WITHIN_DAYS
+germinative capacity duration,1,GERMINATIVE_CAPACITY_DURATION
+given air gradually,1,GIVEN_AIR_GRADUALLY
+goes to seed in,1,GOES_TO_SEED_IN
+frame,1,FRAME_OF
+has cold temperature,1,HAS_COLD_TEMPERATURE
+has conditional requirement,1,HAS_CONDITIONAL_REQUIREMENT
+has costly investment,1,HAS_COSTLY_INVESTMENT
+has duration,1,HAS_DURATION
+has duration requirement,1,HAS_DURATION_REQUIREMENT
+has equipment type,1,HAS_EQUIPMENT_TYPE
+has feature,1,HAS_FEATURE
+has fruit,1,HAS_FRUIT
+has fruits until june,1,HAS_FRUITS_UNTIL_JUNE
+has growth cycle,1,HAS_GROWTH_CYCLE
+grows in structures,1,GROWS_IN_STRUCTURES
+has length,1,HAS_LENGTH
+has more seasons than,1,HAS_MORE_SEASONS_THAN
+has parts,1,HAS_PARTS
+has planting date,1,HAS_PLANTING_DATE
+has propagation method,1,HAS_PROPAGATION_METHOD
+has purpose,1,HAS_PURPOSE
+has root depth reaching,1,HAS_ROOT_DEPTH_REACHING
+has seed type,1,HAS_SEED_TYPE
+has specific growth cycle,1,HAS_SPECIFIC_GROWTH_CYCLE
+has specific growth stage,1,HAS_SPECIFIC_GROWTH_STAGE
+has specific number horses,1,HAS_SPECIFIC_NUMBER_OF_HORSES
+has growth stages,1,HAS_GROWTH_STAGES
+grows into,1,GROWS_INTO
+grows into apple form,1,GROWS_INTO_APPLE_FORM
+grows into fruit,1,GROWS_INTO_FRUIT
+grows within,1,GROWS_WITHIN
+growth stage change,1,GROWTH_STAGE_CHANGE
+had competition open,1,HAD_COMPETITION_OPEN
+hand planted,1,HAND_PLANTED
+hand planted to depth,1,HAND_PLANTED_TO_DEPTH
+handle with care during,1,HANDLE_WITH_CARE_DURING
+handled by personnel role,1,HANDLED_BY_PERSONNEL_ROLE
+has branches,1,HAS_BRANCHES
+harvest date,1,HARVEST_DATE
+harvested by,1,HARVESTED_BY
+harvested from field location,1,HARVESTED_FROM_FIELD_LOCATION
+harvested from spring onward,1,HARVESTED_FROM_SPRING_ONWARD
+harvested in month,1,HARVESTED_IN_MONTH
+harvested in months,1,HARVESTED_IN_MONTHS_OF
+harvested on,1,HARVESTED_ON
+harvested on date,1,HARVESTED_ON_DATE
+harvested until,1,HARVESTED_UNTIL
+harvests every,1,HARVESTS_EVERY
+has better quality than york cabbage,1,HAS_BETTER_QUALITY_THAN_YORK_CABBAGE
+hang in cellar upside down from,1,HANG_IN_CELLAR_UPSIDE_DOWN_FROM

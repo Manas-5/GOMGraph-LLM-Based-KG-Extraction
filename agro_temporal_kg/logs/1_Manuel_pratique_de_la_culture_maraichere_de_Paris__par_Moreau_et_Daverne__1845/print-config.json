@@ -1,0 +1,367 @@
+2026-03-12 17:30:04.413 | INFO     | __main__:create_tkg:86 - Loaded configuration:
+{'text_splitter': {'chunk_size': 1000, 'chunk_overlap': 150, 'separators': ['\n\n', '\n', '. ', ' ', '']}, 'llm': {'model': 'llama3.1:70b', 'temperature': 0.0, 'api_key': 'abc', 'base_url': 'http://localhost:11434/v1'}, 'embedder': {'api_key': 'abc', 'base_url': 'http://localhost:11434/v1', 'embedding_model': 'bge-m3:567m', 'embedding_dim': 768}, 'falkordb': {'host': 'localhost', 'port': 6380, 'database': '1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845'}, 'file': {'path': '/mnt/diskGum/manas/GOMgraph-main-clone-2/data/1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845.txt', 'group_id': '1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845', 'source_description': 'A concise 1845 French manual detailing the techniques and principles of Parisian market gardening, by Moreau and Daverne.', 'reference_year': 1845}, 'prompts': {'extract_text': {'system_version': 'v0', 'user_version': 'v2'}, 'extract_edges': {'system_version': 'v0', 'user_version': 'v2'}}, 'entity_types': {'types': ['Plant', 'PlantPart', 'Pest', 'Practice', 'SoilType', 'Condition', 'Structure', 'Time', 'Location', 'Input', 'Equipment', 'Disease', 'Weather', 'Nutrient', 'Organism', 'Animal', 'People', 'Institution']}, 'edge_types': {'types': ['AffectedBy', 'Causes', 'ResistantTo', 'Requires', 'Uses', 'LocatedInOrAt', 'OriginatesFrom', 'ContainsOrHasPart', 'PartOf', 'VarietyOf', 'TreatedWithSomething', 'ProtectionRelation', 'PlantedIn', 'GrowthStageRelatedTo', 'SeedingRelationship', 'PropagationMethod', 'Precedes', 'Follows', 'TemporalAssociation', 'SeasonalRelatedness', 'HasCharacteristic', 'HasMonetaryValue', 'ComparesTo', 'AlternativeOrReplacement', 'DiffersFrom', 'AssociatedWith', 'ProductionRelation', 'GrownIn']}, 'edge_type_map': {'edge_type_map': {'Entity,Entity': ['AssociatedWith', 'HasCharacteristic', 'ComparesTo', 'DiffersFrom', 'ContainsOrHasPart'], 'Plant,Plant': ['AlternativeOrReplacement', 'ComparesTo', 'DiffersFrom', 'VarietyOf', 'Precedes'], 'Plant,Location': ['LocatedInOrAt', 'OriginatesFrom', 'PlantedIn', 'GrownIn'], 'Plant,Condition': ['AffectedBy', 'ResistantTo', 'Requires', 'GrownIn'], 'Plant,SoilType': ['PlantedIn', 'Requires', 'GrowthStageRelatedTo', 'GrownIn'], 'Plant,Time': ['SeasonalRelatedness', 'TemporalAssociation', 'GrowthStageRelatedTo', 'Precedes', 'GrownIn'], 'Plant,Input': ['TreatedWithSomething', 'Requires', 'Uses'], 'Plant,PlantPart': ['ContainsOrHasPart', 'PartOf', 'HasCharacteristic'], 'Plant,Practice': ['Uses', 'Requires', 'PropagationMethod', 'SeedingRelationship'], 'Plant,Pest': ['AffectedBy', 'ResistantTo', 'ProtectionRelation'], 'Plant,Disease': ['AffectedBy', 'ResistantTo', 'Causes'], 'Plant,Weather': ['AffectedBy', 'ResistantTo', 'SeasonalRelatedness,', 'GrownIn'], 'Plant,Nutrient': ['Requires', 'AffectedBy', 'HasCharacteristic'], 'Plant,Equipment': ['Uses', 'Requires', 'ProtectionRelation'], 'Plant,Structure': ['LocatedInOrAt', 'ProtectionRelation', 'ContainsOrHasPart', 'GrownIn'], 'Plant,People': ['ProductionRelation', 'Uses', 'AssociatedWith'], 'Practice,Plant': ['Uses', 'AffectedBy', 'ProductionRelation'], 'Practice,Time': ['TemporalAssociation', 'SeasonalRelatedness', 'Precedes', 'Follows'], 'Practice,Input': ['Uses', 'Requires'], 'Practice,Equipment': ['Uses', 'Requires'], 'Practice,Practice': ['Precedes', 'Follows', 'AlternativeOrReplacement'], 'Practice,SoilType': ['Requires', 'AffectedBy', 'AssociatedWith'], 'Practice,Location': ['LocatedInOrAt', 'AssociatedWith'], 'Location,Plant': ['ContainsOrHasPart', 'ProductionRelation'], 'Location,Location': ['ContainsOrHasPart', 'PartOf', 'ComparesTo'], 'Structure,Plant': ['ContainsOrHasPart', 'ProtectionRelation'], 'Structure,Structure': ['ContainsOrHasPart', 'PartOf', 'ComparesTo'], 'Input,Plant': ['TreatedWithSomething', 'AffectedBy', 'ProductionRelation'], 'Input,SoilType': ['TreatedWithSomething', 'AffectedBy'], 'Input,Input': ['AlternativeOrReplacement', 'ComparesTo', 'ContainsOrHasPart'], 'People,Plant': ['Uses', 'ProductionRelation'], 'People,Practice': ['Uses', 'AssociatedWith'], 'People,Institution': ['AssociatedWith', 'PartOf'], 'People,People': ['AssociatedWith', 'ComparesTo'], 'People,Location': ['LocatedInOrAt', 'AssociatedWith'], 'People,Equipment': ['Uses', 'AssociatedWith'], 'Institution,People': ['AssociatedWith', 'ContainsOrHasPart'], 'Institution,Location': ['LocatedInOrAt', 'AssociatedWith'], 'Weather,Plant': ['AffectedBy', 'Causes'], 'Weather,Practice': ['AffectedBy', 'Requires'], 'Condition,Plant': ['AffectedBy', 'Causes', 'Requires'], 'Pest,Plant': ['AffectedBy', 'Causes'], 'Disease,Plant': ['AffectedBy', 'Causes', 'ResistantTo'], 'PlantPart,Plant': ['PartOf', 'ContainsOrHasPart', 'HasCharacteristic'], 'PlantPart,PlantPart': ['ContainsOrHasPart', 'PartOf', 'ComparesTo'], 'Time,Practice': ['TemporalAssociation', 'SeasonalRelatedness'], 'Time,Plant': ['TemporalAssociation', 'SeasonalRelatedness', 'GrowthStageRelatedTo'], 'Equipment,Plant': ['Uses', 'ProtectionRelation'], 'Equipment,Practice': ['Uses', 'AssociatedWith'], 'SoilType,Plant': ['AffectedBy', 'Requires', 'HasCharacteristic'], 'SoilType,Input': ['TreatedWithSomething', 'Requires'], 'Nutrient,Plant': ['AffectedBy', 'Requires'], 'Nutrient,SoilType': ['ContainsOrHasPart', 'AffectedBy'], 'Animal,Plant': ['AffectedBy', 'Causes', 'Uses'], 'Organism,Plant': ['AffectedBy', 'Causes', 'AssociatedWith']}}}
+{
+  "embedder": {
+    "api_key": "**********",
+    "base_url": "http://localhost:11434/v1",
+    "embedding_model": "bge-m3:567m",
+    "embedding_dim": 768
+  },
+  "falkor_db": {
+    "host": "localhost",
+    "port": 6380,
+    "database": "1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845"
+  },
+  "text_splitter": {
+    "chunk_size": 1000,
+    "chunk_overlap": 150,
+    "separators": [
+      "\n\n",
+      "\n",
+      ". ",
+      " ",
+      ""
+    ]
+  },
+  "llm": {
+    "model": "llama3.1:70b",
+    "temperature": 0.0,
+    "api_key": "abc",
+    "base_url": "http://localhost:11434/v1"
+  },
+  "file": {
+    "path": "/mnt/diskGum/manas/GOMgraph-main-clone-2/data/1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845.txt",
+    "group_id": "1_Manuel_pratique_de_la_culture_maraichere_de_Paris__par_Moreau_et_Daverne__1845",
+    "source_description": "A concise 1845 French manual detailing the techniques and principles of Parisian market gardening, by Moreau and Daverne.",
+    "reference_year": 1845
+  },
+  "prompts": {
+    "extract_text": {
+      "system_version": "v0",
+      "user_version": "v2"
+    },
+    "extract_edges": {
+      "system_version": "v0",
+      "user_version": "v2"
+    },
+    "summary_instructions_version": null
+  },
+  "update_communities": false,
+  "entity_types": [
+    "Plant",
+    "PlantPart",
+    "Pest",
+    "Practice",
+    "SoilType",
+    "Condition",
+    "Structure",
+    "Time",
+    "Location",
+    "Input",
+    "Equipment",
+    "Disease",
+    "Weather",
+    "Nutrient",
+    "Organism",
+    "Animal",
+    "People",
+    "Institution"
+  ],
+  "edge_types": [
+    "AffectedBy",
+    "Causes",
+    "ResistantTo",
+    "Requires",
+    "Uses",
+    "LocatedInOrAt",
+    "OriginatesFrom",
+    "ContainsOrHasPart",
+    "PartOf",
+    "VarietyOf",
+    "TreatedWithSomething",
+    "ProtectionRelation",
+    "PlantedIn",
+    "GrowthStageRelatedTo",
+    "SeedingRelationship",
+    "PropagationMethod",
+    "Precedes",
+    "Follows",
+    "TemporalAssociation",
+    "SeasonalRelatedness",
+    "HasCharacteristic",
+    "HasMonetaryValue",
+    "ComparesTo",
+    "AlternativeOrReplacement",
+    "DiffersFrom",
+    "AssociatedWith",
+    "ProductionRelation",
+    "GrownIn"
+  ],
+  "edge_type_map": {
+    "Entity,Entity": [
+      "AssociatedWith",
+      "HasCharacteristic",
+      "ComparesTo",
+      "DiffersFrom",
+      "ContainsOrHasPart"
+    ],
+    "Plant,Plant": [
+      "AlternativeOrReplacement",
+      "ComparesTo",
+      "DiffersFrom",
+      "VarietyOf",
+      "Precedes"
+    ],
+    "Plant,Location": [
+      "LocatedInOrAt",
+      "OriginatesFrom",
+      "PlantedIn",
+      "GrownIn"
+    ],
+    "Plant,Condition": [
+      "AffectedBy",
+      "ResistantTo",
+      "Requires",
+      "GrownIn"
+    ],
+    "Plant,SoilType": [
+      "PlantedIn",
+      "Requires",
+      "GrowthStageRelatedTo",
+      "GrownIn"
+    ],
+    "Plant,Time": [
+      "SeasonalRelatedness",
+      "TemporalAssociation",
+      "GrowthStageRelatedTo",
+      "Precedes",
+      "GrownIn"
+    ],
+    "Plant,Input": [
+      "TreatedWithSomething",
+      "Requires",
+      "Uses"
+    ],
+    "Plant,PlantPart": [
+      "ContainsOrHasPart",
+      "PartOf",
+      "HasCharacteristic"
+    ],
+    "Plant,Practice": [
+      "Uses",
+      "Requires",
+      "PropagationMethod",
+      "SeedingRelationship"
+    ],
+    "Plant,Pest": [
+      "AffectedBy",
+      "ResistantTo",
+      "ProtectionRelation"
+    ],
+    "Plant,Disease": [
+      "AffectedBy",
+      "ResistantTo",
+      "Causes"
+    ],
+    "Plant,Weather": [
+      "AffectedBy",
+      "ResistantTo",
+      "SeasonalRelatedness,",
+      "GrownIn"
+    ],
+    "Plant,Nutrient": [
+      "Requires",
+      "AffectedBy",
+      "HasCharacteristic"
+    ],
+    "Plant,Equipment": [
+      "Uses",
+      "Requires",
+      "ProtectionRelation"
+    ],
+    "Plant,Structure": [
+      "LocatedInOrAt",
+      "ProtectionRelation",
+      "ContainsOrHasPart",
+      "GrownIn"
+    ],
+    "Plant,People": [
+      "ProductionRelation",
+      "Uses",
+      "AssociatedWith"
+    ],
+    "Practice,Plant": [
+      "Uses",
+      "AffectedBy",
+      "ProductionRelation"
+    ],
+    "Practice,Time": [
+      "TemporalAssociation",
+      "SeasonalRelatedness",
+      "Precedes",
+      "Follows"
+    ],
+    "Practice,Input": [
+      "Uses",
+      "Requires"
+    ],
+    "Practice,Equipment": [
+      "Uses",
+      "Requires"
+    ],
+    "Practice,Practice": [
+      "Precedes",
+      "Follows",
+      "AlternativeOrReplacement"
+    ],
+    "Practice,SoilType": [
+      "Requires",
+      "AffectedBy",
+      "AssociatedWith"
+    ],
+    "Practice,Location": [
+      "LocatedInOrAt",
+      "AssociatedWith"
+    ],
+    "Location,Plant": [
+      "ContainsOrHasPart",
+      "ProductionRelation"
+    ],
+    "Location,Location": [
+      "ContainsOrHasPart",
+      "PartOf",
+      "ComparesTo"
+    ],
+    "Structure,Plant": [
+      "ContainsOrHasPart",
+      "ProtectionRelation"
+    ],
+    "Structure,Structure": [
+      "ContainsOrHasPart",
+      "PartOf",
+      "ComparesTo"
+    ],
+    "Input,Plant": [
+      "TreatedWithSomething",
+      "AffectedBy",
+      "ProductionRelation"
+    ],
+    "Input,SoilType": [
+      "TreatedWithSomething",
+      "AffectedBy"
+    ],
+    "Input,Input": [
+      "AlternativeOrReplacement",
+      "ComparesTo",
+      "ContainsOrHasPart"
+    ],
+    "People,Plant": [
+      "Uses",
+      "ProductionRelation"
+    ],
+    "People,Practice": [
+      "Uses",
+      "AssociatedWith"
+    ],
+    "People,Institution": [
+      "AssociatedWith",
+      "PartOf"
+    ],
+    "People,People": [
+      "AssociatedWith",
+      "ComparesTo"
+    ],
+    "People,Location": [
+      "LocatedInOrAt",
+      "AssociatedWith"
+    ],
+    "People,Equipment": [
+      "Uses",
+      "AssociatedWith"
+    ],
+    "Institution,People": [
+      "AssociatedWith",
+      "ContainsOrHasPart"
+    ],
+    "Institution,Location": [
+      "LocatedInOrAt",
+      "AssociatedWith"
+    ],
+    "Weather,Plant": [
+      "AffectedBy",
+      "Causes"
+    ],
+    "Weather,Practice": [
+      "AffectedBy",
+      "Requires"
+    ],
+    "Condition,Plant": [
+      "AffectedBy",
+      "Causes",
+      "Requires"
+    ],
+    "Pest,Plant": [
+      "AffectedBy",
+      "Causes"
+    ],
+    "Disease,Plant": [
+      "AffectedBy",
+      "Causes",
+      "ResistantTo"
+    ],
+    "PlantPart,Plant": [
+      "PartOf",
+      "ContainsOrHasPart",
+      "HasCharacteristic"
+    ],
+    "PlantPart,PlantPart": [
+      "ContainsOrHasPart",
+      "PartOf",
+      "ComparesTo"
+    ],
+    "Time,Practice": [
+      "TemporalAssociation",
+      "SeasonalRelatedness"
+    ],
+    "Time,Plant": [
+      "TemporalAssociation",
+      "SeasonalRelatedness",
+      "GrowthStageRelatedTo"
+    ],
+    "Equipment,Plant": [
+      "Uses",
+      "ProtectionRelation"
+    ],
+    "Equipment,Practice": [
+      "Uses",
+      "AssociatedWith"
+    ],
+    "SoilType,Plant": [
+      "AffectedBy",
+      "Requires",
+      "HasCharacteristic"
+    ],
+    "SoilType,Input": [
+      "TreatedWithSomething",
+      "Requires"
+    ],
+    "Nutrient,Plant": [
+      "AffectedBy",
+      "Requires"
+    ],
+    "Nutrient,SoilType": [
+      "ContainsOrHasPart",
+      "AffectedBy"
+    ],
+    "Animal,Plant": [
+      "AffectedBy",
+      "Causes",
+      "Uses"
+    ],
+    "Organism,Plant": [
+      "AffectedBy",
+      "Causes",
+      "AssociatedWith"
+    ]
+  }
+}

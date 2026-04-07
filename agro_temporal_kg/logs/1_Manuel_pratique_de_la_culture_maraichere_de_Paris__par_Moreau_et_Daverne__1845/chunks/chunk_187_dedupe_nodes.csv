@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-03-13T00:15:39.157334+00:00,exact,ad8d6d24-2852-4ba8-a6c0-c64cd77d5611,Cauliflower,"Cauliflower is a cruciferous vegetable with large, yellow or whitish flowers that are followed by twisted siliques containing several seeds.",d7b3ba77-e94f-498c-a4c1-5e4b95a66139,,,,
+2026-03-13T00:15:39.157363+00:00,llm,ad8d6d24-2852-4ba8-a6c0-c64cd77d5611,Cauliflower,"Cauliflower is a cruciferous vegetable with large, yellow or whitish flowers that are followed by twisted siliques containing several seeds.",d99efccf-8a69-4a8a-b7c9-6a82b8319f43,,,,

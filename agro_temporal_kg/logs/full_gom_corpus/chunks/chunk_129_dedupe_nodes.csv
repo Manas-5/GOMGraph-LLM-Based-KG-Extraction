@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-10T18:15:01.200653+00:00,exact,28cb72d8-d293-45df-9938-f31cc5679d02,manure,"Manure is used to fertilize land; market gardeners in Paris amass a large quantity of manure in advance and pile it up in large heaps or 'meules', to be used as needed.",60217253-33ad-4649-900d-79a70905fd4e,,,,
+2026-02-10T18:15:01.200681+00:00,llm,28cb72d8-d293-45df-9938-f31cc5679d02,manure,"Manure is used to fertilize land; market gardeners in Paris amass a large quantity of manure in advance and pile it up in large heaps or 'meules', to be used as needed.",888b1c9a-7295-4a62-a0cc-fdab0d908107,,,,

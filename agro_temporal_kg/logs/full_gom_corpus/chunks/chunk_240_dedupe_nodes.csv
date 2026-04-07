@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-10T23:27:17.114342+00:00,exact,5cb0699b-6fbe-49a9-aec2-d861bcc42205,straw mats,Straw mats are used to cover and protect small black lettuces from light frosts.,615892ff-57ef-471a-bac6-637ad34b557e,,,,
+2026-02-10T23:27:17.114356+00:00,llm,5cb0699b-6fbe-49a9-aec2-d861bcc42205,straw mats,Straw mats are used to cover and protect small black lettuces from light frosts.,de9190a0-642d-48fe-b1a4-459d531472b9,,,,

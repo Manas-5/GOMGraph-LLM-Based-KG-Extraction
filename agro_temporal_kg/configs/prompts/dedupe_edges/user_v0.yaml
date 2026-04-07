@@ -1,0 +1,20 @@
+<EXISTING_FACTS>
+{existing_edges}
+</EXISTING_FACTS>
+
+<NEW_EDGE>
+{new_edge}
+</NEW_EDGE>
+
+<INVALIDATION_CANDIDATES>
+{edge_invalidation_candidates}
+</INVALIDATION_CANDIDATES>
+
+<EDGE_TYPES>
+{edge_types}
+</EDGE_TYPES>
+
+Decide:
+- duplicate_facts: indices in EXISTING_FACTS that are duplicates of NEW_EDGE (empty if none)
+- contradicted_facts: indices in INVALIDATION_CANDIDATES that NEW_EDGE invalidates (empty if none)
+- fact_type: choose from EDGE_TYPES only

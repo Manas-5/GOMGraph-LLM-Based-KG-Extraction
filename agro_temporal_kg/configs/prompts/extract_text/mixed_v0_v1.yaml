@@ -1,0 +1,9 @@
+# @package _global_.prompts.extract_text
+# Example: Mixed versions - system v0 and user v1
+# 
+# To use this config, override in create_tkg.yaml:
+#   prompts/extract_text: mixed_v0_v1
+
+system_version: v0
+user_version: v1
+

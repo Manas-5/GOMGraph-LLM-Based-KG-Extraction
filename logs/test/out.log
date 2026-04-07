@@ -1,0 +1,209 @@
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /mnt/diskGum/manas/graph-dedup-patch/agro_temporal_kg/scripts/run.py:79 in   │
+│ create_tkg                                                                   │
+│                                                                              │
+│    76 │   overrides = [o for o in override.split(" ") if o] if override else │
+│    77 │                                                                      │
+│    78 │   # Compose configuration using Hydra                                │
+│ ❱  79 │   cfg = compose_config(                                              │
+│    80 │   │   config_name="create_tkg",                                      │
+│    81 │   │   config_dir=config_dir,                                         │
+│    82 │   │   overrides=overrides,                                           │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │   config_dir = None                                                      │ │
+│ │     override = 'file=test llm.model=llama3.1:70b file.chunk_size=        │ │
+│ │                file.chunk_overlap= max_retrie'+3                         │ │
+│ │    overrides = [                                                         │ │
+│ │                │   'file=test',                                          │ │
+│ │                │   'llm.model=llama3.1:70b',                             │ │
+│ │                │   'file.chunk_size=',                                   │ │
+│ │                │   'file.chunk_overlap=',                                │ │
+│ │                │   'max_retries=1'                                       │ │
+│ │                ]                                                         │ │
+│ │ print_config = False                                                     │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /mnt/diskGum/manas/graph-dedup-patch/agro_temporal_kg/agro_temporal_kg/confi │
+│ gs/compose_config.py:39 in compose_config                                    │
+│                                                                              │
+│   36 │   with initialize_config_dir(config_dir=str(config_dir), version_base │
+│   37 │   │   # Compose config with overrides                                 │
+│   38 │   │   overrides_list = overrides or []                                │
+│ ❱ 39 │   │   cfg = compose(config_name=config_name, overrides=overrides_list │
+│   40 │   │                                                                   │
+│   41 │   │   # Resolve interpolations                                        │
+│   42 │   │   OmegaConf.resolve(cfg)                                          │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │     config_dir = PosixPath('/mnt/diskGum/manas/graph-dedup-patch/config… │ │
+│ │    config_name = 'create_tkg'                                            │ │
+│ │      overrides = [                                                       │ │
+│ │                  │   'file=test',                                        │ │
+│ │                  │   'llm.model=llama3.1:70b',                           │ │
+│ │                  │   'file.chunk_size=',                                 │ │
+│ │                  │   'file.chunk_overlap=',                              │ │
+│ │                  │   'max_retries=1'                                     │ │
+│ │                  ]                                                       │ │
+│ │ overrides_list = [                                                       │ │
+│ │                  │   'file=test',                                        │ │
+│ │                  │   'llm.model=llama3.1:70b',                           │ │
+│ │                  │   'file.chunk_size=',                                 │ │
+│ │                  │   'file.chunk_overlap=',                              │ │
+│ │                  │   'max_retries=1'                                     │ │
+│ │                  ]                                                       │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /mnt/diskGum/manas/graph-dedup-patch/dedup/lib/python3.10/site-packages/hydr │
+│ a/compose.py:38 in compose                                                   │
+│                                                                              │
+│   35 │                                                                       │
+│   36 │   gh = GlobalHydra.instance()                                         │
+│   37 │   assert gh.hydra is not None                                         │
+│ ❱ 38 │   cfg = gh.hydra.compose_config(                                      │
+│   39 │   │   config_name=config_name,                                        │
+│   40 │   │   overrides=overrides,                                            │
+│   41 │   │   run_mode=RunMode.RUN,                                           │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │         config_name = 'create_tkg'                                       │ │
+│ │                  gh = <hydra.core.global_hydra.GlobalHydra object at     │ │
+│ │                       0x7fbf6271f7c0>                                    │ │
+│ │           overrides = [                                                  │ │
+│ │                       │   'file=test',                                   │ │
+│ │                       │   'llm.model=llama3.1:70b',                      │ │
+│ │                       │   'file.chunk_size=',                            │ │
+│ │                       │   'file.chunk_overlap=',                         │ │
+│ │                       │   'max_retries=1'                                │ │
+│ │                       ]                                                  │ │
+│ │ return_hydra_config = False                                              │ │
+│ │              strict = None                                               │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /mnt/diskGum/manas/graph-dedup-patch/dedup/lib/python3.10/site-packages/hydr │
+│ a/_internal/hydra.py:594 in compose_config                                   │
+│                                                                              │
+│   591 │   │   :return:                                                       │
+│   592 │   │   """                                                            │
+│   593 │   │                                                                  │
+│ ❱ 594 │   │   cfg = self.config_loader.load_configuration(                   │
+│   595 │   │   │   config_name=config_name,                                   │
+│   596 │   │   │   overrides=overrides,                                       │
+│   597 │   │   │   run_mode=run_mode,                                         │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │              config_name = 'create_tkg'                                  │ │
+│ │               from_shell = False                                         │ │
+│ │                overrides = [                                             │ │
+│ │                            │   'file=test',                              │ │
+│ │                            │   'llm.model=llama3.1:70b',                 │ │
+│ │                            │   'file.chunk_size=',                       │ │
+│ │                            │   'file.chunk_overlap=',                    │ │
+│ │                            │   'max_retries=1'                           │ │
+│ │                            ]                                             │ │
+│ │                 run_mode = <RunMode.RUN: 1>                              │ │
+│ │                     self = <hydra._internal.hydra.Hydra object at        │ │
+│ │                            0x7fbf6275a8c0>                               │ │
+│ │ validate_sweep_overrides = True                                          │ │
+│ │   with_log_configuration = False                                         │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /mnt/diskGum/manas/graph-dedup-patch/dedup/lib/python3.10/site-packages/hydr │
+│ a/_internal/config_loader_impl.py:142 in load_configuration                  │
+│                                                                              │
+│   139 │   │   validate_sweep_overrides: bool = True,                         │
+│   140 │   ) -> DictConfig:                                                   │
+│   141 │   │   try:                                                           │
+│ ❱ 142 │   │   │   return self._load_configuration_impl(                      │
+│   143 │   │   │   │   config_name=config_name,                               │
+│   144 │   │   │   │   overrides=overrides,                                   │
+│   145 │   │   │   │   run_mode=run_mode,                                     │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │              config_name = 'create_tkg'                                  │ │
+│ │               from_shell = False                                         │ │
+│ │                overrides = [                                             │ │
+│ │                            │   'file=test',                              │ │
+│ │                            │   'llm.model=llama3.1:70b',                 │ │
+│ │                            │   'file.chunk_size=',                       │ │
+│ │                            │   'file.chunk_overlap=',                    │ │
+│ │                            │   'max_retries=1'                           │ │
+│ │                            ]                                             │ │
+│ │                 run_mode = <RunMode.RUN: 1>                              │ │
+│ │                     self = <hydra._internal.config_loader_impl.ConfigLo… │ │
+│ │                            object at 0x7fbf62758490>                     │ │
+│ │ validate_sweep_overrides = True                                          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /mnt/diskGum/manas/graph-dedup-patch/dedup/lib/python3.10/site-packages/hydr │
+│ a/_internal/config_loader_impl.py:243 in _load_configuration_impl            │
+│                                                                              │
+│   240 │   ) -> DictConfig:                                                   │
+│   241 │   │   from hydra import __version__, version                         │
+│   242 │   │                                                                  │
+│ ❱ 243 │   │   self.ensure_main_config_source_available()                     │
+│   244 │   │   parsed_overrides, caching_repo = self._parse_overrides_and_cre │
+│   245 │   │   │   config_name, overrides                                     │
+│   246 │   │   )                                                              │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │              config_name = 'create_tkg'                                  │ │
+│ │               from_shell = False                                         │ │
+│ │                overrides = [                                             │ │
+│ │                            │   'file=test',                              │ │
+│ │                            │   'llm.model=llama3.1:70b',                 │ │
+│ │                            │   'file.chunk_size=',                       │ │
+│ │                            │   'file.chunk_overlap=',                    │ │
+│ │                            │   'max_retries=1'                           │ │
+│ │                            ]                                             │ │
+│ │                 run_mode = <RunMode.RUN: 1>                              │ │
+│ │                     self = <hydra._internal.config_loader_impl.ConfigLo… │ │
+│ │                            object at 0x7fbf62758490>                     │ │
+│ │ validate_sweep_overrides = True                                          │ │
+│ │                  version = <module 'hydra.version' from                  │ │
+│ │                            '/mnt/diskGum/manas/graph-dedup-patch/dedup/… │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /mnt/diskGum/manas/graph-dedup-patch/dedup/lib/python3.10/site-packages/hydr │
+│ a/_internal/config_loader_impl.py:129 in ensure_main_config_source_available │
+│                                                                              │
+│   126 │   │   │   │   │   │   │   f" config directory '{source.path}' exists │
+│   127 │   │   │   │   │   │   )                                              │
+│   128 │   │   │   │   │                                                      │
+│ ❱ 129 │   │   │   │   │   self._missing_config_error(                        │
+│   130 │   │   │   │   │   │   config_name=None, msg=msg, with_search_path=Fa │
+│   131 │   │   │   │   │   )                                                  │
+│   132                                                                        │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │    msg = "Primary config directory not found.\nCheck that the config     │ │
+│ │          directory '/mnt/diskGu"+54                                      │ │
+│ │   self = <hydra._internal.config_loader_impl.ConfigLoaderImpl object at  │ │
+│ │          0x7fbf62758490>                                                 │ │
+│ │ source = provider=main,                                                  │ │
+│ │          path=file:///mnt/diskGum/manas/graph-dedup-patch/configs        │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /mnt/diskGum/manas/graph-dedup-patch/dedup/lib/python3.10/site-packages/hydr │
+│ a/_internal/config_loader_impl.py:102 in _missing_config_error               │
+│                                                                              │
+│    99 │   │   │   else:                                                      │
+│   100 │   │   │   │   return msg                                             │
+│   101 │   │                                                                  │
+│ ❱ 102 │   │   raise MissingConfigException(                                  │
+│   103 │   │   │   missing_cfg_file=config_name, message=add_search_path()    │
+│   104 │   │   )                                                              │
+│   105                                                                        │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │      config_name = None                                                  │ │
+│ │              msg = "Primary config directory not found.\nCheck that the  │ │
+│ │                    config directory '/mnt/diskGu"+54                     │ │
+│ │             self = <hydra._internal.config_loader_impl.ConfigLoaderImpl  │ │
+│ │                    object at 0x7fbf62758490>                             │ │
+│ │ with_search_path = False                                                 │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+╰──────────────────────────────────────────────────────────────────────────────╯
+MissingConfigException: Primary config directory not found.
+Check that the config directory '/mnt/diskGum/manas/graph-dedup-patch/configs' 
+exists and readable

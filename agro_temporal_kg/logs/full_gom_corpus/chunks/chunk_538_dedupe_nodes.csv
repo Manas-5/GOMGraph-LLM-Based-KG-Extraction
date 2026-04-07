@@ -1,0 +1,5 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-11T15:06:02.996769+00:00,exact,96b5a7bd-2f9c-43df-a8d3-74013af697a3,Carrots,Carrots are mentioned as one of the vegetables that can be cleaned in greenhouses.,b5ff9742-ff8e-4d19-adf0-e821420d29ec,,,,
+2026-02-11T15:06:02.996802+00:00,exact,96b5a7bd-2f9c-43df-a8d3-74013af697a3,Carrots,Carrots are mentioned as one of the vegetables that can be cleaned in greenhouses.,1010d8af-6377-4146-8c16-7e342adc773b,,,,
+2026-02-11T15:06:02.996829+00:00,exact,855733d8-ff3f-4360-9764-e8e44ffae4ad,LEEK,LEEK is a plant that overwinters well in open ground and bears fruit like an onion.,c4bad731-4f36-4c74-ab92-a8bd624b899d,,,,
+2026-02-11T15:06:02.996854+00:00,exact,855733d8-ff3f-4360-9764-e8e44ffae4ad,LEEK,LEEK is a plant that overwinters well in open ground and bears fruit like an onion.,c233a0ca-77f3-4419-8cd8-8a0109490b50,,,,

@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/scripts/run.py", line 22, in <module>
+    from agro_temporal_kg.configs import CreateTemporalKGConfig, compose_config
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/agro_temporal_kg/configs/__init__.py", line 3, in <module>
+    from agro_temporal_kg.configs.compose_config import compose_config, config_to_dict
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/agro_temporal_kg/configs/compose_config.py", line 10, in <module>
+    from hydra import compose, initialize_config_dir
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/__init__.py", line 5, in <module>
+    from hydra import utils
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/utils.py", line 8, in <module>
+    import hydra._internal.instantiate._instantiate2
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 9, in <module>
+    from omegaconf import OmegaConf, SCMode
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/__init__.py", line 1, in <module>
+    from .base import Container, DictKeyType, Node, SCMode, UnionNode
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/base.py", line 11, in <module>
+    from ._utils import (
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/_utils.py", line 24, in <module>
+    import yaml
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/yaml/__init__.py", line 8, in <module>
+    from .loader import *
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/yaml/loader.py", line 4, in <module>
+    from .reader import *
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/yaml/reader.py", line 45, in <module>
+    class Reader(object):
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/yaml/reader.py", line 137, in Reader
+    NON_PRINTABLE = re.compile('[^\x09\x0A\x0D\x20-\x7E\x85\xA0-\uD7FF\uE000-\uFFFD\U00010000-\U0010ffff]')
+  File "/usr/lib/python3.10/re.py", line 251, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 792, in compile
+    code = _code(p, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 628, in _code
+    _compile_info(code, p, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 614, in _compile_info
+    charset, hascased = _optimize_charset(charset)
+  File "/usr/lib/python3.10/sre_compile.py", line 328, in _optimize_charset
+    charmap[i] = 1
+KeyboardInterrupt

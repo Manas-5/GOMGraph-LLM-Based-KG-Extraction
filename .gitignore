@@ -1,0 +1,4 @@
+exported_data/
+*.code-workspace
+.DS_Store
+**__pycache__**

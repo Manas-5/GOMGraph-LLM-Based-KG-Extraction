@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-12T12:51:15.490059+00:00,exact,38c0ac4c-7dc1-493f-90a9-401353b3eded,FEBRUARY,February is when Hard wheat can be sown.,b5c3c5df-b89e-47a3-be9d-4720021d251e,,,,
+2026-02-12T12:51:15.490113+00:00,llm,38c0ac4c-7dc1-493f-90a9-401353b3eded,FEBRUARY,February is when Hard wheat can be sown.,ad022bce-0300-427f-bc13-5fb5b7c78c52,,,,

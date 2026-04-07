@@ -1,0 +1,7 @@
+# Causal relationship types
+types:
+  - CauseOf
+  - AffectedBy
+  - TreatedWith
+  - ProtectsFrom
+

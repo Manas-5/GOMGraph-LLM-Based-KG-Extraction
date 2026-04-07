@@ -1,0 +1,2335 @@
+# Curated edge_type_map: 3-5 semantically appropriate types per entity pair.
+# Entity,Entity serves as catchall for any pair not explicitly listed.
+edge_type_map:
+
+  # --- Catchall fallback ---
+  "Entity,Entity":
+    - AssociatedWith
+    - HasCharacteristic
+    - ComparesTo
+    - DiffersFrom
+    - ContainsOrHasPart
+
+  # --- Plant-centric ---
+  "Plant,Plant":
+    - AlternativeOrReplacement
+    - ComparesTo
+    - DiffersFrom
+    - VarietyOf
+    - Precedes
+  "Plant,Location":
+    - LocatedInOrAt
+    - OriginatesFrom
+    - PlantedIn
+    - GrownIn
+  "Plant,Condition":
+    - AffectedBy
+    - ResistantTo
+    - Requires
+    - GrownIn
+  "Plant,SoilType":
+    - PlantedIn
+    - Requires
+    - GrowthStageRelatedTo
+    - GrownIn
+  "Plant,Time":
+    - SeasonalRelatedness
+    - TemporalAssociation
+    - GrowthStageRelatedTo
+    - Precedes
+    - GrownIn
+  "Plant,Input":
+    - TreatedWithSomething
+    - Requires
+    - Uses
+  "Plant,PlantPart":
+    - ContainsOrHasPart
+    - PartOf
+    - HasCharacteristic
+  "Plant,Practice":
+    - Uses
+    - Requires
+    - PropagationMethod
+    - SeedingRelationship
+  "Plant,Pest":
+    - AffectedBy
+    - ResistantTo
+    - ProtectionRelation
+  "Plant,Disease":
+    - AffectedBy
+    - ResistantTo
+    - Causes
+  "Plant,Weather":
+    - AffectedBy
+    - ResistantTo
+    - SeasonalRelatedness,
+    - GrownIn
+  "Plant,Nutrient":
+    - Requires
+    - AffectedBy
+    - HasCharacteristic
+  "Plant,Equipment":
+    - Uses
+    - Requires
+    - ProtectionRelation
+  "Plant,Structure":
+    - LocatedInOrAt
+    - ProtectionRelation
+    - ContainsOrHasPart
+    - GrownIn
+  "Plant,People":
+    - ProductionRelation
+    - Uses
+    - AssociatedWith
+
+  # --- Practice-centric ---
+  "Practice,Plant":
+    - Uses
+    - AffectedBy
+    - ProductionRelation
+  "Practice,Time":
+    - TemporalAssociation
+    - SeasonalRelatedness
+    - Precedes
+    - Follows
+  "Practice,Input":
+    - Uses
+    - Requires
+  "Practice,Equipment":
+    - Uses
+    - Requires
+  "Practice,Practice":
+    - Precedes
+    - Follows
+    - AlternativeOrReplacement
+  "Practice,SoilType":
+    - Requires
+    - AffectedBy
+    - AssociatedWith
+  "Practice,Location":
+    - LocatedInOrAt
+    - AssociatedWith
+
+  # --- Location / Structure ---
+  "Location,Plant":
+    - ContainsOrHasPart
+    - ProductionRelation
+  "Location,Location":
+    - ContainsOrHasPart
+    - PartOf
+    - ComparesTo
+  "Structure,Plant":
+    - ContainsOrHasPart
+    - ProtectionRelation
+  "Structure,Structure":
+    - ContainsOrHasPart
+    - PartOf
+    - ComparesTo
+
+  # --- Input / Treatment ---
+  "Input,Plant":
+    - TreatedWithSomething
+    - AffectedBy
+    - ProductionRelation
+  "Input,SoilType":
+    - TreatedWithSomething
+    - AffectedBy
+  "Input,Input":
+    - AlternativeOrReplacement
+    - ComparesTo
+    - ContainsOrHasPart
+
+  # --- People / Institution ---
+  "People,Plant":
+    - Uses
+    - ProductionRelation
+  "People,Practice":
+    - Uses
+    - AssociatedWith
+  "People,Institution":
+    - AssociatedWith
+    - PartOf
+  "People,People":
+    - AssociatedWith
+    - ComparesTo
+  "People,Location":
+    - LocatedInOrAt
+    - AssociatedWith
+  "People,Equipment":
+    - Uses
+    - AssociatedWith
+  "Institution,People":
+    - AssociatedWith
+    - ContainsOrHasPart
+  "Institution,Location":
+    - LocatedInOrAt
+    - AssociatedWith
+
+  # --- Weather / Condition ---
+  "Weather,Plant":
+    - AffectedBy
+    - Causes
+  "Weather,Practice":
+    - AffectedBy
+    - Requires
+  "Condition,Plant":
+    - AffectedBy
+    - Causes
+    - Requires
+
+  # --- Pest / Disease ---
+  "Pest,Plant":
+    - AffectedBy
+    - Causes
+  "Disease,Plant":
+    - AffectedBy
+    - Causes
+    - ResistantTo
+
+  # --- PlantPart ---
+  "PlantPart,Plant":
+    - PartOf
+    - ContainsOrHasPart
+    - HasCharacteristic
+  "PlantPart,PlantPart":
+    - ContainsOrHasPart
+    - PartOf
+    - ComparesTo
+
+  # --- Time ---
+  "Time,Practice":
+    - TemporalAssociation
+    - SeasonalRelatedness
+  "Time,Plant":
+    - TemporalAssociation
+    - SeasonalRelatedness
+    - GrowthStageRelatedTo
+
+  # --- Equipment ---
+  "Equipment,Plant":
+    - Uses
+    - ProtectionRelation
+  "Equipment,Practice":
+    - Uses
+    - AssociatedWith
+
+  # --- SoilType ---
+  "SoilType,Plant":
+    - AffectedBy
+    - Requires
+    - HasCharacteristic
+  "SoilType,Input":
+    - TreatedWithSomething
+    - Requires
+
+  # --- Nutrient ---
+  "Nutrient,Plant":
+    - AffectedBy
+    - Requires
+  "Nutrient,SoilType":
+    - ContainsOrHasPart
+    - AffectedBy
+
+  # --- Animal / Organism ---
+  "Animal,Plant":
+    - AffectedBy
+    - Causes
+    - Uses
+  "Organism,Plant":
+    - AffectedBy
+    - Causes
+    - AssociatedWith
+
+
+# edge_type_map:
+#   Animal,Entity:
+#   - AffectedBy
+#   - ConsumptionRelation
+#   - HasCostlyAspect
+#   - MovedTo
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Animal,Equipment:
+#   - MovedTo
+#   Animal,Input:
+#   - HasCostlyAspect
+#   Animal,People:
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Animal,Plant:
+#   - AffectedBy
+#   Animal,Structure:
+#   - UsedWithOrBy
+#   Animal,Time:
+#   - ConsumptionRelation
+#   Condition,Disease:
+#   - AffectedBy
+#   - Causes
+#   Condition,Entity:
+#   - AffectedBy
+#   - Causes
+#   - ContainmentIssue
+#   - ContainsOrHasPart
+#   - CoveredOrProtectedWithMaterials
+#   - PeasCultivationPractices
+#   - PropagationMethod
+#   - Requires
+#   Condition,Location:
+#   - ContainmentIssue
+#   Condition,People:
+#   - PropagationMethod
+#   - Requires
+#   Condition,Plant:
+#   - AffectedBy
+#   - ContainsOrHasPart
+#   - PeasCultivationPractices
+#   Condition,Structure:
+#   - CoveredOrProtectedWithMaterials
+#   Disease,Entity:
+#   - AffectedBy
+#   - LocatedInOrAt
+#   - PlantedIn
+#   - ProneToDegeneration
+#   - Removed
+#   - TreatedWithSomething
+#   Disease,Equipment:
+#   - Removed
+#   - TreatedWithSomething
+#   Disease,Input:
+#   - PlantedIn
+#   Disease,Plant:
+#   - AffectedBy
+#   - LocatedInOrAt
+#   - ProneToDegeneration
+#   Entity,Animal:
+#   - ContainsOrHasPart
+#   - EquipmentRelationship
+#   - LocatedInOrAt
+#   - TransportationRelation
+#   Entity,Condition:
+#   - AffectedBy
+#   - ComparesTo
+#   - FearOfPests
+#   - HasMonetaryValue
+#   - PlantedIn
+#   - SoilRelationship
+#   - UncertainOrDifficultToDetermine
+#   - WateringRelation
+#   Entity,Disease:
+#   - AffectedBy
+#   - Causes
+#   - ConditionallyTriggered
+#   - IsRelevantTo
+#   - LocatedInOrAt
+#   - PlantedIn
+#   - PruneOrCut
+#   - RelatedToFarmingPractice
+#   - SoilRelationship
+#   - TreatedWithSomething
+#   Entity,Entity:
+#   - AccessibilityDifference
+#   - AffectedBy
+#   - AffectedByAuthorityAction
+#   - AimedAtProducingResourceFor
+#   - AlsoKnownAs
+#   - AlternativeOrReplacement
+#   - AppealRenewal
+#   - AsparagusColorVariety
+#   - AssignedTo
+#   - AssociatedWith
+#   - AssociatedWithOrganizationOrPersonnel
+#   - AttendeeOfReligiousEvent
+#   - AvailableInLocation
+#   - AwardedPrize
+#   - BasedOn
+#   - BearsFoodIn
+#   - BeforeRipeningOnVine
+#   - BellRelatedInfo
+#   - BlanchingBoundary
+#   - BlanchingSource
+#   - CabbageHarvestingAge
+#   - CarrotIsLocatedInOrOn
+#   - CategoryOf
+#   - Causes
+#   - CollarPosition
+#   - CompareAttribute
+#   - ComparesTo
+#   - CompetitionFromExternalFactors
+#   - CompetitionStatus
+#   - ConditionallyTriggered
+#   - ConditionsForSuccessfulGreenManureApplication
+#   - ConstructingWindbreaks
+#   - ConsumptionRelation
+#   - ContainMannequins
+#   - ContainmentIssue
+#   - ContainsOrHasPart
+#   - ContainsTrench
+#   - CoveredOrProtectedWithMaterials
+#   - CropRelatedInfo
+#   - CultivatedTaxonomyRelationship
+#   - DeficiencyRelationship
+#   - DiffersFrom
+#   - DuplicateTranslation
+#   - EdgeCreation
+#   - EquipmentRelationship
+#   - ExposureEffectOnDevelopment
+#   - ExtensionRelationship
+#   - FamilyRelationship
+#   - FearOfPests
+#   - FinancialExchange
+#   - Follows
+#   - FoundingDate
+#   - FrameAssociation
+#   - GerminationContext
+#   - GrowInWinter
+#   - GrowthRateRelationship
+#   - GrowthStageRelatedTo
+#   - HairConditionFavorableForGrowth
+#   - HasCharacteristic
+#   - HasCostlyAspect
+#   - HasDimensionalAttribute
+#   - HasDimensionalProperty
+#   - HasMonetaryValue
+#   - HasPuttyOrPulley
+#   - HasRelationshipWith
+#   - HasStructuralTimbers
+#   - HeatRelatedInteraction
+#   - HighQuality
+#   - HypernymOf
+#   - InstanceOf
+#   - IntermarriagePattern
+#   - IsRelevantTo
+#   - LayeringRelationship
+#   - LeadPipeMaterialOrAlternative
+#   - LeftInPlace
+#   - LettuceNeverReplaced
+#   - LettuceRelationship
+#   - LimitationRelationship
+#   - LocatedInOrAt
+#   - LocatedInParis
+#   - LocationAssociation
+#   - ManureRelated
+#   - MarketGardenerCharacteristics
+#   - MarketGardeningRelated
+#   - MarketingRelation
+#   - MaturityDateRelation
+#   - MeasurementRelation
+#   - MembershipRelationship
+#   - MilledToBleach
+#   - MonthlyComparisonOfSuccess
+#   - MonthlyTiming
+#   - MovedTo
+#   - MulchRelated
+#   - NativeOrigin
+#   - NegativeAssociation
+#   - NegativelyAffectsGrowth
+#   - NotGrown
+#   - OccupiesSpaceOf
+#   - OptionalRelationship
+#   - OrientationRelationship
+#   - OriginatesFrom
+#   - PartOf
+#   - PeasCultivationPractices
+#   - PeopleRelationshipEconomicActivity
+#   - PilesInWetlands
+#   - PlantabilityStatus
+#   - PlantedIn
+#   - PlantingOrHarvestingMethod
+#   - PracticesInOrRelatedTo
+#   - Precedes
+#   - PreferredCondition
+#   - PreparationStatus
+#   - ProductionRelation
+#   - ProneToDegeneration
+#   - PropagationMethod
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RadishOrigin
+#   - RaisedOrEnhancedAt
+#   - ReceivedBy
+#   - RegionSpecific
+#   - RelatedToEconomicInformation
+#   - RelatedToFarmingPractice
+#   - RelatedToGreens
+#   - Removed
+#   - RemovedFrom
+#   - RentsAt
+#   - RepositionsObjects
+#   - Requires
+#   - RequiresConditionalRemoval
+#   - ResearchInitiation
+#   - ResistantTo
+#   - RetainsSeedViabilityFor
+#   - SeasonAssociatedEvents
+#   - SeasonalChervilActivity
+#   - SeasonalRelatedness
+#   - SeedingRelatedState
+#   - SeedingRelationship
+#   - SelectedOrPicked
+#   - SeparatedBy
+#   - SimilarityRelationship
+#   - SoilConditionReasonsForNoTransplanting
+#   - SoilRelationship
+#   - SpatialRelationship
+#   - SpreadBy
+#   - SproutsFromOrIn
+#   - TemporalAssociation
+#   - ThinningMethodOrTool
+#   - TimestampCreated
+#   - TransplantationEvent
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UncertainOrDifficultToDetermine
+#   - UsedWithOrBy
+#   - VarietyOf
+#   - VisualRepresentation
+#   - WateringRelation
+#   - WeatherSensitivity
+#   - YieldingInto
+#   Entity,Equipment:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - ContainMannequins
+#   - ContainsOrHasPart
+#   - EdgeCreation
+#   - EquipmentRelationship
+#   - Follows
+#   - GrowthStageRelatedTo
+#   - HasMonetaryValue
+#   - HasPuttyOrPulley
+#   - HasRelationshipWith
+#   - HasStructuralTimbers
+#   - HeatRelatedInteraction
+#   - LeadPipeMaterialOrAlternative
+#   - LocatedInOrAt
+#   - MovedTo
+#   - MulchRelated
+#   - OrientationRelationship
+#   - PlantedIn
+#   - PreparationStatus
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RelatedToFarmingPractice
+#   - Removed
+#   - Requires
+#   - SeparatedBy
+#   - SoilRelationship
+#   - TransplantationEvent
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   Entity,Input:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - BlanchingSource
+#   - CarrotIsLocatedInOrOn
+#   - CompareAttribute
+#   - CompetitionStatus
+#   - ContainsOrHasPart
+#   - FrameAssociation
+#   - HasCharacteristic
+#   - HasCostlyAspect
+#   - HasDimensionalProperty
+#   - HasPuttyOrPulley
+#   - HasStructuralTimbers
+#   - HeatRelatedInteraction
+#   - IsRelevantTo
+#   - LayeringRelationship
+#   - LeadPipeMaterialOrAlternative
+#   - LocatedInOrAt
+#   - LocationAssociation
+#   - ManureRelated
+#   - MeasurementRelation
+#   - NegativeAssociation
+#   - OriginatesFrom
+#   - PartOf
+#   - PlantedIn
+#   - PreferredCondition
+#   - PreparationStatus
+#   - ProductionRelation
+#   - RaisedOrEnhancedAt
+#   - RelatedToEconomicInformation
+#   - Removed
+#   - RentsAt
+#   - Requires
+#   - ResistantTo
+#   - SelectedOrPicked
+#   - SeparatedBy
+#   - SoilRelationship
+#   - SproutsFromOrIn
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Entity,Institution:
+#   - AssociatedWith
+#   - PeopleRelationshipEconomicActivity
+#   - ReceivedBy
+#   - UsedWithOrBy
+#   Entity,Location:
+#   - AffectedBy
+#   - AppealRenewal
+#   - AssociatedWith
+#   - AwardedPrize
+#   - CompareAttribute
+#   - CompetitionFromExternalFactors
+#   - CompetitionStatus
+#   - ContainmentIssue
+#   - ExtensionRelationship
+#   - GrowthStageRelatedTo
+#   - HasMonetaryValue
+#   - HeatRelatedInteraction
+#   - LimitationRelationship
+#   - LocatedInOrAt
+#   - LocationAssociation
+#   - ManureRelated
+#   - MarketGardenerCharacteristics
+#   - MarketGardeningRelated
+#   - MovedTo
+#   - NativeOrigin
+#   - OrientationRelationship
+#   - OriginatesFrom
+#   - PilesInWetlands
+#   - PlantedIn
+#   - PracticesInOrRelatedTo
+#   - PreferredCondition
+#   - PreparationStatus
+#   - RadishOrigin
+#   - RegionSpecific
+#   - RelatedToFarmingPractice
+#   - RepositionsObjects
+#   - Requires
+#   - ResearchInitiation
+#   - SeasonalRelatedness
+#   - SoilRelationship
+#   - SpatialRelationship
+#   - TemporalAssociation
+#   - TransplantationEvent
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - VisualRepresentation
+#   - WateringRelation
+#   - WeatherSensitivity
+#   Entity,Nutrient:
+#   - AssignedTo
+#   - AssociatedWith
+#   - GrowthStageRelatedTo
+#   - OriginatesFrom
+#   - UsedWithOrBy
+#   Entity,Organism:
+#   - AlternativeOrReplacement
+#   - ContainsOrHasPart
+#   - PlantedIn
+#   - Requires
+#   - SoilRelationship
+#   - VarietyOf
+#   Entity,People:
+#   - AimedAtProducingResourceFor
+#   - AssociatedWith
+#   - AssociatedWithOrganizationOrPersonnel
+#   - AvailableInLocation
+#   - BasedOn
+#   - CompareAttribute
+#   - CompetitionFromExternalFactors
+#   - ContainsOrHasPart
+#   - CropRelatedInfo
+#   - ExposureEffectOnDevelopment
+#   - Follows
+#   - IntermarriagePattern
+#   - LocatedInOrAt
+#   - LocatedInParis
+#   - NegativeAssociation
+#   - NotGrown
+#   - PlantedIn
+#   - PracticesInOrRelatedTo
+#   - PreferredCondition
+#   - PreparationStatus
+#   - ProductionRelation
+#   - PropagationMethod
+#   - PruneOrCut
+#   - RaisedOrEnhancedAt
+#   - Requires
+#   - SimilarityRelationship
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Entity,Pest:
+#   - AffectedBy
+#   - ConsumptionRelation
+#   - HasRelationshipWith
+#   - OriginatesFrom
+#   - Removed
+#   - Requires
+#   - TreatedWithSomething
+#   Entity,Plant:
+#   - AffectedBy
+#   - AlsoKnownAs
+#   - AlternativeOrReplacement
+#   - AsparagusColorVariety
+#   - AssignedTo
+#   - AssociatedWith
+#   - AssociatedWithOrganizationOrPersonnel
+#   - AvailableInLocation
+#   - BeforeRipeningOnVine
+#   - BellRelatedInfo
+#   - CategoryOf
+#   - Causes
+#   - CompareAttribute
+#   - ComparesTo
+#   - CompetitionFromExternalFactors
+#   - ConditionsForSuccessfulGreenManureApplication
+#   - ConsumptionRelation
+#   - ContainMannequins
+#   - ContainsOrHasPart
+#   - CoveredOrProtectedWithMaterials
+#   - CropRelatedInfo
+#   - CultivatedTaxonomyRelationship
+#   - DiffersFrom
+#   - FamilyRelationship
+#   - Follows
+#   - FrameAssociation
+#   - GerminationContext
+#   - GrowthStageRelatedTo
+#   - HairConditionFavorableForGrowth
+#   - HasCharacteristic
+#   - HasDimensionalAttribute
+#   - HasMonetaryValue
+#   - HasRelationshipWith
+#   - HeatRelatedInteraction
+#   - HighQuality
+#   - HypernymOf
+#   - InstanceOf
+#   - IsRelevantTo
+#   - LayeringRelationship
+#   - LeftInPlace
+#   - LettuceNeverReplaced
+#   - LettuceRelationship
+#   - LocatedInOrAt
+#   - LocationAssociation
+#   - ManureRelated
+#   - MarketGardeningRelated
+#   - MaturityDateRelation
+#   - MeasurementRelation
+#   - MembershipRelationship
+#   - MilledToBleach
+#   - MovedTo
+#   - NotGrown
+#   - OccupiesSpaceOf
+#   - OptionalRelationship
+#   - OriginatesFrom
+#   - PartOf
+#   - PeasCultivationPractices
+#   - PlantabilityStatus
+#   - PlantedIn
+#   - Precedes
+#   - PreferredCondition
+#   - PreparationStatus
+#   - ProductionRelation
+#   - ProneToDegeneration
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RadishOrigin
+#   - RaisedOrEnhancedAt
+#   - RelatedToFarmingPractice
+#   - RelatedToGreens
+#   - Removed
+#   - Requires
+#   - ResistantTo
+#   - RetainsSeedViabilityFor
+#   - SeasonAssociatedEvents
+#   - SeasonalChervilActivity
+#   - SeasonalRelatedness
+#   - SeedingRelatedState
+#   - SeedingRelationship
+#   - SelectedOrPicked
+#   - SeparatedBy
+#   - SimilarityRelationship
+#   - SoilConditionReasonsForNoTransplanting
+#   - SoilRelationship
+#   - SpatialRelationship
+#   - SpreadBy
+#   - TemporalAssociation
+#   - ThinningMethodOrTool
+#   - TransplantationEvent
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - VarietyOf
+#   - WateringRelation
+#   Entity,PlantPart:
+#   - AffectedBy
+#   - CompareAttribute
+#   - ConditionallyTriggered
+#   - ContainsOrHasPart
+#   - GrowthStageRelatedTo
+#   - HasCharacteristic
+#   - HasRelationshipWith
+#   - LayeringRelationship
+#   - LimitationRelationship
+#   - LocatedInOrAt
+#   - MaturityDateRelation
+#   - OrientationRelationship
+#   - PlantedIn
+#   - PlantingOrHarvestingMethod
+#   - PruneOrCut
+#   - RaisedOrEnhancedAt
+#   - Removed
+#   - Requires
+#   - SoilRelationship
+#   - SpreadBy
+#   - SproutsFromOrIn
+#   - ThinningMethodOrTool
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Entity,Practice:
+#   - AffectedBy
+#   - AssociatedWith
+#   - BasedOn
+#   - CabbageHarvestingAge
+#   - ConditionallyTriggered
+#   - ConstructingWindbreaks
+#   - ContainsOrHasPart
+#   - ContainsTrench
+#   - CoveredOrProtectedWithMaterials
+#   - CultivatedTaxonomyRelationship
+#   - DeficiencyRelationship
+#   - Follows
+#   - GrowthStageRelatedTo
+#   - HasMonetaryValue
+#   - IsRelevantTo
+#   - LocatedInOrAt
+#   - MovedTo
+#   - MulchRelated
+#   - OccupiesSpaceOf
+#   - OrientationRelationship
+#   - PartOf
+#   - PlantedIn
+#   - PlantingOrHarvestingMethod
+#   - PracticesInOrRelatedTo
+#   - PreparationStatus
+#   - PropagationMethod
+#   - PruneOrCut
+#   - RadishOrigin
+#   - RaisedOrEnhancedAt
+#   - ReceivedBy
+#   - RelatedToEconomicInformation
+#   - Removed
+#   - RentsAt
+#   - Requires
+#   - SeedingRelationship
+#   - SelectedOrPicked
+#   - SeparatedBy
+#   - TransplantationEvent
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   - WeatherSensitivity
+#   Entity,SoilType:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - FoundingDate
+#   - IsRelevantTo
+#   - LocatedInOrAt
+#   - MovedTo
+#   - OrientationRelationship
+#   - OriginatesFrom
+#   - PlantedIn
+#   - Precedes
+#   - ProductionRelation
+#   - RaisedOrEnhancedAt
+#   - Requires
+#   - ResearchInitiation
+#   - SeparatedBy
+#   - SoilRelationship
+#   - TransplantationEvent
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - VarietyOf
+#   - WateringRelation
+#   Entity,Structure:
+#   - AccessibilityDifference
+#   - AffectedBy
+#   - AssociatedWith
+#   - CarrotIsLocatedInOrOn
+#   - ContainMannequins
+#   - ContainsOrHasPart
+#   - CoveredOrProtectedWithMaterials
+#   - EquipmentRelationship
+#   - FrameAssociation
+#   - GerminationContext
+#   - HasDimensionalProperty
+#   - HeatRelatedInteraction
+#   - LocatedInOrAt
+#   - NegativeAssociation
+#   - NegativelyAffectsGrowth
+#   - OriginatesFrom
+#   - PlantedIn
+#   - PracticesInOrRelatedTo
+#   - PreparationStatus
+#   - ProtectionRelation
+#   - RaisedOrEnhancedAt
+#   - Removed
+#   - RepositionsObjects
+#   - Requires
+#   - SeparatedBy
+#   - TransplantationEvent
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WeatherSensitivity
+#   Entity,Time:
+#   - AffectedBy
+#   - AffectedByAuthorityAction
+#   - AlsoKnownAs
+#   - AssignedTo
+#   - AssociatedWith
+#   - AttendeeOfReligiousEvent
+#   - AvailableInLocation
+#   - BasedOn
+#   - BearsFoodIn
+#   - BeforeRipeningOnVine
+#   - BellRelatedInfo
+#   - BlanchingBoundary
+#   - BlanchingSource
+#   - CarrotIsLocatedInOrOn
+#   - CategoryOf
+#   - CollarPosition
+#   - ConsumptionRelation
+#   - ContainsOrHasPart
+#   - CoveredOrProtectedWithMaterials
+#   - CropRelatedInfo
+#   - DiffersFrom
+#   - DuplicateTranslation
+#   - FrameAssociation
+#   - GerminationContext
+#   - GrowInWinter
+#   - GrowthRateRelationship
+#   - GrowthStageRelatedTo
+#   - HasCharacteristic
+#   - HasMonetaryValue
+#   - HeatRelatedInteraction
+#   - IsRelevantTo
+#   - LettuceRelationship
+#   - LocatedInOrAt
+#   - MarketingRelation
+#   - MaturityDateRelation
+#   - MeasurementRelation
+#   - MonthlyComparisonOfSuccess
+#   - MonthlyTiming
+#   - MovedTo
+#   - OrientationRelationship
+#   - OriginatesFrom
+#   - PlantedIn
+#   - PracticesInOrRelatedTo
+#   - Precedes
+#   - PreferredCondition
+#   - PreparationStatus
+#   - ProductionRelation
+#   - ProneToDegeneration
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RaisedOrEnhancedAt
+#   - RelatedToFarmingPractice
+#   - Removed
+#   - RemovedFrom
+#   - Requires
+#   - SeasonalChervilActivity
+#   - SeasonalRelatedness
+#   - SeedingRelationship
+#   - SelectedOrPicked
+#   - SeparatedBy
+#   - SoilRelationship
+#   - TemporalAssociation
+#   - TimestampCreated
+#   - TransplantationEvent
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   - YieldingInto
+#   Entity,Weather:
+#   - AffectedBy
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - FinancialExchange
+#   - HasRelationshipWith
+#   - HeatRelatedInteraction
+#   - NegativeAssociation
+#   - PlantedIn
+#   - ProtectionRelation
+#   - RaisedOrEnhancedAt
+#   - Removed
+#   - Requires
+#   - RequiresConditionalRemoval
+#   - ResistantTo
+#   - SeasonalRelatedness
+#   - SoilRelationship
+#   - TemporalAssociation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - VisualRepresentation
+#   - WateringRelation
+#   - WeatherSensitivity
+#   Equipment,Animal:
+#   - TransportationRelation
+#   Equipment,Disease:
+#   - IsRelevantTo
+#   - RelatedToFarmingPractice
+#   Equipment,Entity:
+#   - AccessibilityDifference
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - CompareAttribute
+#   - CompetitionStatus
+#   - ContainMannequins
+#   - ContainsOrHasPart
+#   - CoveredOrProtectedWithMaterials
+#   - EquipmentRelationship
+#   - HasMonetaryValue
+#   - HasStructuralTimbers
+#   - HeatRelatedInteraction
+#   - IsRelevantTo
+#   - LocatedInOrAt
+#   - ManureRelated
+#   - MeasurementRelation
+#   - MovedTo
+#   - OriginatesFrom
+#   - PeasCultivationPractices
+#   - PilesInWetlands
+#   - PlantedIn
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RaisedOrEnhancedAt
+#   - RelatedToFarmingPractice
+#   - Removed
+#   - ResistantTo
+#   - SeparatedBy
+#   - SoilRelationship
+#   - ThinningMethodOrTool
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Equipment,Equipment:
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - ContainMannequins
+#   - EquipmentRelationship
+#   - HasStructuralTimbers
+#   - RelatedToFarmingPractice
+#   - SeparatedBy
+#   - TransportationRelation
+#   - UsedWithOrBy
+#   Equipment,Input:
+#   - CompetitionStatus
+#   - ManureRelated
+#   - MeasurementRelation
+#   - OriginatesFrom
+#   - PlantedIn
+#   - RaisedOrEnhancedAt
+#   - ResistantTo
+#   - SeparatedBy
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   Equipment,Location:
+#   - HasMonetaryValue
+#   - LocatedInOrAt
+#   - PilesInWetlands
+#   - SoilRelationship
+#   - UsedWithOrBy
+#   Equipment,Nutrient:
+#   - UsedWithOrBy
+#   Equipment,People:
+#   - CompareAttribute
+#   Equipment,Pest:
+#   - Removed
+#   Equipment,Plant:
+#   - AffectedBy
+#   - AssociatedWith
+#   - ContainMannequins
+#   - CoveredOrProtectedWithMaterials
+#   - HeatRelatedInteraction
+#   - IsRelevantTo
+#   - MovedTo
+#   - PeasCultivationPractices
+#   - PlantedIn
+#   - PruneOrCut
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Equipment,PlantPart:
+#   - LocatedInOrAt
+#   - ThinningMethodOrTool
+#   Equipment,Practice:
+#   - AssociatedWith
+#   - CoveredOrProtectedWithMaterials
+#   - PlantedIn
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Equipment,SoilType:
+#   - AffectedBy
+#   - ContainsOrHasPart
+#   - IsRelevantTo
+#   - UsedWithOrBy
+#   Equipment,Structure:
+#   - AccessibilityDifference
+#   - ContainMannequins
+#   - ContainsOrHasPart
+#   - PlantedIn
+#   - UsedWithOrBy
+#   Equipment,Time:
+#   - ContainsOrHasPart
+#   - PlantedIn
+#   - Removed
+#   Equipment,Weather:
+#   - AssociatedWith
+#   - HeatRelatedInteraction
+#   - ProtectionRelation
+#   Input,Animal:
+#   - TransportationRelation
+#   Input,Condition:
+#   - SoilRelationship
+#   Input,Disease:
+#   - AffectedBy
+#   - LocatedInOrAt
+#   Input,Entity:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - ConsumptionRelation
+#   - ContainsOrHasPart
+#   - CoveredOrProtectedWithMaterials
+#   - FrameAssociation
+#   - HairConditionFavorableForGrowth
+#   - HasDimensionalProperty
+#   - HasMonetaryValue
+#   - HasPuttyOrPulley
+#   - HasStructuralTimbers
+#   - HeatRelatedInteraction
+#   - IsRelevantTo
+#   - LayeringRelationship
+#   - LeadPipeMaterialOrAlternative
+#   - LocatedInOrAt
+#   - ManureRelated
+#   - MeasurementRelation
+#   - NegativeAssociation
+#   - OriginatesFrom
+#   - PartOf
+#   - PeasCultivationPractices
+#   - PlantedIn
+#   - PreparationStatus
+#   - ProductionRelation
+#   - PruneOrCut
+#   - RaisedOrEnhancedAt
+#   - Removed
+#   - RentsAt
+#   - Requires
+#   - SeparatedBy
+#   - SoilRelationship
+#   - TransplantationEvent
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Input,Equipment:
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - HasPuttyOrPulley
+#   - LeadPipeMaterialOrAlternative
+#   - LocatedInOrAt
+#   - PlantedIn
+#   - PruneOrCut
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   Input,Input:
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - HasStructuralTimbers
+#   - HeatRelatedInteraction
+#   - LayeringRelationship
+#   - LeadPipeMaterialOrAlternative
+#   - LocatedInOrAt
+#   - ManureRelated
+#   - PartOf
+#   - PlantedIn
+#   - Removed
+#   - SeparatedBy
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   Input,Location:
+#   - HasMonetaryValue
+#   - LocatedInOrAt
+#   - ManureRelated
+#   Input,Organism:
+#   - AlternativeOrReplacement
+#   - ContainsOrHasPart
+#   Input,People:
+#   - PlantedIn
+#   - RaisedOrEnhancedAt
+#   Input,Plant:
+#   - AffectedBy
+#   - AssociatedWith
+#   - ConsumptionRelation
+#   - HairConditionFavorableForGrowth
+#   - HeatRelatedInteraction
+#   - ManureRelated
+#   - MeasurementRelation
+#   - PeasCultivationPractices
+#   - PlantedIn
+#   - PreparationStatus
+#   - Requires
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Input,PlantPart:
+#   - SoilRelationship
+#   Input,Practice:
+#   - HasMonetaryValue
+#   - IsRelevantTo
+#   - RentsAt
+#   - UsedWithOrBy
+#   Input,SoilType:
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - OriginatesFrom
+#   - ProductionRelation
+#   - SoilRelationship
+#   - TreatedWithSomething
+#   Input,Structure:
+#   - AssociatedWith
+#   - CoveredOrProtectedWithMaterials
+#   - FrameAssociation
+#   - HasDimensionalProperty
+#   - LocatedInOrAt
+#   - NegativeAssociation
+#   - OriginatesFrom
+#   - PreparationStatus
+#   - SeparatedBy
+#   - UsedWithOrBy
+#   Input,Time:
+#   - IsRelevantTo
+#   - PlantedIn
+#   - Requires
+#   - TransplantationEvent
+#   - UsedWithOrBy
+#   Input,Weather:
+#   - AffectedBy
+#   - Requires
+#   - UsedWithOrBy
+#   Institution,Entity:
+#   - AimedAtProducingResourceFor
+#   - AppealRenewal
+#   - AssociatedWith
+#   - AwardedPrize
+#   - BasedOn
+#   - CompetitionStatus
+#   - PlantedIn
+#   - ResearchInitiation
+#   - VisualRepresentation
+#   Institution,Location:
+#   - AppealRenewal
+#   - AssociatedWith
+#   - AwardedPrize
+#   - CompetitionStatus
+#   - ResearchInitiation
+#   - VisualRepresentation
+#   Institution,People:
+#   - AimedAtProducingResourceFor
+#   - AssociatedWith
+#   - BasedOn
+#   Institution,Plant:
+#   - PlantedIn
+#   Institution,Practice:
+#   - BasedOn
+#   Institution,Time:
+#   - AssociatedWith
+#   Location,Animal:
+#   - LocatedInOrAt
+#   Location,Condition:
+#   - AffectedBy
+#   Location,Entity:
+#   - AccessibilityDifference
+#   - AffectedBy
+#   - AssociatedWith
+#   - BasedOn
+#   - CompetitionFromExternalFactors
+#   - ContainsOrHasPart
+#   - ContainsTrench
+#   - CropRelatedInfo
+#   - GrowthStageRelatedTo
+#   - HeatRelatedInteraction
+#   - IsRelevantTo
+#   - LettuceRelationship
+#   - LocatedInOrAt
+#   - LocatedInParis
+#   - LocationAssociation
+#   - MeasurementRelation
+#   - OriginatesFrom
+#   - PlantedIn
+#   - PracticesInOrRelatedTo
+#   - PreparationStatus
+#   - PruneOrCut
+#   - Requires
+#   - SelectedOrPicked
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Location,Equipment:
+#   - UsedWithOrBy
+#   Location,Input:
+#   - MeasurementRelation
+#   - PreparationStatus
+#   Location,Location:
+#   - HeatRelatedInteraction
+#   - LocationAssociation
+#   - PlantedIn
+#   Location,People:
+#   - AssociatedWith
+#   - CompetitionFromExternalFactors
+#   - LocatedInOrAt
+#   - LocatedInParis
+#   Location,Plant:
+#   - AffectedBy
+#   - CompetitionFromExternalFactors
+#   - ContainsOrHasPart
+#   - CropRelatedInfo
+#   - IsRelevantTo
+#   - LettuceRelationship
+#   - OriginatesFrom
+#   - PruneOrCut
+#   - SelectedOrPicked
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Location,PlantPart:
+#   - GrowthStageRelatedTo
+#   Location,Practice:
+#   - BasedOn
+#   - ContainsTrench
+#   - PracticesInOrRelatedTo
+#   - Requires
+#   Location,Structure:
+#   - AccessibilityDifference
+#   Location,Time:
+#   - AffectedBy
+#   Nutrient,Condition:
+#   - UncertainOrDifficultToDetermine
+#   Nutrient,Entity:
+#   - AffectedBy
+#   - AssociatedWith
+#   - MulchRelated
+#   - PlantedIn
+#   - RaisedOrEnhancedAt
+#   - UncertainOrDifficultToDetermine
+#   Nutrient,Input:
+#   - AffectedBy
+#   Nutrient,People:
+#   - AssociatedWith
+#   Nutrient,Practice:
+#   - MulchRelated
+#   Nutrient,SoilType:
+#   - RaisedOrEnhancedAt
+#   Nutrient,Time:
+#   - PlantedIn
+#   Organism,Entity:
+#   - FamilyRelationship
+#   - HasPuttyOrPulley
+#   - OriginatesFrom
+#   Organism,Input:
+#   - HasPuttyOrPulley
+#   Organism,Plant:
+#   - FamilyRelationship
+#   Organism,Structure:
+#   - OriginatesFrom
+#   People,Animal:
+#   - ContainsOrHasPart
+#   - EquipmentRelationship
+#   People,Entity:
+#   - AlsoKnownAs
+#   - AssociatedWith
+#   - AssociatedWithOrganizationOrPersonnel
+#   - AttendeeOfReligiousEvent
+#   - BasedOn
+#   - ContainsOrHasPart
+#   - CropRelatedInfo
+#   - EquipmentRelationship
+#   - Follows
+#   - IntermarriagePattern
+#   - LocatedInOrAt
+#   - MarketGardenerCharacteristics
+#   - MarketGardeningRelated
+#   - PeopleRelationshipEconomicActivity
+#   - PlantedIn
+#   - PracticesInOrRelatedTo
+#   - ProductionRelation
+#   - ReceivedBy
+#   - RelatedToEconomicInformation
+#   - RelatedToFarmingPractice
+#   - RepositionsObjects
+#   - Requires
+#   - SimilarityRelationship
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   People,Equipment:
+#   - AssociatedWith
+#   - Requires
+#   - UsedWithOrBy
+#   People,Input:
+#   - ContainsOrHasPart
+#   - ProductionRelation
+#   - UsedWithOrBy
+#   People,Institution:
+#   - AssociatedWith
+#   - PeopleRelationshipEconomicActivity
+#   - ReceivedBy
+#   - UsedWithOrBy
+#   People,Location:
+#   - AssociatedWith
+#   - MarketGardenerCharacteristics
+#   - MarketGardeningRelated
+#   - PracticesInOrRelatedTo
+#   - RelatedToFarmingPractice
+#   - RepositionsObjects
+#   - Requires
+#   People,Organism:
+#   - Requires
+#   People,People:
+#   - AssociatedWith
+#   - Follows
+#   - IntermarriagePattern
+#   - PlantedIn
+#   - ProductionRelation
+#   - SimilarityRelationship
+#   People,Plant:
+#   - AlsoKnownAs
+#   - AssociatedWith
+#   - AssociatedWithOrganizationOrPersonnel
+#   - CropRelatedInfo
+#   - LocatedInOrAt
+#   - MarketGardeningRelated
+#   - PlantedIn
+#   People,Practice:
+#   - RelatedToEconomicInformation
+#   People,SoilType:
+#   - WateringRelation
+#   People,Structure:
+#   - EquipmentRelationship
+#   - PlantedIn
+#   - Requires
+#   - TreatedWithSomething
+#   People,Time:
+#   - AttendeeOfReligiousEvent
+#   - BasedOn
+#   - PlantedIn
+#   - PracticesInOrRelatedTo
+#   - UsedWithOrBy
+#   Pest,Condition:
+#   - AffectedBy
+#   Pest,Disease:
+#   - AffectedBy
+#   Pest,Entity:
+#   - AffectedBy
+#   - HasRelationshipWith
+#   - PlantedIn
+#   - Requires
+#   - SoilRelationship
+#   Pest,Plant:
+#   - AffectedBy
+#   - HasRelationshipWith
+#   - PlantedIn
+#   - Requires
+#   - SoilRelationship
+#   Pest,Practice:
+#   - PlantedIn
+#   Pest,Weather:
+#   - AffectedBy
+#   Plant,Condition:
+#   - AffectedBy
+#   - FearOfPests
+#   - HasMonetaryValue
+#   - PlantedIn
+#   - WateringRelation
+#   Plant,Disease:
+#   - AffectedBy
+#   - PlantedIn
+#   - PruneOrCut
+#   - TreatedWithSomething
+#   Plant,Entity:
+#   - AffectedBy
+#   - AffectedByAuthorityAction
+#   - AlsoKnownAs
+#   - AlternativeOrReplacement
+#   - AsparagusColorVariety
+#   - AssociatedWith
+#   - AssociatedWithOrganizationOrPersonnel
+#   - AvailableInLocation
+#   - BearsFoodIn
+#   - BeforeRipeningOnVine
+#   - BlanchingBoundary
+#   - BlanchingSource
+#   - CabbageHarvestingAge
+#   - CarrotIsLocatedInOrOn
+#   - CategoryOf
+#   - CollarPosition
+#   - CompareAttribute
+#   - ComparesTo
+#   - CompetitionFromExternalFactors
+#   - ConsumptionRelation
+#   - ContainsOrHasPart
+#   - CropRelatedInfo
+#   - CultivatedTaxonomyRelationship
+#   - DeficiencyRelationship
+#   - DiffersFrom
+#   - DuplicateTranslation
+#   - ExposureEffectOnDevelopment
+#   - ExtensionRelationship
+#   - FearOfPests
+#   - Follows
+#   - GerminationContext
+#   - GrowInWinter
+#   - GrowthStageRelatedTo
+#   - HasCharacteristic
+#   - HasDimensionalAttribute
+#   - HasDimensionalProperty
+#   - HasMonetaryValue
+#   - HasRelationshipWith
+#   - HeatRelatedInteraction
+#   - HighQuality
+#   - HypernymOf
+#   - InstanceOf
+#   - LayeringRelationship
+#   - LeftInPlace
+#   - LettuceNeverReplaced
+#   - LettuceRelationship
+#   - LimitationRelationship
+#   - LocatedInOrAt
+#   - LocationAssociation
+#   - ManureRelated
+#   - MarketGardeningRelated
+#   - MarketingRelation
+#   - MaturityDateRelation
+#   - MembershipRelationship
+#   - MilledToBleach
+#   - MonthlyTiming
+#   - MovedTo
+#   - MulchRelated
+#   - NativeOrigin
+#   - NegativeAssociation
+#   - NotGrown
+#   - OccupiesSpaceOf
+#   - OrientationRelationship
+#   - OriginatesFrom
+#   - PartOf
+#   - PeasCultivationPractices
+#   - PlantedIn
+#   - PlantingOrHarvestingMethod
+#   - PracticesInOrRelatedTo
+#   - Precedes
+#   - PreferredCondition
+#   - PreparationStatus
+#   - ProductionRelation
+#   - ProneToDegeneration
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RadishOrigin
+#   - RaisedOrEnhancedAt
+#   - ReceivedBy
+#   - RegionSpecific
+#   - RelatedToEconomicInformation
+#   - RelatedToFarmingPractice
+#   - RelatedToGreens
+#   - Removed
+#   - RemovedFrom
+#   - RentsAt
+#   - Requires
+#   - RequiresConditionalRemoval
+#   - ResistantTo
+#   - RetainsSeedViabilityFor
+#   - SeasonalChervilActivity
+#   - SeasonalRelatedness
+#   - SeedingRelatedState
+#   - SeedingRelationship
+#   - SelectedOrPicked
+#   - SeparatedBy
+#   - SimilarityRelationship
+#   - SoilConditionReasonsForNoTransplanting
+#   - SoilRelationship
+#   - SpatialRelationship
+#   - SpreadBy
+#   - SproutsFromOrIn
+#   - TemporalAssociation
+#   - TimestampCreated
+#   - TransplantationEvent
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - VarietyOf
+#   - VisualRepresentation
+#   - WateringRelation
+#   - WeatherSensitivity
+#   - YieldingInto
+#   Plant,Equipment:
+#   - AffectedBy
+#   - AssociatedWith
+#   - GrowthStageRelatedTo
+#   - HasRelationshipWith
+#   - HeatRelatedInteraction
+#   - MulchRelated
+#   - PlantedIn
+#   - PreparationStatus
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RelatedToFarmingPractice
+#   - Requires
+#   - SoilRelationship
+#   - TransplantationEvent
+#   - UsedWithOrBy
+#   Plant,Input:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - BlanchingSource
+#   - CarrotIsLocatedInOrOn
+#   - ContainsOrHasPart
+#   - HasCharacteristic
+#   - HeatRelatedInteraction
+#   - LocatedInOrAt
+#   - LocationAssociation
+#   - ManureRelated
+#   - PlantedIn
+#   - PreferredCondition
+#   - RelatedToEconomicInformation
+#   - RentsAt
+#   - Requires
+#   - SelectedOrPicked
+#   - SoilRelationship
+#   - SproutsFromOrIn
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Plant,Location:
+#   - AffectedBy
+#   - AssociatedWith
+#   - CompareAttribute
+#   - CompetitionFromExternalFactors
+#   - ExtensionRelationship
+#   - GrowthStageRelatedTo
+#   - LimitationRelationship
+#   - LocatedInOrAt
+#   - MarketGardeningRelated
+#   - NativeOrigin
+#   - OrientationRelationship
+#   - OriginatesFrom
+#   - PlantedIn
+#   - PracticesInOrRelatedTo
+#   - PreferredCondition
+#   - PreparationStatus
+#   - RadishOrigin
+#   - RegionSpecific
+#   - TransplantationEvent
+#   - WeatherSensitivity
+#   Plant,Nutrient:
+#   - AssociatedWith
+#   - OriginatesFrom
+#   Plant,Organism:
+#   - ContainsOrHasPart
+#   - PlantedIn
+#   - SoilRelationship
+#   - VarietyOf
+#   Plant,People:
+#   - AssociatedWithOrganizationOrPersonnel
+#   - AvailableInLocation
+#   - ContainsOrHasPart
+#   - CropRelatedInfo
+#   - ExposureEffectOnDevelopment
+#   - NotGrown
+#   - PreferredCondition
+#   - PreparationStatus
+#   - PruneOrCut
+#   - Requires
+#   Plant,Pest:
+#   - AffectedBy
+#   - ConsumptionRelation
+#   - HasRelationshipWith
+#   - OriginatesFrom
+#   - Requires
+#   - TreatedWithSomething
+#   Plant,Plant:
+#   - AffectedBy
+#   - AlsoKnownAs
+#   - AlternativeOrReplacement
+#   - AsparagusColorVariety
+#   - AssociatedWith
+#   - BeforeRipeningOnVine
+#   - CategoryOf
+#   - CompareAttribute
+#   - ComparesTo
+#   - ContainsOrHasPart
+#   - CropRelatedInfo
+#   - CultivatedTaxonomyRelationship
+#   - DiffersFrom
+#   - Follows
+#   - GerminationContext
+#   - GrowthStageRelatedTo
+#   - HasCharacteristic
+#   - HasDimensionalAttribute
+#   - HasMonetaryValue
+#   - HighQuality
+#   - HypernymOf
+#   - InstanceOf
+#   - LayeringRelationship
+#   - LeftInPlace
+#   - LettuceNeverReplaced
+#   - LocatedInOrAt
+#   - ManureRelated
+#   - MembershipRelationship
+#   - MilledToBleach
+#   - NotGrown
+#   - PartOf
+#   - PeasCultivationPractices
+#   - PlantedIn
+#   - Precedes
+#   - PreferredCondition
+#   - PreparationStatus
+#   - ProductionRelation
+#   - ProneToDegeneration
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RadishOrigin
+#   - RaisedOrEnhancedAt
+#   - RelatedToFarmingPractice
+#   - RelatedToGreens
+#   - Removed
+#   - Requires
+#   - RetainsSeedViabilityFor
+#   - SeasonalChervilActivity
+#   - SeasonalRelatedness
+#   - SeedingRelatedState
+#   - SeedingRelationship
+#   - SeparatedBy
+#   - SimilarityRelationship
+#   - SoilConditionReasonsForNoTransplanting
+#   - SoilRelationship
+#   - SpatialRelationship
+#   - SpreadBy
+#   - TransplantationEvent
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - VarietyOf
+#   - WateringRelation
+#   Plant,PlantPart:
+#   - ContainsOrHasPart
+#   - GrowthStageRelatedTo
+#   - HasRelationshipWith
+#   - LimitationRelationship
+#   - MaturityDateRelation
+#   - OrientationRelationship
+#   - PlantedIn
+#   - PlantingOrHarvestingMethod
+#   - PruneOrCut
+#   - RaisedOrEnhancedAt
+#   - Removed
+#   - Requires
+#   - SproutsFromOrIn
+#   - TreatedWithSomething
+#   - WateringRelation
+#   Plant,Practice:
+#   - AffectedBy
+#   - AssociatedWith
+#   - CabbageHarvestingAge
+#   - ContainsOrHasPart
+#   - DeficiencyRelationship
+#   - GrowthStageRelatedTo
+#   - LocatedInOrAt
+#   - MulchRelated
+#   - OccupiesSpaceOf
+#   - PlantedIn
+#   - PlantingOrHarvestingMethod
+#   - PreparationStatus
+#   - PruneOrCut
+#   - RadishOrigin
+#   - RaisedOrEnhancedAt
+#   - ReceivedBy
+#   - Requires
+#   - SeedingRelationship
+#   - SeparatedBy
+#   - TransplantationEvent
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Plant,SoilType:
+#   - AffectedBy
+#   - PlantedIn
+#   - Requires
+#   - SeparatedBy
+#   - SoilRelationship
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Plant,Structure:
+#   - AffectedBy
+#   - CarrotIsLocatedInOrOn
+#   - GerminationContext
+#   - HasDimensionalProperty
+#   - HeatRelatedInteraction
+#   - LocatedInOrAt
+#   - PlantedIn
+#   - ProtectionRelation
+#   - Removed
+#   - Requires
+#   - TransplantationEvent
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - WeatherSensitivity
+#   Plant,Time:
+#   - AffectedBy
+#   - AffectedByAuthorityAction
+#   - AlsoKnownAs
+#   - AvailableInLocation
+#   - BearsFoodIn
+#   - BeforeRipeningOnVine
+#   - BlanchingBoundary
+#   - BlanchingSource
+#   - CarrotIsLocatedInOrOn
+#   - CategoryOf
+#   - CollarPosition
+#   - ContainsOrHasPart
+#   - CropRelatedInfo
+#   - DiffersFrom
+#   - DuplicateTranslation
+#   - GerminationContext
+#   - GrowInWinter
+#   - GrowthStageRelatedTo
+#   - HasCharacteristic
+#   - HasMonetaryValue
+#   - HeatRelatedInteraction
+#   - LettuceRelationship
+#   - LocatedInOrAt
+#   - MarketingRelation
+#   - MaturityDateRelation
+#   - MonthlyTiming
+#   - MovedTo
+#   - OriginatesFrom
+#   - PlantedIn
+#   - Precedes
+#   - PreferredCondition
+#   - PreparationStatus
+#   - ProductionRelation
+#   - ProneToDegeneration
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RaisedOrEnhancedAt
+#   - RelatedToFarmingPractice
+#   - Removed
+#   - RemovedFrom
+#   - Requires
+#   - SeasonalChervilActivity
+#   - SeasonalRelatedness
+#   - SeedingRelationship
+#   - SelectedOrPicked
+#   - SeparatedBy
+#   - SoilRelationship
+#   - TemporalAssociation
+#   - TimestampCreated
+#   - TransplantationEvent
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - WateringRelation
+#   - YieldingInto
+#   Plant,Weather:
+#   - AffectedBy
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - HasRelationshipWith
+#   - HeatRelatedInteraction
+#   - NegativeAssociation
+#   - PlantedIn
+#   - Requires
+#   - RequiresConditionalRemoval
+#   - ResistantTo
+#   - SeasonalRelatedness
+#   - TreatedWithSomething
+#   - VisualRepresentation
+#   - WeatherSensitivity
+#   PlantPart,Entity:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - CategoryOf
+#   - CompareAttribute
+#   - ConditionallyTriggered
+#   - ConditionsForSuccessfulGreenManureApplication
+#   - ContainsOrHasPart
+#   - CoveredOrProtectedWithMaterials
+#   - GrowthStageRelatedTo
+#   - HasCharacteristic
+#   - HasDimensionalAttribute
+#   - MonthlyComparisonOfSuccess
+#   - MovedTo
+#   - PartOf
+#   - PlantedIn
+#   - PropagationMethod
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RaisedOrEnhancedAt
+#   - Removed
+#   - Requires
+#   - SelectedOrPicked
+#   - SoilRelationship
+#   - SpatialRelationship
+#   - ThinningMethodOrTool
+#   - TransplantationEvent
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WeatherSensitivity
+#   PlantPart,Equipment:
+#   - AssociatedWith
+#   - PlantedIn
+#   - TransplantationEvent
+#   PlantPart,Location:
+#   - MovedTo
+#   - SpatialRelationship
+#   PlantPart,Nutrient:
+#   - GrowthStageRelatedTo
+#   PlantPart,Pest:
+#   - TreatedWithSomething
+#   PlantPart,Plant:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - CategoryOf
+#   - ConditionsForSuccessfulGreenManureApplication
+#   - CoveredOrProtectedWithMaterials
+#   - HasDimensionalAttribute
+#   - PartOf
+#   - PlantedIn
+#   - ProtectionRelation
+#   - Removed
+#   - ThinningMethodOrTool
+#   - TransplantationEvent
+#   PlantPart,PlantPart:
+#   - AffectedBy
+#   - CompareAttribute
+#   - ContainsOrHasPart
+#   - HasCharacteristic
+#   - PlantedIn
+#   - Removed
+#   - SoilRelationship
+#   - UsedWithOrBy
+#   PlantPart,Practice:
+#   - ConditionallyTriggered
+#   - GrowthStageRelatedTo
+#   - PlantedIn
+#   - PropagationMethod
+#   - Removed
+#   - Requires
+#   - SelectedOrPicked
+#   - WeatherSensitivity
+#   PlantPart,SoilType:
+#   - PlantedIn
+#   PlantPart,Structure:
+#   - PlantedIn
+#   PlantPart,Time:
+#   - GrowthStageRelatedTo
+#   - MonthlyComparisonOfSuccess
+#   - PlantedIn
+#   - PruneOrCut
+#   - Requires
+#   PlantPart,Weather:
+#   - ProtectionRelation
+#   - RaisedOrEnhancedAt
+#   - Removed
+#   Practice,Condition:
+#   - ComparesTo
+#   Practice,Entity:
+#   - AssociatedWith
+#   - Causes
+#   - ComparesTo
+#   - ContainsOrHasPart
+#   - CultivatedTaxonomyRelationship
+#   - EdgeCreation
+#   - Follows
+#   - FoundingDate
+#   - HasDimensionalProperty
+#   - HeatRelatedInteraction
+#   - LayeringRelationship
+#   - LocatedInOrAt
+#   - OccupiesSpaceOf
+#   - OrientationRelationship
+#   - PlantedIn
+#   - PracticesInOrRelatedTo
+#   - Precedes
+#   - PreferredCondition
+#   - ProtectionRelation
+#   - RaisedOrEnhancedAt
+#   - Requires
+#   - SoilRelationship
+#   - SpreadBy
+#   - TransplantationEvent
+#   - UsedWithOrBy
+#   - VisualRepresentation
+#   - WateringRelation
+#   - WeatherSensitivity
+#   Practice,Equipment:
+#   - AssociatedWith
+#   - EdgeCreation
+#   - Follows
+#   - UsedWithOrBy
+#   Practice,Input:
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - HasDimensionalProperty
+#   - Requires
+#   Practice,Location:
+#   - Requires
+#   - VisualRepresentation
+#   Practice,People:
+#   - PracticesInOrRelatedTo
+#   Practice,Plant:
+#   - Causes
+#   - LayeringRelationship
+#   - OccupiesSpaceOf
+#   - PlantedIn
+#   - PreferredCondition
+#   - ProtectionRelation
+#   - Requires
+#   - SoilRelationship
+#   - TransplantationEvent
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Practice,PlantPart:
+#   - LayeringRelationship
+#   - SpreadBy
+#   Practice,Practice:
+#   - CultivatedTaxonomyRelationship
+#   - Follows
+#   - OrientationRelationship
+#   - PracticesInOrRelatedTo
+#   - Requires
+#   - UsedWithOrBy
+#   Practice,SoilType:
+#   - FoundingDate
+#   - OrientationRelationship
+#   - PlantedIn
+#   - Precedes
+#   - RaisedOrEnhancedAt
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Practice,Structure:
+#   - HeatRelatedInteraction
+#   - PracticesInOrRelatedTo
+#   Practice,Time:
+#   - LocatedInOrAt
+#   - OrientationRelationship
+#   Practice,Weather:
+#   - ProtectionRelation
+#   SoilType,Entity:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssignedTo
+#   - AssociatedWith
+#   - CompareAttribute
+#   - ContainsOrHasPart
+#   - EdgeCreation
+#   - HeatRelatedInteraction
+#   - LocatedInOrAt
+#   - MeasurementRelation
+#   - MovedTo
+#   - NegativeAssociation
+#   - OptionalRelationship
+#   - OriginatesFrom
+#   - PreparationStatus
+#   - ProductionRelation
+#   - RaisedOrEnhancedAt
+#   - Removed
+#   - Requires
+#   - ResearchInitiation
+#   - SoilRelationship
+#   - SpreadBy
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - VarietyOf
+#   - WateringRelation
+#   SoilType,Equipment:
+#   - EdgeCreation
+#   SoilType,Input:
+#   - AssociatedWith
+#   - CompareAttribute
+#   - HeatRelatedInteraction
+#   - NegativeAssociation
+#   - OriginatesFrom
+#   - ProductionRelation
+#   - UsedWithOrBy
+#   SoilType,Nutrient:
+#   - AssignedTo
+#   SoilType,People:
+#   - NegativeAssociation
+#   SoilType,Plant:
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - OptionalRelationship
+#   - Requires
+#   - SoilRelationship
+#   - SpreadBy
+#   - UsedWithOrBy
+#   - WateringRelation
+#   SoilType,PlantPart:
+#   - Removed
+#   SoilType,Practice:
+#   - MovedTo
+#   - Requires
+#   SoilType,SoilType:
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - MovedTo
+#   - ResearchInitiation
+#   - SoilRelationship
+#   - TreatedWithSomething
+#   - VarietyOf
+#   SoilType,Structure:
+#   - AffectedBy
+#   - LocatedInOrAt
+#   - RaisedOrEnhancedAt
+#   SoilType,Time:
+#   - AffectedBy
+#   - MeasurementRelation
+#   - PreparationStatus
+#   - Removed
+#   - Requires
+#   - UsedWithOrBy
+#   SoilType,Weather:
+#   - AffectedBy
+#   - SoilRelationship
+#   Structure,Entity:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - BellRelatedInfo
+#   - ContainsOrHasPart
+#   - FinancialExchange
+#   - FrameAssociation
+#   - HasMonetaryValue
+#   - HasStructuralTimbers
+#   - HeatRelatedInteraction
+#   - LocatedInOrAt
+#   - MulchRelated
+#   - OrientationRelationship
+#   - OriginatesFrom
+#   - PeasCultivationPractices
+#   - PlantedIn
+#   - PreparationStatus
+#   - ProductionRelation
+#   - RelatedToFarmingPractice
+#   - TransportationRelation
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Structure,Equipment:
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - HasMonetaryValue
+#   - LocatedInOrAt
+#   - OrientationRelationship
+#   - TransportationRelation
+#   - UsedWithOrBy
+#   Structure,Input:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - FrameAssociation
+#   - HasStructuralTimbers
+#   - HeatRelatedInteraction
+#   - LocatedInOrAt
+#   - OriginatesFrom
+#   - PlantedIn
+#   - ProductionRelation
+#   Structure,Location:
+#   - AffectedBy
+#   - HasMonetaryValue
+#   - RelatedToFarmingPractice
+#   - TreatedWithSomething
+#   - WateringRelation
+#   Structure,Organism:
+#   - ContainsOrHasPart
+#   Structure,People:
+#   - PreparationStatus
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Structure,Plant:
+#   - AffectedBy
+#   - ContainsOrHasPart
+#   - FrameAssociation
+#   - LocatedInOrAt
+#   - PeasCultivationPractices
+#   - PlantedIn
+#   - RelatedToFarmingPractice
+#   - WateringRelation
+#   Structure,Practice:
+#   - MulchRelated
+#   Structure,SoilType:
+#   - ContainsOrHasPart
+#   - LocatedInOrAt
+#   - PlantedIn
+#   Structure,Structure:
+#   - AssociatedWith
+#   - ContainsOrHasPart
+#   - FrameAssociation
+#   - LocatedInOrAt
+#   - PlantedIn
+#   - UsedWithOrBy
+#   Structure,Time:
+#   - BellRelatedInfo
+#   - FrameAssociation
+#   - LocatedInOrAt
+#   Structure,Weather:
+#   - FinancialExchange
+#   Time,Disease:
+#   - SoilRelationship
+#   Time,Entity:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssignedTo
+#   - AssociatedWith
+#   - AvailableInLocation
+#   - BellRelatedInfo
+#   - CategoryOf
+#   - GrowthRateRelationship
+#   - GrowthStageRelatedTo
+#   - IsRelevantTo
+#   - LocatedInOrAt
+#   - LocationAssociation
+#   - MaturityDateRelation
+#   - NegativelyAffectsGrowth
+#   - OriginatesFrom
+#   - PlantabilityStatus
+#   - PlantedIn
+#   - Precedes
+#   - PreparationStatus
+#   - ProtectionRelation
+#   - PruneOrCut
+#   - RepositionsObjects
+#   - Requires
+#   - SeasonAssociatedEvents
+#   - SeasonalRelatedness
+#   - SelectedOrPicked
+#   - SoilRelationship
+#   - TemporalAssociation
+#   - TransplantationEvent
+#   - TreatedWithSomething
+#   - UsedWithOrBy
+#   - WateringRelation
+#   Time,Equipment:
+#   - ProtectionRelation
+#   Time,Input:
+#   - AffectedBy
+#   - AssociatedWith
+#   - IsRelevantTo
+#   - UsedWithOrBy
+#   Time,Location:
+#   - PlantedIn
+#   - SeasonalRelatedness
+#   - TemporalAssociation
+#   - UsedWithOrBy
+#   Time,Plant:
+#   - AffectedBy
+#   - AlternativeOrReplacement
+#   - AssignedTo
+#   - AssociatedWith
+#   - AvailableInLocation
+#   - BellRelatedInfo
+#   - CategoryOf
+#   - GrowthStageRelatedTo
+#   - LocatedInOrAt
+#   - LocationAssociation
+#   - MaturityDateRelation
+#   - PlantabilityStatus
+#   - PlantedIn
+#   - Precedes
+#   - PreparationStatus
+#   - PruneOrCut
+#   - Requires
+#   - SeasonAssociatedEvents
+#   - SelectedOrPicked
+#   - TemporalAssociation
+#   - TransplantationEvent
+#   - WateringRelation
+#   Time,PlantPart:
+#   - PruneOrCut
+#   - UsedWithOrBy
+#   Time,Practice:
+#   - Requires
+#   - WateringRelation
+#   Time,SoilType:
+#   - IsRelevantTo
+#   - PlantedIn
+#   - SoilRelationship
+#   Time,Structure:
+#   - NegativelyAffectsGrowth
+#   - OriginatesFrom
+#   - PlantedIn
+#   - RepositionsObjects
+#   - TreatedWithSomething
+#   Time,Time:
+#   - AssignedTo
+#   - GrowthRateRelationship
+#   - LocatedInOrAt
+#   - PlantedIn
+#   - PreparationStatus
+#   - TransplantationEvent
+#   - WateringRelation
+#   Time,Weather:
+#   - AssociatedWith
+#   - TemporalAssociation
+#   - WateringRelation
+#   Weather,Condition:
+#   - AffectedBy
+#   - PlantedIn
+#   Weather,Disease:
+#   - ConditionallyTriggered
+#   Weather,Entity:
+#   - AffectedBy
+#   - AssociatedWith
+#   - ConditionallyTriggered
+#   - ConstructingWindbreaks
+#   - CoveredOrProtectedWithMaterials
+#   - HeatRelatedInteraction
+#   - LocatedInOrAt
+#   - PlantedIn
+#   - PreferredCondition
+#   - ProtectionRelation
+#   - Requires
+#   - ResistantTo
+#   - TransplantationEvent
+#   - WateringRelation
+#   Weather,Input:
+#   - Requires
+#   Weather,Location:
+#   - PreferredCondition
+#   Weather,People:
+#   - PlantedIn
+#   Weather,Plant:
+#   - AffectedBy
+#   - AssociatedWith
+#   - HeatRelatedInteraction
+#   - LocatedInOrAt
+#   - PlantedIn
+#   - ResistantTo
+#   - WateringRelation
+#   Weather,PlantPart:
+#   - ConditionallyTriggered
+#   Weather,Practice:
+#   - ConstructingWindbreaks
+#   - Requires
+#   Weather,SoilType:
+#   - TransplantationEvent
+#   Weather,Structure:
+#   - ProtectionRelation
+#   Weather,Time:
+#   - CoveredOrProtectedWithMaterials
+#   - PlantedIn
+#   Weather,Weather:
+#   - ProtectionRelation
+#   - Requires

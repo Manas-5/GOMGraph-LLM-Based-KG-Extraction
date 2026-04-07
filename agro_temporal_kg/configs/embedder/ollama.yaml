@@ -1,0 +1,4 @@
+api_key: "abc"  # Set via OPENAI_API_KEY env var
+base_url: "http://localhost:11434/v1"
+embedding_model: "bge-m3:567m"
+embedding_dim: 768

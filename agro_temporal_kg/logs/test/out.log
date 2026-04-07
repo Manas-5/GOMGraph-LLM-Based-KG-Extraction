@@ -1,0 +1,1317 @@
+❌ FalkorDB error: Invalid graph operation on empty key
+2026-02-10 13:16:07.653 | INFO     | __main__:create_tkg:84 - Loaded configuration:
+{'text_splitter': {'chunk_size': 1000, 'chunk_overlap': 150, 'separators': ['\n\n', '\n', '. ', ' ', '']}, 'llm': {'model': 'llama3.1:70b', 'temperature': 0.0, 'api_key': 'abc', 'base_url': 'http://localhost:11434/v1'}, 'embedder': {'api_key': 'abc', 'base_url': 'http://localhost:11434/v1', 'embedding_model': 'bge-m3:567m', 'embedding_dim': 768}, 'falkordb': {'host': 'localhost', 'port': 6380, 'database': 'test'}, 'file': {'path': '/mnt/diskGum/manas/graph-dedup-patch/data/test.txt', 'group_id': 'test', 'source_description': 'These passages describe traditional horticultural practices and challenges, detailing soil management, watering, pest damage, plant structure, and cultivation methods in garden and orchard settings.', 'reference_year': 1880}, 'prompts': {'extract_text': {'system_version': 'v0', 'user_version': 'v0'}, 'extract_edges': {'system_version': 'v0', 'user_version': 'v1'}}, 'entity_types': {'types': ['Plant', 'PlantPart', 'Pest', 'Practice', 'SoilType', 'Condition', 'Structure', 'Time', 'Location', 'Input', 'Equipment', 'Disease', 'Weather', 'Nutrient', 'Organism', 'Animal', 'People', 'Institution']}, 'edge_types': {'types': []}}
+2026-02-10 13:16:07.662 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:23 - ============================================================
+2026-02-10 13:16:07.662 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:24 - Starting Temporal Knowledge Graph Pipeline
+2026-02-10 13:16:07.662 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:25 - ============================================================
+2026-02-10 13:16:07.662 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:28 - [Step 1/4] Loading file...
+2026-02-10 13:16:07.662 | INFO     | agro_temporal_kg.steps.load_file:load_file:34 - Loading file: /mnt/diskGum/manas/graph-dedup-patch/data/test.txt
+2026-02-10 13:16:07.663 | INFO     | agro_temporal_kg.steps.load_file:load_file:43 - Loaded 3,286 characters from test.txt
+2026-02-10 13:16:07.663 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:32 - [Step 2/4] Splitting text into chunks...
+2026-02-10 13:16:07.664 | INFO     | agro_temporal_kg.steps.split_text:split_text:42 - Split text into 4 chunks (chunk_size=1000, overlap=150)
+2026-02-10 13:16:07.664 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:36 - [Step 3/4] Initializing Graphiti...
+2026-02-10 13:16:07.664 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:61 - Initializing FalkorDB driver: localhost:6380
+2026-02-10 13:16:07.667 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:77 - Initializing LLM client: llama3.1:70b
+2026-02-10 13:16:07.837 | INFO     | agro_temporal_kg.ollama_graphiti_client:__init__:45 - 🦙 OllamaGraphitiClient initialized: llama3.1:70b
+2026-02-10 13:16:07.837 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:92 - Initializing embedder: bge-m3:567m
+2026-02-10 13:16:07.882 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:103 - Initializing cross-encoder reranker
+2026-02-10 13:16:07.882 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:113 - Loading custom prompts: extract_text (system: vv0, user: vv0)
+2026-02-10 13:16:07.882 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:125 - Loading custom prompts: extract_edges (system: vv0, user: vv1)
+2026-02-10 13:16:07.886 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:148 - Custom prompts and snippets loaded successfully
+2026-02-10 13:16:08.007 | INFO     | agro_temporal_kg.steps.build_graphiti:build_graphiti:170 - Graphiti initialized successfully (database: test)
+2026-02-10 13:16:08.008 | INFO     | agro_temporal_kg.pipelines.create_temporal_kg:create_temporal_kg:40 - [Step 4/4] Ingesting episodes into knowledge graph...
+2026-02-10 13:16:08.008 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:56 - Starting ingestion of 4 chunks into knowledge graph
+2026-02-10 13:16:08.009 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:57 -   Group ID: test
+2026-02-10 13:16:08.009 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:58 -   Source: These passages describe traditional horticultural practices and challenges, detailing soil management, watering, pest damage, plant structure, and cultivation methods in garden and orchard settings.
+2026-02-10 13:16:08.009 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:59 -   Reference year: 1880
+2026-02-10 13:16:08.009 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:66 -   Using 18 entity types: Animal, Condition, Disease, Equipment, Input, Institution, Location, Nutrient, Organism, People, Pest, Plant, PlantPart, Practice, SoilType, Structure, Time, Weather
+2026-02-10 13:16:08.009 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:77 -   Using default Graphiti edge types
+2026-02-10 13:16:08.009 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:82 - pycountry: available
+2026-02-10 13:16:08.009 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:88 - ROR cache: using /mnt/diskGum/manas/GOMgraph-main-clone-3/data/ror/v2.0-2025-12-16-ror-data.json
+2026-02-10 13:16:08.009 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:99 - Processing chunk 1/4 (940 chars)...
+2026-02-10 13:16:08.022 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "extracted_entities": {
+      "description": "List of extracted entities",
+      "items": {
+        "properties": {
+          "name": {
+            "description": "Name of the extracted entity",
+            "title": "Name",
+            "type": "string"
+          },
+          "entity_type_id": {
+            "description": "ID of the classified entity type. Must be one of the provided entity_type_id integers.",
+            "title": "Entity Type Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "name",
+          "entity_type_id"
+        ],
+        "title": "ExtractedEntity",
+        "type": "object"
+      },
+      "title": "Extracted Entities",
+      "type": "array"
+    }
+  },
+  "required": [
+    "extracted_entities"
+  ],
+  "title": "ExtractedEntities",
+  "type": "object"
+}
+2026-02-10 13:16:08.022 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "extracted_entities": [
+    {
+      "name": "example_name",
+      "entity_type_id": 0
+    }
+  ]
+}
+2026-02-10 13:16:43.392 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:16:46.993 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "entity_resolutions": {
+      "description": "List of resolved nodes",
+      "items": {
+        "properties": {
+          "id": {
+            "description": "integer id of the entity",
+            "title": "Id",
+            "type": "integer"
+          },
+          "duplicate_idx": {
+            "description": "idx of the duplicate entity. If no duplicate entities are found, default to -1.",
+            "title": "Duplicate Idx",
+            "type": "integer"
+          },
+          "name": {
+            "description": "Name of the entity. Should be the most complete and descriptive name of the entity. Do not include any JSON formatting in the Entity name such as {}.",
+            "title": "Name",
+            "type": "string"
+          },
+          "duplicates": {
+            "description": "idx of all entities that are a duplicate of the entity with the above id.",
+            "items": {
+              "type": "integer"
+            },
+            "title": "Duplicates",
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "duplicate_idx",
+          "name",
+          "duplicates"
+        ],
+        "title": "NodeDuplicate",
+        "type": "object"
+      },
+      "title": "Entity Resolutions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "entity_resolutions"
+  ],
+  "title": "NodeResolutions",
+  "type": "object"
+}
+2026-02-10 13:16:46.993 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "entity_resolutions": [
+    {
+      "id": 0,
+      "duplicate_idx": 0,
+      "name": "example_name",
+      "duplicates": [
+        {}
+      ]
+    }
+  ]
+}
+2026-02-10 13:17:17.474 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+Invalid duplicate_idx 3 for extracted node 44ab5fb2-34ce-4ce8-b148-000d8ca9c1b2; treating as no duplicate.
+2026-02-10 13:17:17.481 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "edges": {
+      "items": {
+        "properties": {
+          "relation_type": {
+            "description": "FACT_PREDICATE_IN_SCREAMING_SNAKE_CASE",
+            "title": "Relation Type",
+            "type": "string"
+          },
+          "source_entity_id": {
+            "description": "The id of the source entity from the ENTITIES list",
+            "title": "Source Entity Id",
+            "type": "integer"
+          },
+          "target_entity_id": {
+            "description": "The id of the target entity from the ENTITIES list",
+            "title": "Target Entity Id",
+            "type": "integer"
+          },
+          "fact": {
+            "description": "A natural language description of the relationship between the entities, paraphrased from the source text",
+            "title": "Fact",
+            "type": "string"
+          },
+          "valid_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "The date and time when the relationship described by the edge fact became true or was established. Use ISO 8601 format (YYYY-MM-DDTHH:MM:SS.SSSSSSZ)",
+            "title": "Valid At"
+          },
+          "invalid_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "The date and time when the relationship described by the edge fact stopped being true or ended. Use ISO 8601 format (YYYY-MM-DDTHH:MM:SS.SSSSSSZ)",
+            "title": "Invalid At"
+          }
+        },
+        "required": [
+          "relation_type",
+          "source_entity_id",
+          "target_entity_id",
+          "fact"
+        ],
+        "title": "Edge",
+        "type": "object"
+      },
+      "title": "Edges",
+      "type": "array"
+    }
+  },
+  "required": [
+    "edges"
+  ],
+  "title": "ExtractedEdges",
+  "type": "object"
+}
+2026-02-10 13:17:17.481 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "edges": [
+    {
+      "relation_type": "example_relation_type",
+      "source_entity_id": 0,
+      "target_entity_id": 0,
+      "fact": "example_fact",
+      "valid_at": "example_valid_at",
+      "invalid_at": "example_invalid_at"
+    }
+  ]
+}
+2026-02-10 13:17:47.395 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:17:48.400 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "contradicted_facts": {
+      "description": "List of ids of facts that should be invalidated. If no facts should be invalidated, the list should be empty.",
+      "items": {
+        "type": "integer"
+      },
+      "title": "Contradicted Facts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contradicted_facts"
+  ],
+  "title": "InvalidatedEdges",
+  "type": "object"
+}
+2026-02-10 13:17:48.400 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "contradicted_facts": [
+    {}
+  ]
+}
+2026-02-10 13:17:48.403 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "contradicted_facts": {
+      "description": "List of ids of facts that should be invalidated. If no facts should be invalidated, the list should be empty.",
+      "items": {
+        "type": "integer"
+      },
+      "title": "Contradicted Facts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contradicted_facts"
+  ],
+  "title": "InvalidatedEdges",
+  "type": "object"
+}
+2026-02-10 13:17:48.403 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "contradicted_facts": [
+    {}
+  ]
+}
+2026-02-10 13:17:48.406 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "contradicted_facts": {
+      "description": "List of ids of facts that should be invalidated. If no facts should be invalidated, the list should be empty.",
+      "items": {
+        "type": "integer"
+      },
+      "title": "Contradicted Facts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contradicted_facts"
+  ],
+  "title": "InvalidatedEdges",
+  "type": "object"
+}
+2026-02-10 13:17:48.406 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "contradicted_facts": [
+    {}
+  ]
+}
+2026-02-10 13:17:48.409 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "contradicted_facts": {
+      "description": "List of ids of facts that should be invalidated. If no facts should be invalidated, the list should be empty.",
+      "items": {
+        "type": "integer"
+      },
+      "title": "Contradicted Facts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contradicted_facts"
+  ],
+  "title": "InvalidatedEdges",
+  "type": "object"
+}
+2026-02-10 13:17:48.409 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "contradicted_facts": [
+    {}
+  ]
+}
+2026-02-10 13:17:48.411 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "contradicted_facts": {
+      "description": "List of ids of facts that should be invalidated. If no facts should be invalidated, the list should be empty.",
+      "items": {
+        "type": "integer"
+      },
+      "title": "Contradicted Facts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contradicted_facts"
+  ],
+  "title": "InvalidatedEdges",
+  "type": "object"
+}
+2026-02-10 13:17:48.411 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "contradicted_facts": [
+    {}
+  ]
+}
+2026-02-10 13:17:50.242 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:17:51.635 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:17:52.994 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:17:54.370 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:17:55.740 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:17:56.004 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "A plant species, variety, or cultivar used in agriculture or gardening.",
+  "properties": {
+    "species": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Scientific or common species name",
+      "title": "Species"
+    },
+    "variety": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Specific variety or cultivar name",
+      "title": "Variety"
+    }
+  },
+  "title": "Plant",
+  "type": "object",
+  "required": [
+    "species",
+    "variety"
+  ]
+}
+2026-02-10 13:17:56.004 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "species": "example_species",
+  "variety": "example_variety"
+}
+2026-02-10 13:17:56.010 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "A plant species, variety, or cultivar used in agriculture or gardening.",
+  "properties": {
+    "species": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Scientific or common species name",
+      "title": "Species"
+    },
+    "variety": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Specific variety or cultivar name",
+      "title": "Variety"
+    }
+  },
+  "title": "Plant",
+  "type": "object",
+  "required": [
+    "species",
+    "variety"
+  ]
+}
+2026-02-10 13:17:56.010 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "species": "example_species",
+  "variety": "example_variety"
+}
+2026-02-10 13:17:56.014 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "An environmental condition, state, or circumstance affecting agriculture.",
+  "properties": {
+    "condition_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Type of condition, e.g. 'weather', 'disease', 'nutrient_deficiency', 'moisture'",
+      "title": "Condition Type"
+    },
+    "severity": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Severity level, e.g. 'mild', 'moderate', 'severe'",
+      "title": "Severity"
+    }
+  },
+  "title": "Condition",
+  "type": "object",
+  "required": [
+    "condition_type",
+    "severity"
+  ]
+}
+2026-02-10 13:17:56.014 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "condition_type": "example_condition_type",
+  "severity": "example_severity"
+}
+2026-02-10 13:17:56.017 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "An environmental condition, state, or circumstance affecting agriculture.",
+  "properties": {
+    "condition_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Type of condition, e.g. 'weather', 'disease', 'nutrient_deficiency', 'moisture'",
+      "title": "Condition Type"
+    },
+    "severity": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Severity level, e.g. 'mild', 'moderate', 'severe'",
+      "title": "Severity"
+    }
+  },
+  "title": "Condition",
+  "type": "object",
+  "required": [
+    "condition_type",
+    "severity"
+  ]
+}
+2026-02-10 13:17:56.017 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "condition_type": "example_condition_type",
+  "severity": "example_severity"
+}
+2026-02-10 13:17:56.019 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "A nutrient, mineral, or chemical element important for plant growth.",
+  "properties": {
+    "nutrient_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Type of nutrient, e.g. 'macronutrient', 'micronutrient', 'nitrogen', 'phosphorus', 'potassium'",
+      "title": "Nutrient Type"
+    },
+    "nutrient_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Name of the nutrient or element",
+      "title": "Nutrient Name"
+    }
+  },
+  "title": "Nutrient",
+  "type": "object",
+  "required": [
+    "nutrient_type",
+    "nutrient_name"
+  ]
+}
+2026-02-10 13:17:56.019 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "nutrient_type": "example_nutrient_type",
+  "nutrient_name": "example_nutrient_name"
+}
+2026-02-10 13:17:56.022 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "A specific part of a plant (e.g., root, stem, leaf, fruit, seed).",
+  "properties": {
+    "part_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Name of the plant part, e.g. 'root', 'leaf', 'fruit', 'seed'",
+      "title": "Part Name"
+    },
+    "function": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Function or purpose of this plant part",
+      "title": "Function"
+    }
+  },
+  "title": "PlantPart",
+  "type": "object",
+  "required": [
+    "part_name",
+    "function"
+  ]
+}
+2026-02-10 13:17:56.022 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "part_name": "example_part_name",
+  "function": "example_function"
+}
+2026-02-10 13:17:56.024 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "An environmental condition, state, or circumstance affecting agriculture.",
+  "properties": {
+    "condition_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Type of condition, e.g. 'weather', 'disease', 'nutrient_deficiency', 'moisture'",
+      "title": "Condition Type"
+    },
+    "severity": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Severity level, e.g. 'mild', 'moderate', 'severe'",
+      "title": "Severity"
+    }
+  },
+  "title": "Condition",
+  "type": "object",
+  "required": [
+    "condition_type",
+    "severity"
+  ]
+}
+2026-02-10 13:17:56.024 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "condition_type": "example_condition_type",
+  "severity": "example_severity"
+}
+2026-02-10 13:17:56.027 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "An agricultural or gardening practice, technique, or management activity.",
+  "properties": {
+    "practice_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Type of practice, e.g. 'sowing', 'planting', 'pruning', 'harvesting', 'fertilizing'",
+      "title": "Practice Type"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Description of the practice",
+      "title": "Description"
+    }
+  },
+  "title": "Practice",
+  "type": "object",
+  "required": [
+    "practice_type",
+    "description"
+  ]
+}
+2026-02-10 13:17:56.027 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "practice_type": "example_practice_type",
+  "description": "example_description"
+}
+2026-02-10 13:17:56.029 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "An agricultural or gardening practice, technique, or management activity.",
+  "properties": {
+    "practice_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Type of practice, e.g. 'sowing', 'planting', 'pruning', 'harvesting', 'fertilizing'",
+      "title": "Practice Type"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Description of the practice",
+      "title": "Description"
+    }
+  },
+  "title": "Practice",
+  "type": "object",
+  "required": [
+    "practice_type",
+    "description"
+  ]
+}
+2026-02-10 13:17:56.030 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "practice_type": "example_practice_type",
+  "description": "example_description"
+}
+2026-02-10 13:17:56.032 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "An agricultural or gardening practice, technique, or management activity.",
+  "properties": {
+    "practice_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Type of practice, e.g. 'sowing', 'planting', 'pruning', 'harvesting', 'fertilizing'",
+      "title": "Practice Type"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Description of the practice",
+      "title": "Description"
+    }
+  },
+  "title": "Practice",
+  "type": "object",
+  "required": [
+    "practice_type",
+    "description"
+  ]
+}
+2026-02-10 13:17:56.032 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "practice_type": "example_practice_type",
+  "description": "example_description"
+}
+2026-02-10 13:17:56.035 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "A geographic location, field, farm, or region relevant to agriculture.",
+  "properties": {
+    "location_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Type of location, e.g. 'field', 'farm', 'region', 'zone', 'garden'",
+      "title": "Location Type"
+    },
+    "location_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Name of the location",
+      "title": "Location Name"
+    }
+  },
+  "title": "Location",
+  "type": "object",
+  "required": [
+    "location_type",
+    "location_name"
+  ]
+}
+2026-02-10 13:17:56.035 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "location_type": "example_location_type",
+  "location_name": "example_location_name"
+}
+2026-02-10 13:17:56.037 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "description": "A physical structure or infrastructure used in agriculture or gardening.",
+  "properties": {
+    "structure_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Type of structure, e.g. 'greenhouse', 'cold_frame', 'bed', 'pot', 'trellis'",
+      "title": "Structure Type"
+    },
+    "purpose": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Purpose or function of the structure",
+      "title": "Purpose"
+    }
+  },
+  "title": "Structure",
+  "type": "object",
+  "required": [
+    "structure_type",
+    "purpose"
+  ]
+}
+2026-02-10 13:17:56.038 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "structure_type": "example_structure_type",
+  "purpose": "example_purpose"
+}
+2026-02-10 13:17:58.991 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:17:58.993 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:17:58.993 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:00.870 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:00.872 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:00.872 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:02.610 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:02.612 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:02.612 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:05.691 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:05.693 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:05.693 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:07.648 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:07.650 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:07.650 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:09.385 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:09.387 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:09.387 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:11.589 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:11.590 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:11.591 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:14.520 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:14.521 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:14.521 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:16.724 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:16.726 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:16.726 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:19.459 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:19.460 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:19.460 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:21.414 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:21.416 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:21.416 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:23.363 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:23.365 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "summary": {
+      "description": "Summary containing the important information about the entity. Under 500 characters.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "EntitySummary",
+  "type": "object"
+}
+2026-02-10 13:18:23.365 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "summary": "example_summary"
+}
+2026-02-10 13:18:25.919 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:27.954 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:30.901 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:33.527 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:36.415 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:39.240 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:42.066 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:44.357 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:46.978 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:49.066 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:51.549 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:53.898 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:18:54.386 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:147 - ✅ Chunk 1/4 processed | nodes=12 edges=5 episodic_edges=12 communities=0 invalidated_edges=0
+2026-02-10 13:18:54.451 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:173 - [EXPORT] Checkpoint written to /mnt/diskGum/manas/graph-dedup-patch/agro_temporal_kg/exported_data/checkpoints/test/chunk_1
+2026-02-10 13:18:54.451 | INFO     | agro_temporal_kg.steps.ingest_episodes:ingest_episodes:99 - Processing chunk 2/4 (751 chars)...
+2026-02-10 13:18:54.455 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "extracted_entities": {
+      "description": "List of extracted entities",
+      "items": {
+        "properties": {
+          "name": {
+            "description": "Name of the extracted entity",
+            "title": "Name",
+            "type": "string"
+          },
+          "entity_type_id": {
+            "description": "ID of the classified entity type. Must be one of the provided entity_type_id integers.",
+            "title": "Entity Type Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "name",
+          "entity_type_id"
+        ],
+        "title": "ExtractedEntity",
+        "type": "object"
+      },
+      "title": "Extracted Entities",
+      "type": "array"
+    }
+  },
+  "required": [
+    "extracted_entities"
+  ],
+  "title": "ExtractedEntities",
+  "type": "object"
+}
+2026-02-10 13:18:54.455 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "extracted_entities": [
+    {
+      "name": "example_name",
+      "entity_type_id": 0
+    }
+  ]
+}
+2026-02-10 13:19:13.781 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:19:14.468 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "entity_resolutions": {
+      "description": "List of resolved nodes",
+      "items": {
+        "properties": {
+          "id": {
+            "description": "integer id of the entity",
+            "title": "Id",
+            "type": "integer"
+          },
+          "duplicate_idx": {
+            "description": "idx of the duplicate entity. If no duplicate entities are found, default to -1.",
+            "title": "Duplicate Idx",
+            "type": "integer"
+          },
+          "name": {
+            "description": "Name of the entity. Should be the most complete and descriptive name of the entity. Do not include any JSON formatting in the Entity name such as {}.",
+            "title": "Name",
+            "type": "string"
+          },
+          "duplicates": {
+            "description": "idx of all entities that are a duplicate of the entity with the above id.",
+            "items": {
+              "type": "integer"
+            },
+            "title": "Duplicates",
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "duplicate_idx",
+          "name",
+          "duplicates"
+        ],
+        "title": "NodeDuplicate",
+        "type": "object"
+      },
+      "title": "Entity Resolutions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "entity_resolutions"
+  ],
+  "title": "NodeResolutions",
+  "type": "object"
+}
+2026-02-10 13:19:14.468 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "entity_resolutions": [
+    {
+      "id": 0,
+      "duplicate_idx": 0,
+      "name": "example_name",
+      "duplicates": [
+        {}
+      ]
+    }
+  ]
+}
+2026-02-10 13:19:32.558 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:421 - ✅ Ollama response validated successfully
+2026-02-10 13:19:32.567 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:337 - 📋 Simplified schema sent to model:
+{
+  "properties": {
+    "edges": {
+      "items": {
+        "properties": {
+          "relation_type": {
+            "description": "FACT_PREDICATE_IN_SCREAMING_SNAKE_CASE",
+            "title": "Relation Type",
+            "type": "string"
+          },
+          "source_entity_id": {
+            "description": "The id of the source entity from the ENTITIES list",
+            "title": "Source Entity Id",
+            "type": "integer"
+          },
+          "target_entity_id": {
+            "description": "The id of the target entity from the ENTITIES list",
+            "title": "Target Entity Id",
+            "type": "integer"
+          },
+          "fact": {
+            "description": "A natural language description of the relationship between the entities, paraphrased from the source text",
+            "title": "Fact",
+            "type": "string"
+          },
+          "valid_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "The date and time when the relationship described by the edge fact became true or was established. Use ISO 8601 format (YYYY-MM-DDTHH:MM:SS.SSSSSSZ)",
+            "title": "Valid At"
+          },
+          "invalid_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "The date and time when the relationship described by the edge fact stopped being true or ended. Use ISO 8601 format (YYYY-MM-DDTHH:MM:SS.SSSSSSZ)",
+            "title": "Invalid At"
+          }
+        },
+        "required": [
+          "relation_type",
+          "source_entity_id",
+          "target_entity_id",
+          "fact"
+        ],
+        "title": "Edge",
+        "type": "object"
+      },
+      "title": "Edges",
+      "type": "array"
+    }
+  },
+  "required": [
+    "edges"
+  ],
+  "title": "ExtractedEdges",
+  "type": "object"
+}
+2026-02-10 13:19:32.567 | DEBUG    | agro_temporal_kg.ollama_graphiti_client:generate_response:338 - 📋 Example sent to model:
+{
+  "edges": [
+    {
+      "relation_type": "example_relation_type",
+      "source_entity_id": 0,
+      "target_entity_id": 0,
+      "fact": "example_fact",
+      "valid_at": "example_valid_at",
+      "invalid_at": "example_invalid_at"
+    }
+  ]
+}

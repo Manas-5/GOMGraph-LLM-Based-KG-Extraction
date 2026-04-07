@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-11T16:22:18.652946+00:00,exact,645377f5-872c-4b4f-8977-8d2eb39180b1,apple trees,Pruning of apple and pear trees continues in February; apple and pear seedlings are sown.,ee002f4e-2a34-483a-9bdf-22ee77b3271a,,,,
+2026-02-11T16:22:18.652981+00:00,llm,645377f5-872c-4b4f-8977-8d2eb39180b1,apple trees,Pruning of apple and pear trees continues in February; apple and pear seedlings are sown.,9f95dca8-89c8-4d1b-b76d-9921ac306885,,,,

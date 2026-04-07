@@ -1,0 +1,8 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-13T16:39:54.044871+00:00,exact,6c3ab550-5860-43ad-bab6-9dcbad1344b9,white flowers,White flowers are mentioned in various plant species including Mamillaria de Mauritanie and others.,8270ef35-644e-4f84-8d68-b4a9d0cb3555,,,,
+2026-02-13T16:39:54.044910+00:00,exact,6c3ab550-5860-43ad-bab6-9dcbad1344b9,white flowers,White flowers are mentioned in various plant species including Mamillaria de Mauritanie and others.,ae8c6b3a-806d-41c5-81ff-a7689eb3ec75,,,,
+2026-02-13T16:39:54.044940+00:00,llm,94b1a6f7-6631-43d0-aa30-5a3d712c18db,Sorbs,Sorbs is a plant that grows in the open ground in March.,7f7dd93e-1679-489b-9319-37465420ba64,,,,
+2026-02-13T16:39:54.044961+00:00,llm,94b1a6f7-6631-43d0-aa30-5a3d712c18db,Sorbs,Sorbs is a plant that grows in the open ground in March.,3b46e4e3-e3af-4bbd-acf7-1fea17c68f97,,,,
+2026-02-13T16:39:54.044982+00:00,llm,94b1a6f7-6631-43d0-aa30-5a3d712c18db,Sorbs,Sorbs is a plant that grows in the open ground in March.,3128f826-6eb8-492e-a808-23c1c359d628,,,,
+2026-02-13T16:39:54.045005+00:00,llm,c576320f-4fd2-49cd-9d45-4a3fc36363d9,M. bright,M. bright: purple-red flowers; prolific stem; cold greenhouse,b98a1c7c-3acb-4897-8806-6813120947fd,,,,
+2026-02-13T16:39:54.045027+00:00,llm,c576320f-4fd2-49cd-9d45-4a3fc36363d9,M. bright,M. bright: purple-red flowers; prolific stem; cold greenhouse,23ac6c72-92c9-4d9d-a309-4eedea31682a,,,,

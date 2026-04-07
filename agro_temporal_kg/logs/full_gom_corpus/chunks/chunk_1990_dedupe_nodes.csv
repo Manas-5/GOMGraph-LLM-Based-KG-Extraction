@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-15T13:03:05.587365+00:00,exact,28cb72d8-d293-45df-9938-f31cc5679d02,manure,Manure is a critical resource for market gardeners and serves as a fertilizer.,9604e573-e3aa-474d-87b8-f6f53958775a,,,,
+2026-02-15T13:03:05.587380+00:00,llm,28cb72d8-d293-45df-9938-f31cc5679d02,manure,Manure is a critical resource for market gardeners and serves as a fertilizer.,5d01c91f-9027-4471-8ac8-ee4c8502a14e,,,,

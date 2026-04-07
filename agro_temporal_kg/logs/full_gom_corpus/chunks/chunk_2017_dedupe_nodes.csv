@@ -1,0 +1,3 @@
+timestamp_utc,dedupe_stage,canonical_uuid,canonical_name,canonical_summary,alias_uuid,alias_name,alias_summary,alias_episode_uuid,alias_episode_excerpt
+2026-02-15T14:30:13.831324+00:00,exact,639a79a6-5a2b-4a90-889e-5df1eee2f666,thermometer,A thermometer is used by market gardeners to monitor temperature for plants and ensure proper conditions; a glass thermometer provides accurate readings.,f17d3e43-ff8c-4bf9-9746-357706dfd8e2,,,,
+2026-02-15T14:30:13.831337+00:00,llm,639a79a6-5a2b-4a90-889e-5df1eee2f666,thermometer,A thermometer is used by market gardeners to monitor temperature for plants and ensure proper conditions; a glass thermometer provides accurate readings.,67673da0-b640-49d5-8cf8-5aece18bec79,,,,

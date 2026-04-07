@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/scripts/run.py", line 22, in <module>
+    from agro_temporal_kg.configs import CreateTemporalKGConfig, compose_config
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/agro_temporal_kg/configs/__init__.py", line 3, in <module>
+    from agro_temporal_kg.configs.compose_config import compose_config, config_to_dict
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/agro_temporal_kg/configs/compose_config.py", line 10, in <module>
+    from hydra import compose, initialize_config_dir
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/__init__.py", line 5, in <module>
+    from hydra import utils
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/utils.py", line 8, in <module>
+    import hydra._internal.instantiate._instantiate2
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 9, in <module>
+    from omegaconf import OmegaConf, SCMode
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/__init__.py", line 1, in <module>
+    from .base import Container, DictKeyType, Node, SCMode, UnionNode
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/base.py", line 11, in <module>
+    from ._utils import (
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/omegaconf/_utils.py", line 43, in <module>
+    import attr
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/attr/__init__.py", line 29, in <module>
+    from ._version_info import VersionInfo
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/attr/_version_info.py", line 12, in <module>
+    class VersionInfo:
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/attr/_make.py", line 1570, in wrap
+    return builder.build_class()
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/attr/_make.py", line 794, in build_class
+    self._eval_snippets()
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/attr/_make.py", line 779, in _eval_snippets
+    locs = _linecache_and_compile(
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/attr/_make.py", line 260, in _linecache_and_compile
+    _compile_and_eval(script, globs, locs, filename)
+  File "/mnt/diskGum/manas/GOMgraph-main/agro_temporal_kg/.venv/lib/python3.10/site-packages/attr/_make.py", line 226, in _compile_and_eval
+    bytecode = compile(script, filename, "exec")
+KeyboardInterrupt
