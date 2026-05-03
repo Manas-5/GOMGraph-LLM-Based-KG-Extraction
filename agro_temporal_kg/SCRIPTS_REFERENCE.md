@@ -381,7 +381,12 @@ out-dir/
 
 ## 5. `unified_dedup/unified_dedup_pipeline.py`
 
-**Role:** The **archived/deprecated** predecessor to `scripts/unified_dedup_pipeline.py`. The file at this path is commented-out code and is kept for historical reference only. It has the same overall design as the active version in `scripts/` but was superseded by the refactored and improved version there. Do not use this file directly — use `scripts/unified_dedup_pipeline.py` instead.
+**Role:** Exploratory variant of the dedup pipeline. Differs from the canonical `scripts/` version by adding two extra steps:
+
+- `group_by_normalized()` — pre-groups raw edge names by their normalized embedding form before clustering, so labels like `"is a type of"` and `"is_a_type_of"` are merged with summed counts before embedding.
+- `consolidate_clusters_by_normalized_form()` — post-clustering merge of clusters whose members share identical normalized forms.
+
+The final thesis numbers (688 → 115 canonical relations, 100% node-duplicate elimination across 1,533 nodes) were produced with the `scripts/` version. Treat this file as the alternative implementation kept for reference; new work should use `scripts/unified_dedup_pipeline.py` unless the extra normalization-grouping behavior is specifically wanted.
 
 ---
 
