@@ -2,6 +2,9 @@
 
 A specialized knowledge graph system for extracting and structuring agricultural and horticultural information from historical gardening texts, with a focus on temporal relationships and seasonal gardening practices.
 
+> **Code by Manas Raaj × Pablo Sánchez Martín × Claude (Anthropic).**
+> Research supervision: David Colliaux, Alessandra Toniato, Pablo Sánchez Martín — Sony CSL Paris and Sony AI.
+
 ## 🌱 Overview
 
 This project leverages the [Graphiti](https://github.com/getzep/graphiti) framework to build temporal knowledge graphs from agricultural texts, particularly French gardening manuals. It extracts structured information about plants, tasks, timing, environments, and their relationships to create a comprehensive agricultural knowledge base.
