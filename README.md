@@ -1,6 +1,6 @@
 # GOMGraph — LLM-Based Knowledge Graph Extraction from Historical Texts
 
-> **Code by Manas Raaj × Pablo Sánchez Martín × Claude (Anthropic).**
+> **Code by [Manas Raaj](https://github.com/Manas-5) × [Pablo Sánchez Martín](https://github.com/pablo-sanchez-sony) × [Claude](https://www.anthropic.com/claude) (Anthropic).**
 > Research supervision: David Colliaux, Alessandra Toniato, Pablo Sánchez Martín — Sony CSL Paris and Sony AI.
 
 End-to-end LLM-based knowledge-graph extraction pipeline applied to the **Good Old Manuals (GOM)** corpus — a collection of 19th- and early 20th-century French market-gardening manuals — built as part of a collaborative research initiative between Sony CSL Paris and Sony AI.

@@ -2,7 +2,7 @@
 
 A specialized knowledge graph system for extracting and structuring agricultural and horticultural information from historical gardening texts, with a focus on temporal relationships and seasonal gardening practices.
 
-> **Code by Manas Raaj × Pablo Sánchez Martín × Claude (Anthropic).**
+> **Code by [Manas Raaj](https://github.com/Manas-5) × [Pablo Sánchez Martín](https://github.com/pablo-sanchez-sony) × [Claude](https://www.anthropic.com/claude) (Anthropic).**
 > Research supervision: David Colliaux, Alessandra Toniato, Pablo Sánchez Martín — Sony CSL Paris and Sony AI.
 
 ## 🌱 Overview
